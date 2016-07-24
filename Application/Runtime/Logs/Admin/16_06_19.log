@@ -1,0 +1,2283 @@
+[ 2016-06-19T11:32:13+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2016-06-19T11:34:52+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002946s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.1125s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('jQuery中的text(),html(),val()有什么区别？this.value和$(this).val()都可以获取值，那么这两中方式有什么区别？','15','<span style=\"line-height:1.5;\">this.value 获取 dom对象的值 如 text radio checkbox select 等</span><br />
+<span style=\"line-height:1.5;\">text():获取或者改变指定元素的文本</span><br />
+<span style=\"line-height:1.5;\">html():获取或改变指定元素的html元素以及文本</span><br />
+<span style=\"line-height:1.5;\">val():获取或者改变指定元素的value值（一般是表单元素）</span><br />
+<span style=\"line-height:1.5;\">以上3个都是jquery类库中的语法</span><br />
+<br />
+<span style=\"line-height:1.5;\">二者基本没有什么区别，作用都是获得当前对象的value值（一般是表单元素）</span><br />
+<span style=\"line-height:1.5;\">只是，this.value是js的原生语法，$(this).val()是jquery的语法</span><br />
+<span style=\"line-height:1.5;\">使用this.value无需引入任何库文件，而$(this).val()则需要引入jquery库文件</span><br />') [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+
+[ 2016-06-19T11:34:54+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2016-06-19T11:41:17+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2016-06-19T11:41:27+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2016-06-19T11:53:01+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('javascript和jquery对于console的调试方法说明？','15','<span style=\"line-height:1.5;\">控制台（Console）是Firebug的第一个面板，也是最重要的面板，主要作用是显示网页加载过程中产生各类信息。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">一、显示信息的命令</span><br />
+<span style=\"line-height:1.5;\">Firebug内置一个console对象，提供5种方法，用来显示信息。</span><br />
+<span style=\"line-height:1.5;\">最简单的方法是console.log()，可以用来取代alert()或document.write()。比如，在网页脚本中使用console.log(\"Hello World\")，加载时控制台就会自动显示上述内容。</span><br />
+<span style=\"line-height:1.5;\">另外，根据信息的不同性质，console对象还有4种显示信息的方法，分别是一般信息console.info()、除错信息console.debug()、警告提示console.warn()、错误提示console.error()。</span><br />
+<span style=\"line-height:1.5;\">比如，在网页脚本中插入下面四行：</span><br />
+<span style=\"line-height:1.5;\">　　console.info(\"这是info\");</span><br />
+<span style=\"line-height:1.5;\">　　console.debug(\"这是debug\");</span><br />
+<span style=\"line-height:1.5;\">　　console.warn(\"这是warn\");</span><br />
+<span style=\"line-height:1.5;\">　　console.error(\"这是error\");</span><br />
+<span style=\"line-height:1.5;\">加载时，控制台会显示上述</span><span></span><span style=\"line-height:1.5;\">内容。</span><br />
+<span style=\"line-height:1.5;\">可以看到，不同性质的信息前面有不同的图标，并且每条信息后面都有超级链接，点击后跳转到网页源码的相应行。</span><br />
+<span style=\"line-height:1.5;\"></span><br />
+<span style=\"color:#E53333;line-height:1.5;\">二、占位符</span><br />
+<span style=\"line-height:1.5;\">console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）四种。</span><br />
+<span style=\"line-height:1.5;\">比如，</span><br />
+<span style=\"line-height:1.5;\">　　console.log(\"%d年%d月%d日\",2011,3,26);</span><br />
+<span style=\"line-height:1.5;\">　　</span><span style=\"line-height:1.5;\">console.log(\"圆周率是%f\",3.1415926);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">%o占位符，可以用来查看一个对象内部情况。比如，有这样一个对象：</span><br />
+<span style=\"line-height:1.5;\">　　var dog = {} ;</span><br />
+<span style=\"line-height:1.5;\">　　dog.name = \"大毛\" ;</span><br />
+<span style=\"line-height:1.5;\">　　dog.color = \"黄色\";</span><br />
+<span style=\"line-height:1.5;\">然后，对它使用%o占位符。</span><br />
+<span style=\"line-height:1.5;\">　　console.log(\"%o\",dog);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">三、分组显示</span><br />
+<span style=\"line-height:1.5;\">如果信息太多，可以分组显示，用到的方法是console.group()和console.groupEnd()。</span><br />
+<span style=\"line-height:1.5;\">　　console.group(\"第一组信息\");</span><br />
+<span style=\"line-height:1.5;\">　　　　console.log(\"第一组第一条\");</span><br />
+<span style=\"line-height:1.5;\">　　　　console.log(\"第一组第二条\");</span><br />
+<span style=\"line-height:1.5;\">　　console.groupEnd();</span><br />
+<span style=\"line-height:1.5;\">　　console.group(\"第二组信息\");</span><br />
+<span style=\"line-height:1.5;\">　　　　console.log(\"第二组第一条\");</span><br />
+<span style=\"line-height:1.5;\">　　　　console.log(\"第二组第二条\");</span><br />
+<span style=\"line-height:1.5;\">　　console.groupEnd();</span><br />
+<span style=\"line-height:1.5;\">点击组标题，该组信息会折叠或展开。</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">四、console.dir()</span><br />
+<span style=\"line-height:1.5;\">console.dir()可以显示一个对象所有的属性和方法。</span><br />
+<span style=\"line-height:1.5;\">比如，现在为第二节的dog对象，添加一个bark()方法。</span><br />
+<span style=\"line-height:1.5;\">　　dog.bark = function(){alert(\"汪汪汪\");};</span><br />
+<span style=\"line-height:1.5;\">然后，显示该对象的内容，</span><br />
+<span style=\"line-height:1.5;\">　　console.dir(dog);</span><br />
+<span></span><span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">五、console.dirxml()</span><br />
+<span style=\"line-height:1.5;\">console.dirxml()用来显示网页的某个节点（node）所包含的html/xml代码。</span><br />
+<span style=\"line-height:1.5;\">比如，先获取一个表格节点，</span><br />
+<span style=\"line-height:1.5;\">　　var table = document.getElementById(\"table1\");</span><br />
+<span style=\"line-height:1.5;\">然后，显示该节点包含的代码。</span><br />
+<span style=\"line-height:1.5;\">　　console.dirxml(table);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">六、console.assert()</span><br />
+<span style=\"line-height:1.5;\">console.assert()用来判断一个表达式或变量是否为真。如果结果为否，则在控制台输出一条相应信息，并且抛出一个异常。</span><br />
+<span style=\"line-height:1.5;\">比如，下面两个判断的结果都为否。</span><br />
+<span style=\"line-height:1.5;\">　　var result = 0;</span><br />
+<span style=\"line-height:1.5;\">　　console.assert( result );</span><br />
+<span style=\"line-height:1.5;\">　　var year = 2000;</span><br />
+<span style=\"line-height:1.5;\">　　console.assert(year == 2011 );</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">七、console.trace()</span><br />
+<span style=\"line-height:1.5;\">console.trace()用来追踪函数的调用轨迹。</span><br />
+<span style=\"line-height:1.5;\">比如，有一个加法器函数。</span><br />
+<span style=\"line-height:1.5;\">　　function add(a,b){</span><br />
+<span style=\"line-height:1.5;\">　　　　return a+b;</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">我想知道这个函数是如何被调用的，在其中加入console.trace()方法就可以了。</span><br />
+<span style=\"line-height:1.5;\">　　function add(a,b){</span><br />
+<span style=\"line-height:1.5;\">　　　　console.trace();</span><br />
+<span style=\"line-height:1.5;\">　　　　return a+b;</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">假定这个函数的调用代码如下：</span><br />
+<span style=\"line-height:1.5;\">　　var x = add3(1,1);</span><br />
+<span style=\"line-height:1.5;\">　　function add3(a,b){return add2(a,b);}</span><br />
+<span style=\"line-height:1.5;\">　　function add2(a,b){return add1(a,b);}</span><br />
+<span style=\"line-height:1.5;\">　　function add1(a,b){return add(a,b);}</span><br />
+<span style=\"line-height:1.5;\">运行后，会显示add()的调用轨迹，从上到下依次为add()、add1()、add2()、add3()。</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">八、计时功能</span><br />
+<span style=\"line-height:1.5;\">console.time()和console.timeEnd()，用来显示代码的运行时间。</span><br />
+<span style=\"line-height:1.5;\">　　console.time(\"计时器一\");</span><br />
+<span style=\"line-height:1.5;\">　　for(var i=0;i&lt;1000;i++){</span><br />
+<span style=\"line-height:1.5;\">　　　　for(var j=0;j&lt;1000;j++){}</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">　　console.timeEnd(\"计时器一\");</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">九、性能分析</span><br />
+<span style=\"line-height:1.5;\">性能分析（Profiler）就是分析程序各个部分的运行时间，找出瓶颈所在，使用的方法是console.profile()。</span><br />
+<span style=\"line-height:1.5;\">假定有一个函数Foo()，里面调用了另外两个函数funcA()和funcB()，其中funcA()调用10次，funcB()调用1次。</span><br />
+<span style=\"line-height:1.5;\">　　function Foo(){</span><br />
+<span style=\"line-height:1.5;\">　　　　for(var i=0;i&lt;10;i++){funcA(1000);}</span><br />
+<span style=\"line-height:1.5;\">　　　　funcB(10000);</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">　　function funcA(count){</span><br />
+<span style=\"line-height:1.5;\">　　　　for(var i=0;i&lt;count;i++){}</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">　　function funcB(count){</span><br />
+<span style=\"line-height:1.5;\">　　　　for(var i=0;i&lt;count;i++){}</span><br />
+<span style=\"line-height:1.5;\">　　}</span><br />
+<span style=\"line-height:1.5;\">然后，就可以分析Foo()的运行性能了。</span><br />
+<span style=\"line-height:1.5;\">　　console.profile(\'性能分析器一\');</span><br />
+<span style=\"line-height:1.5;\">　　Foo();</span><br />
+<span style=\"line-height:1.5;\">　　console.profileEnd();</span><br />
+<span style=\"line-height:1.5;\">控制台会显示一张性能分析表。</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">标题栏提示，一共运行了12个函数，共耗时2.656毫秒。其中funcA()运行10次，耗时1.391毫秒，最短运行时间0.123毫秒，最长0.284毫秒，平均0.139毫秒；funcB()运行1次，耗时1.229ms毫秒。</span><br />
+<span style=\"line-height:1.5;\">除了使用console.profile()方法，firebug还提供了一个\"概况\"（Profiler）按钮。第一次点击该按钮，\"性能分析\" 开始，你可以对网页进行某种操作（比如ajax操作），然后第二次点击该按钮，\"性能分析\"结束，该操作引发的所有运算就会进行性能分析。</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">十、属性菜单</span><br />
+<span style=\"line-height:1.5;\">控制台面板的名称后面，有一个倒三角，点击后会显示属性菜单。</span><br />
+<span style=\"line-height:1.5;\">默认情况下，控制台只显示Javascript错误。如果选中Javascript警告、CSS错误、XML错误都送上，则相关的提示信息都会显示。</span><br />
+<span style=\"line-height:1.5;\">这里比较有用的是\"显示XMLHttpRequests\"，也就是显示ajax请求。选中以后，网页的所有ajax请求，都会在控制台面板显示出来。</span><br />
+<span style=\"line-height:1.5;\">比如，点击一个button</span><span style=\"line-height:1.5;\">，控制台就会告诉我们，它用ajax方式发出了一个GET请求，http请求和响应的头信息和内容主体，也都可以看到。</span><br />') [ RunTime:0.0423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002044s ]
+
+[ 2016-06-19T11:53:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-06-19T15:04:44+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0482s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('您是否使用过ImageMagick和Sphinx？做什么用的？为什么使用？','17','您是否使用过ImageMagick和Sphinx？做什么用的？为什么使用？<br />
+ImageMagick是一套稳定的工具集和开发包，可以用来读、写和处理超过89种基本格式的图片文件，包括流行的<br />
+TIFF, JPEG, GIF, PNG, PDF以及PhotoCD等格式。利用ImageMagick，你可以根据web应用程序的需要动态生成图片<br />
+, 还可以对一个图片或图片序列进行改变大小、旋转、锐化、减色或增加特效，并将操作的结果以相同格式或其它<br />
+格式保存。对图片的操作，可以通过命令行进行，也可以用C/C++、Perl、Java、PHP、Python或Ruby编程来完成。<br />
+同时ImageMagick提供了一个高质量的2D工具包，部分地支持SVG。现在，ImageMagic的主要精力集中在性能、减少<br />
+bug以及提供稳定的API和ABI上。<br />
+<br />
+Sphinx是一个基于SQL的全文检索引擎，可以结合MySQL,PostgreSQL做全文搜索，它可以提供比数据库本身更专业<br />
+的搜索功能，使得应用程序更容易实现专业化的全文检索。Sphinx特别为一些脚本语言设计搜索API接口，如<br />
+PHP,Python,Perl,Ruby等，同时为MySQL也设计了一个存储引擎插件。<br />
+Sphinx单一索引最大可包含1亿条记录，在1千万条记录情况下的查询速度为0.x秒（毫秒级）。Sphinx创建索引的<br />
+速度为：创建100万条记录的索引只需 3～4分钟，创建1000万条记录的索引可以在50分钟内完成，而只包含最新10<br />
+万条记录的增量索引，重建一次只需几十秒。<br />
+<br />
+为什么要用ImageMagick?<br />
+ImageMagick是免费软件:全部源码开放,可以自由使用,复制,修改,发布。支持大多数的操作系统。<br />
+<br />
+为什么要用Sphinx?<br />
+1、大量数据量查询like%name，速度慢<br />
+2、水平分表的情况下，查询慢<br />
+3、查询时中文分词的需求<br />
+4、sphinx查询速度快<br />') [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-06-19T15:04:45+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-06-19T15:05:13+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/169
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 169  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-06-19T15:05:18+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/169
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003193s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: UPDATE `sc_message` SET `title`='您是否使用过ImageMagick和Sphinx？做什么用的？为什么使用？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">您是否使用过ImageMagick和Sphinx？做什么用的？为什么使用？</span><br />
+<span style=\"line-height:1.5;\"> ImageMagick是一套稳定的工具集和开发包，可以用来读、写和处理超过89种基本格式的图片文件，包括流行的</span><br />
+<span style=\"line-height:1.5;\"> TIFF, JPEG, GIF, PNG, PDF以及PhotoCD等格式。利用ImageMagick，你可以根据web应用程序的需要动态生成图片</span><br />
+<span style=\"line-height:1.5;\"> , 还可以对一个图片或图片序列进行改变大小、旋转、锐化、减色或增加特效，并将操作的结果以相同格式或其它</span><br />
+<span style=\"line-height:1.5;\"> 格式保存。对图片的操作，可以通过命令行进行，也可以用C/C++、Perl、Java、PHP、Python或Ruby编程来完成。</span><br />
+<span style=\"line-height:1.5;\"> 同时ImageMagick提供了一个高质量的2D工具包，部分地支持SVG。现在，ImageMagic的主要精力集中在性能、减少</span><br />
+<span style=\"line-height:1.5;\"> bug以及提供稳定的API和ABI上。</span><br />
+<br />
+<span style=\"line-height:1.5;\"> Sphinx是一个基于SQL的全文检索引擎，可以结合MySQL,PostgreSQL做全文搜索，它可以提供比数据库本身更专业</span><br />
+<span style=\"line-height:1.5;\"> 的搜索功能，使得应用程序更容易实现专业化的全文检索。Sphinx特别为一些脚本语言设计搜索API接口，如</span><br />
+<span style=\"line-height:1.5;\"> PHP,Python,Perl,Ruby等，同时为MySQL也设计了一个存储引擎插件。</span><br />
+<span style=\"line-height:1.5;\"> Sphinx单一索引最大可包含1亿条记录，在1千万条记录情况下的查询速度为0.x秒（毫秒级）。Sphinx创建索引的</span><br />
+<span style=\"line-height:1.5;\"> 速度为：创建100万条记录的索引只需 3～4分钟，创建1000万条记录的索引可以在50分钟内完成，而只包含最新10</span><br />
+<span style=\"line-height:1.5;\"> 万条记录的增量索引，重建一次只需几十秒。</span><br />
+<br />
+<span style=\"line-height:1.5;\"> 为什么要用ImageMagick?</span><br />
+<span style=\"line-height:1.5;\"> ImageMagick是免费软件:全部源码开放,可以自由使用,复制,修改,发布。支持大多数的操作系统。</span><br />
+<br />
+<span style=\"line-height:1.5;\"> 为什么要用Sphinx?</span><br />
+<span style=\"line-height:1.5;\"> 1、大量数据量查询like%name，速度慢</span><br />
+<span style=\"line-height:1.5;\"> 2、水平分表的情况下，查询慢</span><br />
+<span style=\"line-height:1.5;\"> 3、查询时中文分词的需求</span><br />
+<span style=\"line-height:1.5;\"> 4、sphinx查询速度快</span><br />' WHERE `id` = 169 [ RunTime:0.0338s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-06-19T15:06:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/169
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 169  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2016-06-19T15:07:44+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/169
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: UPDATE `sc_message` SET `title`='您是否使用过ImageMagick和Sphinx？做什么用的？为什么使用？',`cat_id`='17',`content`='<span><span style=\"line-height:1.5;\">ImageMagick是一个用来创建、编辑、合成图片的软件。它可以读取、转换、写入多种格式的图片。图片切割、颜色替换、各种效果的应用,图片的旋转、组合,文本,直线,多边形,椭圆,曲线,附加到图片伸展旋转。</span><br />
+</span><span></span><br />
+<span style=\"line-height:1.5;\"> Sphinx是一个基于SQL的全文检索引擎，可以结合MySQL,PostgreSQL做全文搜索，它可以提供比数据库本身更专业</span><br />
+<span style=\"line-height:1.5;\"> 的搜索功能，使得应用程序更容易实现专业化的全文检索。Sphinx特别为一些脚本语言设计搜索API接口，如</span><br />
+<span style=\"line-height:1.5;\"> PHP,Python,Perl,Ruby等，同时为MySQL也设计了一个存储引擎插件。</span><br />
+<span style=\"line-height:1.5;\"> Sphinx单一索引最大可包含1亿条记录，在1千万条记录情况下的查询速度为0.x秒（毫秒级）。Sphinx创建索引的</span><br />
+<span style=\"line-height:1.5;\"> 速度为：创建100万条记录的索引只需 3～4分钟，创建1000万条记录的索引可以在50分钟内完成，而只包含最新10</span><br />
+<span style=\"line-height:1.5;\"> 万条记录的增量索引，重建一次只需几十秒。</span><br />
+<br />
+<span style=\"line-height:1.5;\"> 为什么要用ImageMagick?</span><br />
+<span style=\"line-height:1.5;\"> ImageMagick是免费软件:全部源码开放,可以自由使用,复制,修改,发布。支持大多数的操作系统。</span><br />
+<br />
+<span style=\"line-height:1.5;\"> 为什么要用Sphinx?</span><br />
+<span style=\"line-height:1.5;\"> 1、大量数据量查询like%name，速度慢</span><br />
+<span style=\"line-height:1.5;\"> 2、水平分表的情况下，查询慢</span><br />
+<span style=\"line-height:1.5;\"> 3、查询时中文分词的需求</span><br />
+<span style=\"line-height:1.5;\"> 4、sphinx查询速度快</span>' WHERE `id` = 169 [ RunTime:0.0531s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-06-19T15:12:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('说出数组处理常用的函数有哪些，至少10个？','17','<span style=\"line-height:1.5;\">array -- 声明一个数组</span><br />
+<span style=\"line-height:1.5;\">count -- 计算数组中的单元数目或对象中的属性个数</span><br />
+<span style=\"line-height:1.5;\">foreach -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">list -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">explode -- 将字符串转成数组</span><br />
+<span style=\"line-height:1.5;\">implode -- 将数组转成一个新字符串</span><br />
+<span style=\"line-height:1.5;\">array_merge -- 合并一个或多个数组</span><br />
+<span style=\"line-height:1.5;\">is_array -- 检查是否是数组</span><br />
+<span style=\"line-height:1.5;\">print_r -- 输出数组</span><br />
+<span style=\"line-height:1.5;\">sort -- 数组排序</span><br />
+<span style=\"line-height:1.5;\">array_keys -- 返回数组中所有的键名</span><br />
+<span style=\"line-height:1.5;\">array_values -- 返回数组中所有的值</span><br />
+<span style=\"line-height:1.5;\">key -- 从关联数组中取得键名</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-06-19T15:12:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
+[ 2016-06-19T15:13:47+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('说出常用字符串处理函数，至少10个？','17','<span style=\"line-height:1.5;\">trim() -- 去除字符串首尾处的空白字符（或者其他字符）</span><br />
+<span style=\"line-height:1.5;\">strlen() -- 字符串长度</span><br />
+<span style=\"line-height:1.5;\">substr() -- 截取字符串</span><br />
+<span style=\"line-height:1.5;\">str_replace() -- 替换字符串函数</span><br />
+<span style=\"line-height:1.5;\">substr_replace() -- 对指定字符串中的部分字符串进行替换</span><br />
+<span style=\"line-height:1.5;\">strstr() -- 检索字符串函数</span><br />
+<span style=\"line-height:1.5;\">explode() -- 分割字符串函数</span><br />
+<span style=\"line-height:1.5;\">implode() -- 将数组合并成字符串</span><br />
+<span style=\"line-height:1.5;\">str_repeat() -- 重复一个字符串</span><br />
+<span style=\"line-height:1.5;\">addslashes(); -- 转义字符串</span><br />
+<span style=\"line-height:1.5;\">htmlspecialchars() -- HTML 实体转义</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006448s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+
+[ 2016-06-19T15:13:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+
+[ 2016-06-19T15:14:24+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 170  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-06-19T15:14:33+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: UPDATE `sc_message` SET `title`='说出数组常用的处理函数有哪些，至少10个？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">array -- 声明一个数组</span><br />
+<span style=\"line-height:1.5;\">count -- 计算数组中的单元数目或对象中的属性个数</span><br />
+<span style=\"line-height:1.5;\">foreach -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">list -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">explode -- 将字符串转成数组</span><br />
+<span style=\"line-height:1.5;\">implode -- 将数组转成一个新字符串</span><br />
+<span style=\"line-height:1.5;\">array_merge -- 合并一个或多个数组</span><br />
+<span style=\"line-height:1.5;\">is_array -- 检查是否是数组</span><br />
+<span style=\"line-height:1.5;\">print_r -- 输出数组</span><br />
+<span style=\"line-height:1.5;\">sort -- 数组排序</span><br />
+<span style=\"line-height:1.5;\">array_keys -- 返回数组中所有的键名</span><br />
+<span style=\"line-height:1.5;\">array_values -- 返回数组中所有的值</span><br />
+<span style=\"line-height:1.5;\">key -- 从关联数组中取得键名</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 170 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+
+[ 2016-06-19T15:14:43+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 170  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2016-06-19T15:14:47+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: UPDATE `sc_message` SET `title`='说出数组常用的处理函数，至少10个？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">array -- 声明一个数组</span><br />
+<span style=\"line-height:1.5;\">count -- 计算数组中的单元数目或对象中的属性个数</span><br />
+<span style=\"line-height:1.5;\">foreach -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">list -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">explode -- 将字符串转成数组</span><br />
+<span style=\"line-height:1.5;\">implode -- 将数组转成一个新字符串</span><br />
+<span style=\"line-height:1.5;\">array_merge -- 合并一个或多个数组</span><br />
+<span style=\"line-height:1.5;\">is_array -- 检查是否是数组</span><br />
+<span style=\"line-height:1.5;\">print_r -- 输出数组</span><br />
+<span style=\"line-height:1.5;\">sort -- 数组排序</span><br />
+<span style=\"line-height:1.5;\">array_keys -- 返回数组中所有的键名</span><br />
+<span style=\"line-height:1.5;\">array_values -- 返回数组中所有的值</span><br />
+<span style=\"line-height:1.5;\">key -- 从关联数组中取得键名</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 170 [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-06-19T15:19:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('请简述项目中优化sql 语句执行效率的方法,从哪些方面,sql 语句性能如何分析？','17','<span style=\"line-height:1.5;\">1) 尽量选择较小的列</span><br />
+<span style=\"line-height:1.5;\">2) 将where中用的比较频繁的字段建立索引</span><br />
+<span style=\"line-height:1.5;\">3) select子句中避免使用‘*’</span><br />
+<span style=\"line-height:1.5;\">4) 避免在索引列上使用计算、not in 和&lt;&gt;等操作</span><br />
+<span style=\"line-height:1.5;\">5) 当只需要一行数据的时候使用limit 1</span><br />
+<span style=\"line-height:1.5;\">6) 保证单表数据不超过200W，适时分割表。</span><br />
+<span style=\"line-height:1.5;\">7) 尽量不要使用子查询，用连表查询代替</span><br />
+<span style=\"line-height:1.5;\">针对查询较慢的语句，可以使用explain 来分析该语句具体的执行情况。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-06-19T15:19:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2016-06-19T15:23:34+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001631s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 72  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2016-06-19T15:24:07+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='请简述数据库设计的范式及应用。',`cat_id`='17',`content`='一般第3 范式就足以，用于表结构的优化，这样做既可以避免应用程序过于复杂同时也<br />
+避免了SQL 语句过于庞大所造成系统效率低下。<br />
+第一范式：若关系模式R 的每一个属性是不可再分解的，且有主键，则属于第一范式。<br />
+第二范式：若R 属于第一范式，且所有的非主键属性都完全函数依赖于主键属性，则满足第二范式。<br />
+第三范式：若R 属于第二范式，且所有的非主键属性没有一个是传递函数依赖于候选主键属性，则满足第三范式。<br />
+在实际使用中，可以根据需求适当的逆范式。<br />
+<br />' WHERE `id` = 72 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-06-19T15:24:36+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 72  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2016-06-19T15:24:42+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0080s ]
+SQL: UPDATE `sc_message` SET `title`='请简述数据库设计的三范式及应用。',`cat_id`='17',`content`='一般第3 范式就足以，用于表结构的优化，这样做既可以避免应用程序过于复杂同时也<br />
+避免了SQL 语句过于庞大所造成系统效率低下。<br />
+第一范式：若关系模式R 的每一个属性是不可再分解的，且有主键，则属于第一范式。<br />
+第二范式：若R 属于第一范式，且所有的非主键属性都完全函数依赖于主键属性，则满足第二范式。<br />
+第三范式：若R 属于第二范式，且所有的非主键属性没有一个是传递函数依赖于候选主键属性，则满足第三范式。<br />
+在实际使用中，可以根据需求适当的逆范式。<br />
+<br />' WHERE `id` = 72 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-06-19T15:24:56+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 72  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2016-06-19T15:25:00+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/72
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='请简述数据库设计的三范式及应用。',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">一般第3 范式就足以，用于表结构的优化，这样做既可以避免应用程序过于复杂同时也</span><br />
+<span style=\"line-height:1.5;\"> 避免了SQL 语句过于庞大所造成系统效率低下。</span><br />
+<span style=\"line-height:1.5;\"> 第一范式：若关系模式R 的每一个属性是不可再分解的，且有主键，则属于第一范式。</span><br />
+<span style=\"line-height:1.5;\"> 第二范式：若R 属于第一范式，且所有的非主键属性都完全函数依赖于主键属性，则满足第二范式。</span><br />
+<span style=\"line-height:1.5;\"> 第三范式：若R 属于第二范式，且所有的非主键属性没有一个是传递函数依赖于候选主键属性，则满足第三范式。</span><br />
+<span style=\"line-height:1.5;\"> 在实际使用中，可以根据需求适当的逆范式。</span><br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 72 [ RunTime:0.0810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000594s ]
+
+[ 2016-06-19T15:26:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 30  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014574s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002949s ]
+
+[ 2016-06-19T15:27:30+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: UPDATE `sc_message` SET `title`='MYSQL数据库中连接查询的方式有哪几种？写出这几种连接查询方式取数据的结果，并写出完整的连接查询的SQL语句？',`cat_id`='1',`content`='<span><span style=\"line-height:1.5;\">MYSQL数据库中连接查询的方式：</span><br />
+<span style=\"line-height:1.5;\">内连接：就是将两个表中符合所设定的条件的那些数据取出来的结果</span><br />
+<span style=\"line-height:1.5;\">select &nbsp;* &nbsp;from &nbsp;表1 &nbsp;【inner】 &nbsp;join &nbsp;表2 &nbsp;on &nbsp;连接条件</span><br />
+<span style=\"line-height:1.5;\">左（外）连接：就是将两个表的内连接的结果，再加上左边表的不符合内连接所设定的条件的那些数据的结果</span><br />
+<span style=\"line-height:1.5;\">select &nbsp;* &nbsp;from &nbsp;表1 &nbsp;left &nbsp;【outer】 join &nbsp;表2 &nbsp;on &nbsp;连接条件</span><br />
+<span style=\"line-height:1.5;\">右（外）连接：就是将两个表的内连接的结果，再加上右边表的不符合内连接所设定的条件的那些数据的结果</span><br />
+<span style=\"line-height:1.5;\">select &nbsp;* &nbsp;from &nbsp;表1 &nbsp;right &nbsp;【outer】 join &nbsp;表2 &nbsp;on &nbsp;连接条件</span><br />
+<span style=\"line-height:1.5;\">交叉连接：就是将所有数据行都连接起来的结果</span><br />
+<span style=\"line-height:1.5;\">select &nbsp;* &nbsp;from &nbsp;表1 &nbsp;cross &nbsp;join &nbsp;表2</span><br />
+<span style=\"line-height:1.5;\">全连接：MySQL 目前还不支持全外连接。</span><br />
+<span style=\"line-height:1.5;\"></span></span>' WHERE `id` = 30 [ RunTime:0.0550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-06-19T16:03:43+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002131s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0059s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('写出下列服务的用途和默认端口？ftp、ssh、http、telnet、https（新浪网技术部）','17','<span style=\"line-height:1.5;\">ftp：File Transfer Protocol，文件传输协议，是应用层的协议，它基于传输层，为用户服务，它们负责进行文件的传输，其默认端口是21。</span><br />
+<span style=\"line-height:1.5;\">ssh：Secure Shell，安全外壳协议，建立在应用层和传输层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议，其默端口是22。</span><br />
+<span style=\"line-height:1.5;\">http：hypertext transport protocol，超文本传送协议，是一种详细规定了浏览器和万维网服务器之间互相通信的规则，通过因特网传送万维网文档的数据传送协议，其默认端口是80。</span><br />
+<span style=\"line-height:1.5;\">telnet：Telnet 协议是TCP/IP 协议族中的一员，是Internet 远程登陆服务的标准协议和主要方式。它为用户提供了在本地计算机上完成远程主机工作的能力，其默认端口是23。</span><br />
+<span style=\"line-height:1.5;\">https：Hypertext Transfer Protocol over Secure Socket Layer，是以安全为目标的HTTP 通道，用于安全的HTTP 数据传输，它的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性，其默认端口是443。</span><br />') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-06-19T16:03:44+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002322s ]
+
+[ 2016-06-19T16:07:34+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0119s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('PHP中，如何获得一个数组的键值？','17','<span style=\"line-height:1.5;\">使用key() 可以获得数组中当前元素的键名，使用current()则可以返回当前元素的值。</span><br />
+<span style=\"line-height:1.5;\">使用array_keys() 则可以得到数组中所有的键名。</span><br />
+<span style=\"line-height:1.5;\">使用foreach 结构foreach($arr as $key=&gt;$value) 可以通过$key 和$value 分别获取键名和值。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010293s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-06-19T16:07:35+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2016-06-19T16:09:32+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('Js查找dom有哪些方式?','15','<span style=\"line-height:1.5;\">getElementById,这是最常见的方法,根据id定位对象</span><br />
+<span style=\"line-height:1.5;\">getElementsByName,根据name名称获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">getElementsByTagName,根据标签名获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">主要是以上3个,其他:</span><br />
+<span style=\"line-height:1.5;\">parentElement:获取当前元素的父对象</span><br />
+<span style=\"line-height:1.5;\">children:所有子元素对象的集合</span><br />
+<span style=\"line-height:1.5;\">firstChild：第一个子节点</span><br />
+<span style=\"line-height:1.5;\">lastChild:最后一个子节点</span><br />
+<span style=\"line-height:1.5;\">parentNode:父节点</span><br />
+<span style=\"line-height:1.5;\">childNodes:所有子节点的集合</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-06-19T16:09:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2016-06-19T16:13:32+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('请简述include和require包含文件的区别?','17','<span style=\"line-height:1.5;\">require 的使用方法如 require(\"MyRequireFile.php\"); 。这个函数通常放在 PHP 程序的 &nbsp;最前面，PHP 程序在执行前，就会先读入 require 所指定引入的文件，使它变成 PHP 程序网页的一部份。常用的函数，亦可以这个方法将它引入网页中。</span><br />
+<span style=\"line-height:1.5;\">include 使用方法如 include(\"MyIncludeFile.php\"); 。这个函数一般是放在流程控制的处理部分中。PHP 程序网页在读到 include 的文件时，才将它读进来。这种方式，可以把程序执行时的流程简单化。</span><br />
+<span style=\"line-height:1.5;\">他们两个的用途是完全一样的，不一定非得哪个放在最前面哪个放在中间。他们最根本的区别在于错误处理的方式不一样。&nbsp;</span><br />
+<span style=\"line-height:1.5;\">require一个文件存在错误的话，那么程序就会中断执行了，并显示致命错误&nbsp;</span><br />
+<span style=\"line-height:1.5;\">include一个文件存在错误的话，那么程序不会中端，而是继续执行，并显示一个警告错误。</span><br />') [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+
+[ 2016-06-19T16:13:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-06-19T16:13:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/175
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 175  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000874s ]
+
+[ 2016-06-19T16:14:11+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/175
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001184s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001207s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0059s ]
+SQL: UPDATE `sc_message` SET `title`='Javascripts查找dom有哪些方式?',`cat_id`='15',`content`='<span style=\"line-height:1.5;\">getElementById,这是最常见的方法,根据id定位对象</span><br />
+<span style=\"line-height:1.5;\">getElementsByName,根据name名称获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">getElementsByTagName,根据标签名获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">主要是以上3个,其他:</span><br />
+<span style=\"line-height:1.5;\">parentElement:获取当前元素的父对象</span><br />
+<span style=\"line-height:1.5;\">children:所有子元素对象的集合</span><br />
+<span style=\"line-height:1.5;\">firstChild：第一个子节点</span><br />
+<span style=\"line-height:1.5;\">lastChild:最后一个子节点</span><br />
+<span style=\"line-height:1.5;\">parentNode:父节点</span><br />
+<span style=\"line-height:1.5;\">childNodes:所有子节点的集合</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 175 [ RunTime:0.0135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+
+[ 2016-06-19T16:14:28+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/175
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001637s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 175  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-06-19T16:14:36+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/175
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='Javascript查找dom有哪些方式?',`cat_id`='15',`content`='<span style=\"line-height:1.5;\">getElementById,这是最常见的方法,根据id定位对象</span><br />
+<span style=\"line-height:1.5;\">getElementsByName,根据name名称获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">getElementsByTagName,根据标签名获取一组对象的集合</span><br />
+<span style=\"line-height:1.5;\">主要是以上3个,其他:</span><br />
+<span style=\"line-height:1.5;\">parentElement:获取当前元素的父对象</span><br />
+<span style=\"line-height:1.5;\">children:所有子元素对象的集合</span><br />
+<span style=\"line-height:1.5;\">firstChild：第一个子节点</span><br />
+<span style=\"line-height:1.5;\">lastChild:最后一个子节点</span><br />
+<span style=\"line-height:1.5;\">parentNode:父节点</span><br />
+<span style=\"line-height:1.5;\">childNodes:所有子节点的集合</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 175 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+
+[ 2016-06-19T16:19:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('一般图片的防盗链实现以及突破技术?','17','<span style=\"line-height:1.5;\">答案有点多,关键是其实是rewrite重写,原理是请求头的referer,破解方法也就是伪造referer</span><br />
+<span style=\"line-height:1.5;\">使用.htaccess禁止盗链</span><br />
+<span style=\"line-height:1.5;\"><em>通过.htaccess来防止网站的图片、压缩文件、或视频等非Html文件被盗链的方法相当简单，通过在该文件中加入几句命令即可保<span></span>护我们宝贵的带宽。例如本站的设置如下：<span></span></em></span><br />
+<span></span><span style=\"line-height:1.5;color:#E53333;\"><em>RewriteEngine on</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER<span></span>} !^$ [NC]<span></span></em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !webeta.cn [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !ikuaizi.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !zhuaxia.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !xianguo.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !google.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !bloglines.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !feedburner.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !feedsky.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteRule .*.(gif|jpg)$ http://domain.com/no.png [R,NC,L]</em></span><span></span><br />
+<span style=\"line-height:1.5;\">简单的解释一下上述语句：</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>1、RewriteCond %{HTTP_REFERER} !^$ [NC]</em></span><br />
+<span style=\"line-height:1.5;\">允许空“HTTP_REFERER”的访问，即允许用户在浏览器地址栏中直接输入图片地址时图片文件的显示。一般而言，这是可选的，不过，建议这么设置，如果强迫必须具有“HTTP_REFERER”才能访问，可能会带来某些问题，比如说在用户通过代理服务器访问时。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>2、RewriteCond %{HTTP_REFERER} !domain.com [NC]</em></span><br />
+<span style=\"line-height:1.5;\">设置允许访问的HTTP来源，包括我们的站点自身、Google、Baidu、Bloglines、Feedburner等。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>3、RewriteRule .*.(gif|jpg|png)$ http://domain.com/no.png [R,NC,L]</em></span><br />
+<span style=\"line-height:1.5;\">定义被盗链时替代的图片，让所有盗链 jpg、gif、png 等文件的网页，显示根目录下的 no.png 文件。注意：替换显示的图片不要放在设置防盗链的目录中，并且该图片文件体积越小越好。当然你也可以不设置替换图片，而是使用下面的语句即可：</span><br />
+<span style=\"line-height:1.5;\">RewriteRule .*.(gif|jpg|png)$ - [F]</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>4、说明一下其中的R、NC 和 L</em></span><br />
+<span style=\"line-height:1.5;\">R 就是转向的意思</span><br />
+<span style=\"line-height:1.5;\">NC 指的是不区分大小写</span><br />
+<span style=\"line-height:1.5;\">L 的作用是指明本次转向到此结束，后续的转向不受先前判断语句的影响</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>5、防止盗链的文件类型</em></span><br />
+<span style=\"line-height:1.5;\">上例中是 gif、jpg、png，而根据需要，可更改或添加其他文件类型，如rar、mov等，不同文件扩展名间使用“|”分割。</span><br />
+<span style=\"line-height:1.5;\">这样的话，就可以基本做到简单的防止被盗链情况的发生，而且可以尽最大可能的减少服务器流量的无畏消耗，当然了，如果你不在意这点流量的话，那么可以不用考虑上述设置啦！</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-06-19T16:19:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013792s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2016-06-19T16:19:57+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 177  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001713s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2016-06-19T16:22:27+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: UPDATE `sc_message` SET `title`='一般图片的防盗链实现以及突破技术?',`cat_id`='17',`content`='<span style=\"line-height:1.5;\"><span></span>答案有点多,关键是其实是rewrite重写,原理是请求头的referer,破解方法也就是伪造referer<span></span></span><br />
+<span style=\"line-height:1.5;\">使用.htaccess禁止盗链</span><br />
+<span></span><span style=\"line-height:1.5;\">通过.htaccess来防止网站的图片、压缩文件、或视频等非Html文件被盗链的方法相当简单，通过在该文件中加入几句命令即可保护我们宝贵的带宽。例如本站的设置如下:<em>&nbsp;</em></span><br />
+<span></span><span style=\"line-height:1.5;color:#E53333;\"><em>RewriteEngine on</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER<span></span>} !^$ [NC]<span></span></em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !webeta.cn [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !ikuaizi.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !zhuaxia.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !xianguo.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !google.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !bloglines.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !feedburner.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteCond %{HTTP_REFERER} !feedsky.com [NC]</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em>RewriteRule .*.(gif|jpg)$ http://domain.com/no.png [R,NC,L]</em></span><span></span><br />
+<span style=\"line-height:1.5;\">简单的解释一下上述语句：</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>1、RewriteCond %{HTTP_REFERER} !^$ [NC]</strong></em></span><br />
+<span style=\"line-height:1.5;\">允许空“HTTP_REFERER”的访问，即允许用户在浏览器地址栏中<span></span>直接输入图片地址时图片文件的显示。一般而言，这是可选的，不过，建议这么设置，如果强迫必须具有“HTTP_REFERER”才能访问，可能会带来某些问题，比如说在用户通过代理服务器访问时。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>2、RewriteCond %{HTTP_REFERER} !domain.com [NC]</strong></em></span><br />
+<span style=\"line-height:1.5;\">设置允许访问的HTTP来源，包括我们的站点自身、Google、Baidu、Bloglines、Feedburner等。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>3、RewriteRule .*.(gif|jpg|png)$ http://domain.com/no.png [R,NC,L]</strong></em></span><br />
+<span style=\"line-height:1.5;\">定义被盗链时替代的图片，让所有盗链 jpg、gif、png 等文件的网页，显示根目录下的 no.png 文件。注意：替换显示的图片不要放在设置防盗链的目录中，并且该图片文件体积越小越好。当然你也可以不设置替换图片，而是使用下面的语句即可：</span><br />
+<span style=\"line-height:1.5;\">RewriteRule .*.(gif|jpg|png)$ - [F]</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>4、说明一下其中的R、NC 和 L</strong></em></span><br />
+<span style=\"line-height:1.5;\">R 就是转向的意思</span><br />
+<span style=\"line-height:1.5;\">NC 指的是不区分大小写</span><br />
+<span style=\"line-height:1.5;\">L 的作用是指明本次转向到此结束，后续的转向不受先前判断语句的影响</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>5、防止盗链的文件类型</strong></em></span><br />
+<span style=\"line-height:1.5;\">上例中是 gif、jpg、png，而根据需要，可更改或添加其他文件类型，如rar、mov等，不同文件扩展名间使用“|”分割。</span><br />
+<span style=\"line-height:1.5;\">这样的话，就可以基本做到简单的防止被盗链情况的发生，而且可以尽最大可能的减少服务器流量的无畏消耗，当然了，如果你不在意这点流量的话，那么可以不用考虑上述设置啦！</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 177 [ RunTime:0.0521s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009856s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000865s ]
+
+[ 2016-06-19T16:23:37+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 177  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001214s ]
+
+[ 2016-06-19T16:24:06+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/177
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='一般图片的防盗链实现以及突破技术?',`cat_id`='17',`content`='<span style=\"line-height:1.5;\"><span></span>答案有点多,关键是其实是rewrite重写,原理是请求头的referer,破解方法也就是伪造referer<span></span></span><br />
+<span style=\"line-height:1.5;\">使用.htaccess禁止盗链</span><br />
+<span></span><span style=\"line-height:1.5;\">通过.htaccess来防止网站的图片、压缩文件、或视频等非Html文件被盗链的方法相当简单，通过在该文件中加入几句命令即可保护我们宝贵的带宽。例如本站的设置如下:<em>&nbsp;</em></span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><span style=\"color:#003399;\">RewriteEngine on</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !^$ [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !webeta.cn [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !ikuaizi.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !zhuaxia.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !xianguo.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !google.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !bloglines.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !feedburner.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteCond %{HTTP_REFERER} !feedsky.com [NC]</span><br />
+<span style=\"color:#003399;\">RewriteRule .*.(gif|jpg)$ http://domain.com/no.png [R,NC,L]</span></span><span></span><br />
+<span style=\"line-height:1.5;\">简单的解释一下上述语句：</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>1、RewriteCond %{HTTP_REFERER} !^$ [NC]</strong></em></span><br />
+<span style=\"line-height:1.5;\">允许空“HTTP_REFERER”的访问，即允许用户在浏览器地址栏中<span></span>直接输入图片地址时图片文件的显示。一般而言，这是可选的，不过，建议这么设置，如果强迫必须具有“HTTP_REFERER”才能访问，可能会带来某些问题，比如说在用户通过代理服务器访问时。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>2、RewriteCond %{HTTP_REFERER} !domain.com [NC]</strong></em></span><br />
+<span style=\"line-height:1.5;\">设置允许访问的HTTP来源，包括我们的站点自身、Google、Baidu、Bloglines、Feedburner等。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>3、RewriteRule .*.(gif|jpg|png)$ http://domain.com/no.png [R,NC,L]</strong></em></span><br />
+<span style=\"line-height:1.5;\">定义被盗链时替代的图片，让所有盗链 jpg、gif、png 等文件的网页，显示根目录下的 no.png 文件。注意：替换显示的图片不要放在设置防盗链的目录中，并且该图片文件体积越小越好。当然你也可以不设置替换图片，而是使用下面的语句即可：</span><br />
+<span style=\"line-height:1.5;\">RewriteRule .*.(gif|jpg|png)$ - [F]</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>4、说明一下其中的R、NC 和 L</strong></em></span><br />
+<span style=\"line-height:1.5;\">R 就是转向的意思</span><br />
+<span style=\"line-height:1.5;\">NC 指的是不区分大小写</span><br />
+<span style=\"line-height:1.5;\">L 的作用是指明本次转向到此结束，后续的转向不受先前判断语句的影响</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><em><strong>5、防止盗链的文件类型</strong></em></span><br />
+<span style=\"line-height:1.5;\">上例中是 gif、jpg、png，而根据需要，可更改或添加其他文件类型，如rar、mov等，不同文件扩展名间使用“|”分割。</span><br />
+<span style=\"line-height:1.5;\">这样的话，就可以基本做到简单的防止被盗链情况的发生，而且可以尽最大可能的减少服务器流量的无畏消耗，当然了，如果你不在意这点流量的话，那么可以不用考虑上述设置啦！</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 177 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-06-19T16:25:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('说出PHP常见的魔术常量?','17','<span style=\"line-height:1.5;\">__LINE__，文件中当前行号</span><br />
+<span style=\"line-height:1.5;\">__FILE__，文件的完整路径和文件名</span><br />
+<span style=\"line-height:1.5;\">__DIR_，文件所在的目录</span><br />
+<span style=\"line-height:1.5;\">__FUNCTION__，函数名称</span><br />
+<span style=\"line-height:1.5;\">__CLASS__，类的名称</span><br />
+<span style=\"line-height:1.5;\">__TRAIT__，Trait的名字</span><br />
+<span style=\"line-height:1.5;\">__METHOD__，类的方法名</span><br />
+<span style=\"line-height:1.5;\">__NAMESPACE__，当前命名空间的名字</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-06-19T16:26:00+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001822s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2016-06-19T16:27:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 170  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000743s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004607s ]
+
+[ 2016-06-19T16:28:26+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/170
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0070s ]
+SQL: UPDATE `sc_message` SET `title`='说出数组常用的处理函数，至少10个？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">count -- 计算数组中的单元数目或对象中的属性个数</span><br />
+<span style=\"line-height:1.5;\">foreach -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">list -- 遍历数组</span><br />
+<span style=\"line-height:1.5;\">explode -- 将字符串转成数组</span><br />
+<span style=\"line-height:1.5;\">implode -- 将数组转成一个新字符串</span><br />
+<span style=\"line-height:1.5;\">is_array -- 检查是否是数组</span><br />
+<span style=\"line-height:1.5;\">print_r -- 输出数组</span><br />
+<span style=\"line-height:1.5;\">sort -- 数组排序</span><br />
+<span style=\"line-height:1.5;\">array_keys -- 返回数组中所有的键名</span><br />
+<span style=\"line-height:1.5;\">array_values -- 返回数组中所有的值</span><br />
+<span style=\"line-height:1.5;\">key -- 从关联数组中取得键名</span><br />
+<span style=\"line-height:1.5;\">array()----创建数组</span><br />
+<span style=\"line-height:1.5;\">array_combine()----通过合并两个数组来创建一个新数组</span><br />
+<span style=\"line-height:1.5;\">range()----创建并返回一个包含指定范围的元素的数组</span><br />
+<span style=\"line-height:1.5;\">array_merge()----把两个或多个数组合并成一个数组</span><br />
+<span style=\"line-height:1.5;\">array_slice()----在数组中根据条件取出一段值</span><br />
+<span style=\"line-height:1.5;\">array_diff()----返回两个数组的差集数组</span><br />
+<span style=\"line-height:1.5;\">array_intersect()----计算数组的交集</span><br />
+<span style=\"line-height:1.5;\">array_search()----在数组中搜索给定的值</span><br />
+<span style=\"line-height:1.5;\">array_splice()----移除数组的一部分且替代它</span><br />
+<span style=\"line-height:1.5;\">array_key_exists()----判断某个数组中是否存在指定的key</span><br />
+<span style=\"line-height:1.5;\">shuffle()----把数组中的元素按随机顺序重新排列</span><br />
+<span style=\"line-height:1.5;\">array_flip()----交换数组中的键和值</span><br />
+<span style=\"line-height:1.5;\">array_reverse()----将原数组中的元素顺序翻转，创建新的数组并返回</span><br />
+<span style=\"line-height:1.5;\">array_unique()----移除数组中重复的值</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 170 [ RunTime:0.0556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010353s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000936s ]
+
+[ 2016-06-19T16:29:01+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/171
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 171  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2016-06-19T16:32:25+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/171
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0064s ]
+SQL: UPDATE `sc_message` SET `title`='说出常用字符串处理函数，至少10个？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">strpos()---查找字符串位置</span><br />
+<span style=\"line-height:1.5;\">str_replace(search,replace,$str):从$str中查找search用replace来替换</span><br />
+<span style=\"line-height:1.5;\">str_split($str,len):把$str按len长度进行分割返回数组</span><br />
+<span style=\"line-height:1.5;\">ltrim、rtrim 去除左侧和右侧空格\\字符</span><br />
+<span style=\"line-height:1.5;\">strtolower($str) 字符串转换为小写</span><br />
+<span style=\"line-height:1.5;\">strtoupper($str) 字符串转换为大写</span><br />
+<span style=\"line-height:1.5;\">ucfirst($str) 将字符串的第一个字符转换为大写</span><br />
+<span style=\"line-height:1.5;\">trim() -- 去除字符串首尾处的空白字符（或者其他字符）</span><br />
+<span style=\"line-height:1.5;\">strlen() -- 字符串长度</span><br />
+<span style=\"line-height:1.5;\">substr() -- 截取字符串</span><br />
+<span style=\"line-height:1.5;\">substr_replace() -- 对指定字符串中的部分字符串进行替换</span><br />
+<span style=\"line-height:1.5;\">strstr() -- 检索字符串函数</span><br />
+<span style=\"line-height:1.5;\">explode() -- 分割字符串函数</span><br />
+<span style=\"line-height:1.5;\">implode() -- 将数组合并成字符串</span><br />
+<span style=\"line-height:1.5;\">str_repeat() -- 重复一个字符串</span><br />
+<span style=\"line-height:1.5;\">addslashes(); -- 转义字符串</span><br />
+<span style=\"line-height:1.5;\">htmlspecialchars() -- HTML 实体转义</span><br />
+<span style=\"line-height:1.5;\"></span><span style=\"line-height:1.5;\"></span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 171 [ RunTime:0.0504s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000934s ]
+
+[ 2016-06-19T16:41:17+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/156
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 156  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2016-06-19T16:41:47+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/156
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0099s ]
+SQL: UPDATE `sc_message` SET `title`='请写一段 PHP代码，确保多个进程同时写入同一个文件成功？（腾讯）',`cat_id`='17',`content`='<span></span><span style=\"line-height:1.5;color:#E53333;\">核心思路：加锁 <br />
+</span><span style=\"line-height:1.5;\">$fp = fopen(\"lock.txt\",\"w+\");</span><br />
+<span style=\"line-height:1.5;\">if(flock($fp,LOCK_EX)){&nbsp; &nbsp; //&nbsp;<span style=\"color:#E53333;\">LOCK_SH	读锁&nbsp;&nbsp;&nbsp;&nbsp;	LOCK_EX	写锁</span><span></span></span><br />
+<span style=\"line-height:1.5;\"> &nbsp;&nbsp;&nbsp;&nbsp;//获得写锁，写数据</span><br />
+<span style=\"line-height:1.5;\"> &nbsp;&nbsp;&nbsp;&nbsp;fwrite($fp,\"write something\");</span><br />
+<span style=\"line-height:1.5;\"> &nbsp;&nbsp;&nbsp;&nbsp;//解除锁定</span><br />
+<span style=\"line-height:1.5;\"> &nbsp;&nbsp;&nbsp;&nbsp;flock($fp,LOCK_UN); &nbsp;//强制解锁</span><br />
+<span style=\"line-height:1.5;\">} else {</span><br />
+<span style=\"line-height:1.5;\"> &nbsp;&nbsp;&nbsp;&nbsp;echo \"file is locking...\";</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">fclose($fp);</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 156 [ RunTime:0.0478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001268s ]
+
+[ 2016-06-19T16:49:59+08:00 ] 127.0.0.1 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2016-06-19T16:51:27+08:00 ] 127.0.0.1 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0059s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('一群猴子排成一圈，按1，2，...，n依次编号。然后从第 1只开始数，数到第m只,把它 踢出圈，从它后面再开始数，再数到第 m只，在把它踢出去...，如此不停的进行下去，直 到最后只剩下一只猴子为止，那只猴子就叫做大王。要求编程模拟此过程，输入 m、n, 输 出最后那个大王的编号。','17','<span style=\"line-height:1.5;\">//这是著名的约瑟夫环问题，</span><span style=\"line-height:1.5;\">使用php 来模拟这个过程</span><br />
+<span style=\"line-height:1.5;\">function king($n,$m){</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$monkey = range(1,$n);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$i = 0;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">while(count($monkey) &gt; 1){</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$i += 1;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$head = array_shift($monkey); //一个个出列最前面的猴子，array_shift将数组开头的单元移出数组&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">if($i % $m != 0){</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">//如果不是m的倍数，则把该猴子返回尾部，否则就抛掉，也就是出列了</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">array_push($monkey,$head);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">//剩下的最后一个就是大王</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">return $monkey[0];</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">//测试</span><br />
+<span style=\"line-height:1.5;\">echo king(10,7);</span><br />') [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-06-19T16:51:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2016-06-19T16:52:12+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/179
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 179  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002459s ]
+
+[ 2016-06-19T16:54:57+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/179
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001005s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='猴子选大王--经典面试题',`cat_id`='17',`content`='<span>一群猴子排成一圈，按1，2，...，n依次编号。然后从第 1只开始数，数到第m只，把它踢出圈，从它后面再开始数，再数到第 m只，在把它踢出去...，如此不停的进行下去，直 到最后只剩下一只猴子为止，那只猴子就叫做大王。要求编程模拟此过程，输入 m、n, 输出最后那个大王的编号？<br />
+//这是著名的约瑟夫环问题，使用php 来模拟这个过程<br />
+function king($n,$m){<br />
+&nbsp; &nbsp; $monkey = range(1,$n);<br />
+&nbsp; &nbsp; $i = 0;<br />
+&nbsp; &nbsp; while(count($monkey) &gt; 1){<br />
+&nbsp; &nbsp; &nbsp; &nbsp; $i += 1;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; $head = array_shift($monkey); //一个个出列最前面的猴子，array_shift将数组开头的单元移出数组&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if($i % $m != 0){<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //如果不是m的倍数，则把该猴子返回尾部，否则就抛掉，也就是出列了<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; array_push($monkey,$head);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; //剩下的最后一个就是大王<br />
+&nbsp; &nbsp; return $monkey[0];<br />
+}<br />
+//测试<br />
+echo king(10,7);<br />
+</span><br />' WHERE `id` = 179 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000820s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000931s ]
+
+[ 2016-06-19T16:55:17+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/179
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 179  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2016-06-19T16:55:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/179
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: UPDATE `sc_message` SET `title`='猴子选大王--经典面试题',`cat_id`='17',`content`='<span><span style=\"line-height:1.5;\">一群猴子排成一圈，按1，2，...，n依次编号。然后从第 1只开始数，数到第m只，把它踢出圈，从它后面再开始数，再数到第 m只，在把它踢出去...，如此不停的进行下去，直 到最后只剩下一只猴子为止，那只猴子就叫做大王。要求编程模拟此过程，输入 m、n, 输出最后那个大王的编号？</span><br />
+<span style=\"line-height:1.5;\"> <span style=\"line-height:1.5;\">//这是著名的约瑟夫环问题，使用php 来模拟这个过程</span></span><br />
+<span style=\"line-height:1.5;\"> function king($n,$m){</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; $monkey = range(1,$n);</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; $i = 0;</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; while(count($monkey) &gt; 1){</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; $i += 1;</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; $head = array_shift($monkey); //一个个出列最前面的猴子，array_shift将数组开头的单元移出数组&nbsp;</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; if($i % $m != 0){</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //如果不是m的倍数，则把该猴子返回尾部，否则就抛掉，也就是出列了</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; array_push($monkey,$head);</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; //剩下的最后一个就是大王</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; return $monkey[0];</span><br />
+<span style=\"line-height:1.5;\"> }</span><br />
+<span style=\"line-height:1.5;\"> //测试</span><br />
+<span style=\"line-height:1.5;\"> echo king(10,7);</span><br />
+</span>' WHERE `id` = 179 [ RunTime:0.0548s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+
+[ 2016-06-19T16:58:58+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('mysql_fetch_row() 和 mysql_fetch_array() 有什么分别？','17','<span style=\"line-height:1.5;\">mysql_fetch_row() 把数据库的一列储存在一个以零为基数的数组中，第一栏在数组的索引0，第二栏在索引1，依此类推。</span><br />
+<span style=\"line-height:1.5;\">mysql_fetch_assoc() 把数据库的一列储存在一个关联数组中，数组的索引就是字段名称，</span><br />
+<span style=\"line-height:1.5;\">例如我的数据库查询送回“first_name”、“last_name”、“email”三个字段，数组的索引便是“first_name”、“last_name”和“email”。</span><br />
+<span style=\"line-height:1.5;\">mysql_fetch_array()可以同时送回mysql_fetch_row()和mysql_fetch_assoc() 的值。</span><br />') [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-06-19T16:58:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-06-19T16:59:10+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/178
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 178  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001191s ]
+
+[ 2016-06-19T16:59:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/178
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001272s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: UPDATE `sc_message` SET `title`='说出PHP常见的魔术常量有哪些？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">__LINE__，文件中当前行号</span><br />
+<span style=\"line-height:1.5;\">__FILE__，文件的完整路径和文件名</span><br />
+<span style=\"line-height:1.5;\">__DIR_，文件所在的目录</span><br />
+<span style=\"line-height:1.5;\">__FUNCTION__，函数名称</span><br />
+<span style=\"line-height:1.5;\">__CLASS__，类的名称</span><br />
+<span style=\"line-height:1.5;\">__TRAIT__，Trait的名字</span><br />
+<span style=\"line-height:1.5;\">__METHOD__，类的方法名</span><br />
+<span style=\"line-height:1.5;\">__NAMESPACE__，当前命名空间的名字</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 178 [ RunTime:0.0359s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-06-19T17:02:45+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001585s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('常用的正则模式修正符有哪些?什么是贪婪模式?怎么反正贪婪模式?什么是子组模式?','17','<span style=\"line-height:1.5;\">1. 模式修正符就是几个字母，我们在每个正则表达式中可以一次使用一个，也可以连续使用多个，每一个具一定的意义,模式修正符是对整个正则表达式调优使用，也可以说是对正则表达式功能的扩展。</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160619/20160619170156_59666.png\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">2. 贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配.</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;</span><span></span><strong><span style=\"line-height:1.5;\">默认是贪婪模式；在量词后面直接加上一个问号？就是非贪婪模式。</span></strong><span></span><br />
+<span style=\"line-height:1.5;\">　量词：{m,n}：m到n个</span><br />
+<span style=\"line-height:1.5;\">　　　　　*：任意多个</span><br />
+<span style=\"line-height:1.5;\">　　　　　+：一个到多个</span><br />
+<span style=\"line-height:1.5;\">　　　　　？：0或一个</span><br />') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001396s ]
+
+[ 2016-06-19T17:02:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002049s ]
+
+[ 2016-06-19T17:08:08+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 181  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001195s ]
+
+[ 2016-06-19T17:08:28+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003059s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0061s ]
+SQL: UPDATE `sc_message` SET `title`='常用的正则模式修正符有哪些?什么是贪婪模式?怎么反正贪婪模式?什么是子组模式?',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">1. 模式修正符就是几个字母，我们在每个正则表达式中可以一次使用一个，也可以连续使用多个，每一个具一定的意义,模式修正符是对整个正则表达式调优使用，也可以说是对正则表达式功能的扩展。</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160619/20160619170822_87080.bmp\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">2. 贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配.</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;</span><span></span><strong><span style=\"line-height:1.5;\">默认是贪婪模式；在量词后面直接加上一个问号？就是非贪婪模式。</span></strong><span></span><br />
+<span style=\"line-height:1.5;\">　量词：{m,n}：m到n个</span><br />
+<span style=\"line-height:1.5;\">　　　　　*：任意多个</span><br />
+<span style=\"line-height:1.5;\">　　　　　+：一个到多个</span><br />
+<span style=\"line-height:1.5;\">　　　　　？：0或一个</span><br />' WHERE `id` = 181 [ RunTime:0.0574s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+
+[ 2016-06-19T17:08:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 181  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2016-06-19T17:09:58+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0063s ]
+SQL: UPDATE `sc_message` SET `title`='常用的正则模式修正符有哪些?什么是贪婪模式?什么是反贪婪模式?什么是子组模式?',`cat_id`='17',`content`='<p>
+	<span style=\"line-height:1.5;\">1. 模式修正符就是几个字母，我们在每个正则表达式中可以一次使用一个，也可以连续使用多个，每一个具一定的意义,模式修正符是对整个正则表达式调优使用，也可以说是对正则表达式功能的扩展。</span>
+</p>
+<p>
+	<span style=\"line-height:1.5;\"><span style=\"line-height:1.5;\">2. 贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配。</span></span>
+</p>
+<span style=\"line-height:1.5;\"><span style=\"line-height:1.5;\">&nbsp; &nbsp;</span><span></span><strong>默认是贪婪模式；在量词后面直接加上一个问号？就是非贪婪模式。</strong><span></span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　量词：{m,n}：m到n个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　*：任意多个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　+：一个到多个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　？：0或一个</span><span style=\"color:#E53333;\"></span></span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160619/20160619170822_87080.bmp\" alt=\"\" /><br />
+<br />' WHERE `id` = 181 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-06-19T17:11:01+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 181  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2016-06-19T17:11:09+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/181
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0068s ]
+SQL: UPDATE `sc_message` SET `title`='常用的正则模式修正符有哪些?什么是贪婪模式?什么是非贪婪模式?什么是子组模式?',`cat_id`='17',`content`='<p>
+	<span style=\"line-height:1.5;\">1. 模式修正符就是几个字母，我们在每个正则表达式中可以一次使用一个，也可以连续使用多个，每一个具一定的意义,模式修正符是对整个正则表达式调优使用，也可以说是对正则表达式功能的扩展。</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\"><span style=\"line-height:1.5;\">2. 贪婪与非贪婪模式影响的是被量词修饰的子表达式的匹配行为，贪婪模式在整个表达式匹配成功的前提下，尽可能多的匹配，而非贪婪模式在整个表达式匹配成功的前提下，尽可能少的匹配。</span></span> 
+</p>
+<span style=\"line-height:1.5;\"><span style=\"line-height:1.5;\">&nbsp; &nbsp;</span><span></span><strong>默认是贪婪模式；在量词后面直接加上一个问号？就是非贪婪模式。</strong><span></span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　量词：{m,n}：m到n个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　*：任意多个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　+：一个到多个</span><br />
+<span style=\"line-height:1.5;color:#E53333;\">　　　　　？：0或一个</span><span style=\"color:#E53333;\"></span></span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160619/20160619170822_87080.bmp\" alt=\"\" /><br />
+<br />' WHERE `id` = 181 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001010s ]
+
+[ 2016-06-19T17:20:47+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0059s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('写出你使用过的发送POST请求的方式？','17','<span style=\"line-height:1.5;\">1. application/x-www-form-urlencoded</span><br />
+<span style=\"line-height:1.5;\">这应该是最常见的 POST 提交数据的方式了。浏览器的原生 &lt;form&gt; 表单，如果不设置 enctype 属性，那么最终就会以 application/x-www-form-urlencoded 方式提交数据。</span><br />
+<br />
+<span style=\"line-height:1.5;\">2. multipart/form-data</span><br />
+<span style=\"line-height:1.5;\">这又是一个常见的 POST 数据提交的方式。我们使用表单上传文件时，必须让 &lt;form&gt; 表单的 enctyped 等于 multipart/form-data</span><br />
+<br />
+<span style=\"line-height:1.5;\">3. application/json</span><br />
+<span style=\"line-height:1.5;\">application/json 这个 Content-Type 作为响应头大家肯定不陌生。实际上，现在越来越多的人把它作为请求头，用来告诉服务端消息主体是序列化后的 JSON 字符串。</span><br />
+<br />
+<span style=\"line-height:1.5;\">4. text/xml</span><br />
+<div>
+	<br />
+</div>
+<span style=\"line-height:1.5;\">5.还可以使用curl和fsockopen函数来发送POST请求，使用curl要注意开启curl扩展</span>') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-06-19T17:20:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002538s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001111s ]
+
+[ 2016-06-19T18:37:24+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2016-06-19T18:51:13+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001340s ]
+
+[ 2016-06-19T19:00:22+08:00 ] 127.0.0.1 /index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000948s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+

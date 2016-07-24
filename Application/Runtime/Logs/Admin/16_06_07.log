@@ -1,0 +1,1353 @@
+[ 2016-06-07T11:27:26+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008705s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-06-07T11:38:17+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0988s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('为什么在修改my.ini文件之后，在cmd命令下查看数据库默认的字符集不是latin1而是utf8?','<span style=\"color:#E53333;\"><strong>服务器端字符集包含:</strong></span><br />
+服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集<br />
+客户端字符集：客户端字符集、连接字符集、结果字符集。<br />
+<span style=\"color:#E53333;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+如果字段没有设置字符集，将继承数据表的字符集；<br />
+如果数据表没有设置字符集，将继承数据库的字符集；<br />
+如果数据库没有设置字符集，将继承服务器的字符集；<br />
+如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。<br />
+<span style=\"color:#E53333;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+可以通过<span style=\"color:#E53333;\">show variables like \'char%\'</span>命令查看当前系统字符集设置情况<br />
+<span style=\"color:#E53333;\"><strong>服务器字符集设置：</strong></span>修改my.ini配置文件，一般不推荐修改<br />
+<span style=\"color:#E53333;\"><strong>客户端设置：</strong></span>使用set names 来修改<br />
+<span style=\"color:#E53333;\"><strong>字段字符集设置：</strong></span><br />
+ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性<br />
+<span style=\"color:#E53333;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>') [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000931s ]
+
+[ 2016-06-07T11:38:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001713s ]
+
+[ 2016-06-07T11:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2016-06-07T11:38:33+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001355s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2016-06-07T11:38:39+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;\"><strong>服务器端字符集包含:</strong></span><br />
+服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集<br />
+客户端字符集：客户端字符集、连接字符集、结果字符集。<br />
+<span style=\"color:#E53333;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+如果字段没有设置字符集，将继承数据表的字符集；<br />
+如果数据表没有设置字符集，将继承数据库的字符集；<br />
+如果数据库没有设置字符集，将继承服务器的字符集；<br />
+如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。<br />
+<span style=\"color:#E53333;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+可以通过<span style=\"color:#E53333;\">show variables like \'char%\'</span>命令查看当前系统字符集设置情况<br />
+<span style=\"color:#E53333;\"><strong>服务器字符集设置：</strong></span>修改my.ini配置文件，一般不推荐修改<br />
+<span style=\"color:#E53333;\"><strong>客户端设置：</strong></span>使用set names 来修改<br />
+<span style=\"color:#E53333;\"><strong>字段字符集设置：</strong></span><br />
+ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性<br />
+<span style=\"color:#E53333;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0214s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-06-07T11:39:26+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2016-06-07T11:39:31+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0081s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:1.5;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:1.5;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:1.5;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:1.5;\"> 可以通过</span><span style=\"color:#E53333;line-height:1.5;\">show variables like \'char%\'</span><span style=\"line-height:1.5;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:1.5;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>客户端设置：</strong></span><span style=\"line-height:1.5;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:1.5;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-06-07T11:39:48+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001104s ]
+
+[ 2016-06-07T11:39:53+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:2;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:2;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:2;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:2;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:2;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:2;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;line-height:2;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:2;\"> 可以通过</span><span style=\"color:#E53333;line-height:2;\">show variables like \'char%\'</span><span style=\"line-height:2;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:2;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>客户端设置：</strong></span><span style=\"line-height:2;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:2;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:2;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001046s ]
+
+[ 2016-06-07T11:40:04+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001010s ]
+
+[ 2016-06-07T11:40:23+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0064s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:1.5;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:1.5;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:1.5;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:1.5;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:1.5;\"> 可以通过</span><span style=\"color:#E53333;line-height:1.5;\">show variables like \'char%\'</span><span style=\"line-height:1.5;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:1.5;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>客户端设置：</strong></span><span style=\"line-height:1.5;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:1.5;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0584s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-06-07T11:40:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009354s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2016-06-07T11:40:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000451s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001619s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0079s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:2;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:2;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:2;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:2;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:2;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:2;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;line-height:2;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:2;\"> 可以通过</span><span style=\"color:#E53333;line-height:2;\">show variables like \'char%\'</span><span style=\"line-height:2;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:2;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>客户端设置：</strong></span><span style=\"line-height:2;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:2;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:2;\">字段字符集应该在属性之前，类型之后来添加</span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0789s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-06-07T11:45:47+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('如果我在创建数据库的时候不想设定字符集是utf8，希望它默认的就是utf8，那么可以通过哪些方法实现?','<p>
+	我们可以通过<span style=\"line-height:1.5;\">修改my.ini配置文件来实现，默认安装MYSQL时选择的字符集就是utf8。</span>
+</p>
+<p>
+	<span style=\"line-height:1.5;\">
+	<p>
+		my.ini 配置决定两个选项：database、server
+	</p>
+	<p>
+		set&nbsp;names&nbsp;gbk 决定客户端的三个字符集：client（显示字符集）、connection（连接字符集）、results<span style=\"line-height:1.5;\">（返回结果字符集）</span>
+	</p>
+</span>
+</p>') [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-06-07T11:45:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001154s ]
+
+[ 2016-06-07T14:52:56+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('如果数据表的字符集是utf8，而数据字段的字符集是latin1，那么当向数据表中插入一条记录时候，是否会显示乱码？','<p>
+	如果数据表的字符集是utf8，而数据字段的字符集是latin1，此时无法向数据表中插入一个中文字符串的值，会提示一个错误：不正确的value值对于当前已经修改为latin1字符集的那个字段<span></span>
+</p>
+<p>
+	原则是：越靠近数据，字符集优先级越高，最高的设置应该是字段的字符集
+</p>
+<p>
+	也就是说如果字段字符集设置为latin1，那么插入的值不能是中文，因此汉字无法正常插入
+</p>
+<p>
+	<span style=\"line-height:1.5;\">而正常在cmd下显示的中文</span><span style=\"line-height:1.5;\">结果不会乱码，是因为</span><span style=\"line-height:1.5;\">在通过&nbsp;</span><span style=\"line-height:1.5;\">set names gbk;&nbsp;</span><span style=\"line-height:1.5;\">设置客户端字符集之后，影响了返回结果字符集（character_set_results</span><span style=\"line-height:1.5;\">），而最终的显示结果就是以返回结果字符集为准，也就是说当数据表的字符集和表中字段的字符集都是utf8，在 set names&nbsp;gbk 设置字符集之后，数据结果虽然能够在cmd下正常显示，但是在cmd下看到的最终结果其实是gbk，并不是utf8<span></span></span>
+</p>
+<p>
+	<br />
+</p>') [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-06-07T14:52:57+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-06-07T14:53:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 50  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-06-07T14:56:18+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: UPDATE `sc_message` SET `title`='如果数据表的字符集是utf8，而数据字段的字符集是latin1，那么当向数据表中插入一条记录时候，是否会显示乱码？',`content`='<p>
+	如果数据表的字符集是utf8，而数据字段的字符集是latin1，此时无法向数据表中插入一个中文字符串的值，
+</p>
+<p>
+	会提示一个错误：不正确的value值对于当前已经修改为latin1字符集的那个字段<span></span> 
+</p>
+<p>
+	字符集的优先级原则是：越靠近数据，字符集优先级越高，最高的设置应该是字段的字符集
+</p>
+<p>
+	也就是说如果字段字符集设置为latin1，那么插入的值不能是中文，因此汉字无法正常插入
+</p>
+<p>
+	<span style=\"line-height:1.5;\">而正常在cmd下显示的中文</span><span style=\"line-height:1.5;\">结果不会乱码，是因为</span><span style=\"line-height:1.5;\">在通过</span><span style=\"line-height:1.5;\">set names gbk;</span><span style=\"line-height:1.5;\">设置客户端字符集之后，</span>
+</p>
+<p>
+	<span style=\"line-height:1.5;\">影响了返回结果字符集（character_set_results</span><span style=\"line-height:1.5;\">），</span><span style=\"line-height:1.5;\">而最终的显示结果就是以返回结果字符集为准，</span>
+</p>
+<p>
+	<span style=\"line-height:1.5;\">也就是说当数据表的字符集和表中字段的字符集都是utf8的时候，在set names&nbsp;gbk声明客户端字符集之后，数据结果虽然能够正常显示，但是在cmd下看到的最终结果其实是gbk，并不是utf8</span>
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 50 [ RunTime:0.0541s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+
+[ 2016-06-07T14:57:29+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000975s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 50  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001803s ]
+
+[ 2016-06-07T14:57:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001367s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: UPDATE `sc_message` SET `title`='如果数据表的字符集是utf8，而数据字段的字符集是latin1，那么当向数据表中插入一条记录时候，是否会显示乱码？',`content`='<p>
+	如果数据表的字符集是utf8，而数据字段的字符集是latin1，此时无法向数据表中插入一个中文字符串的值，
+</p>
+<p>
+	会提示一个错误：不正确的value值对于当前已经修改为latin1字符集的那个字段<span></span> 
+</p>
+<p>
+	字符集的优先级原则是：越靠近数据，字符集优先级越高，最高的设置应该是字段的字符集
+</p>
+<p>
+	也就是说如果字段字符集设置为latin1，那么插入的值不能是中文，因此汉字无法正常插入
+</p>
+<p>
+	<span style=\"line-height:1.5;\">而正常在cmd下显示的中文</span><span style=\"line-height:1.5;\">结果不会乱码，是因为</span><span style=\"line-height:1.5;\">在通过</span><span style=\"line-height:1.5;\">set names gbk;</span><span style=\"line-height:1.5;\">设置客户端字符集之后，</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\">影响了返回结果字符集（character_set_results</span><span style=\"line-height:1.5;\">），</span><span style=\"line-height:1.5;\">而最终的显示结果就是以返回结果字符集为准，</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\">也就是说如果数据表的字符集和表中字段的字符集都是utf8，在set names&nbsp;gbk声明客户端字符集之后，数据结果虽然能够正常显示，但是在cmd下看到的最终结果其实是gbk，并不是utf8</span> 
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 50 [ RunTime:0.0581s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+
+[ 2016-06-07T15:05:17+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 50  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000967s ]
+
+[ 2016-06-07T15:05:46+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/50
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: UPDATE `sc_message` SET `title`='如果数据表的字符集是utf8，而数据字段的字符集是latin1，那么当向数据表中插入一条记录时候，是否会显示乱码？',`content`='<p>
+	如果数据表的字符集是utf8，而数据字段的字符集是latin1，此时无法向数据表中插入一个中文字符串的值，
+</p>
+<p>
+	会提示一个错误：不正确的value值对于当前已经修改为latin1字符集的那个字段<span></span> 
+</p>
+<p>
+	字符集的优先级原则是：越靠近数据，字符集优先级越高，最高的设置应该是字段的字符集
+</p>
+<p>
+	也就是说如果字段字符集设置为latin1，那么插入的值不能是中文，因此汉字无法正常插入
+</p>
+<p>
+	<span style=\"line-height:1.5;\">而正常在cmd下显示的中文</span><span style=\"line-height:1.5;\">结果不会乱码，是因为</span><span style=\"line-height:1.5;\">在通过</span><span style=\"line-height:1.5;\">set names gbk;</span><span style=\"line-height:1.5;\">设置客户端字符集之后，</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\">影响了返回结果字符集（character_set_results</span><span style=\"line-height:1.5;\">），</span><span style=\"line-height:1.5;\">而最终的显示结果就是以返回结果字符集为准，</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\">也就是说如果数据表的字符集和表中字段的字符集都是utf8，在set names&nbsp;gbk声明客户端字符集之后，数据结果虽然能够正常显示，但是在cmd下看到的最终结果其实是gbk，并不是utf8</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\"><img src=\"/Public/Admin/js/editor/attached/image/20160607/20160607150540_65755.jpg\" alt=\"\" /><br />
+</span>
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 50 [ RunTime:0.1184s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015908s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-06-07T15:08:32+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/49
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001148s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 49  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001087s ]
+
+[ 2016-06-07T15:08:35+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/49
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: UPDATE `sc_message` SET `title`='如果在创建数据库的时候不想设定字符集是utf8，希望它默认的就是utf8，那么可以通过哪些方法实现?',`content`='<p>
+	我们可以通过<span style=\"line-height:1.5;\">修改my.ini配置文件来实现，默认安装MYSQL时选择的字符集就是utf8。</span> 
+</p>
+<p>
+	<span style=\"line-height:1.5;\"> </span>
+</p>
+<p>
+	my.ini 配置决定两个选项：database、server
+</p>
+<p>
+	set&nbsp;names&nbsp;gbk 决定客户端的三个字符集：client（显示字符集）、connection（连接字符集）、results<span style=\"line-height:1.5;\">（返回结果字符集）</span> 
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 49 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-06-07T15:09:04+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001484s ]
+
+[ 2016-06-07T15:09:24+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0069s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:2;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:2;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:2;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:2;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:2;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:2;\">由于数据库字符集优先级高于服务器的，</span><br />
+<span style=\"color:#E53333;line-height:2;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:2;\"> 可以通过</span><span style=\"color:#E53333;line-height:2;\">show variables like \'char%\'</span><span style=\"line-height:2;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:2;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>客户端设置：</strong></span><span style=\"line-height:2;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:2;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:2;\"><span style=\"color:#E53333;\">注意：</span><span style=\"color:#E53333;\">字段字符集应该在属性之前，类型之后来添加</span></span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0571s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001333s ]
+
+[ 2016-06-07T15:09:46+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 48  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000983s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2016-06-07T15:09:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/48
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006395s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='为什么在修改my.ini文件之后，在cmd下查看数据库默认的字符集不是latin1而是utf8?',`content`='<span style=\"color:#E53333;line-height:2;\"><strong>服务器端字符集包含:</strong></span><br />
+<span style=\"line-height:2;\"> 服务器端字符集：服务器字符集、数据库字符集、数据表字符集、字段字符集</span><br />
+<span style=\"line-height:2;\"> 客户端字符集：客户端字符集、连接字符集、结果字符集。</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器端各字符集继承关系:</strong></span><br />
+<span style=\"line-height:2;\"> 如果字段没有设置字符集，将继承数据表的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据表没有设置字符集，将继承数据库的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果数据库没有设置字符集，将继承服务器的字符集；</span><br />
+<span style=\"line-height:2;\"> 如果服务器没有设置字符集，将使用安装MySQL时的字符集(latin1)。</span><br />
+<span style=\"color:#E53333;line-height:2;\">越靠近数据的字符集优先级越高。</span><br />
+<span style=\"color:#E53333;line-height:2;\">由于数据库字符集优先级高于服务器的，</span><span style=\"color:#E53333;line-height:2;\">因此在修改my.ini文件之后，在cmd下查看数据库默认的字符集仍然是utf8。</span><br />
+<span style=\"line-height:2;\"> 可以通过</span><span style=\"color:#E53333;line-height:2;\">show variables like \'char%\'</span><span style=\"line-height:2;\">命令查看当前系统字符集设置情况</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>服务器字符集设置：</strong></span><span style=\"line-height:2;\">修改my.ini配置文件，一般不推荐修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>客户端设置：</strong></span><span style=\"line-height:2;\">使用set names 来修改</span><br />
+<span style=\"color:#E53333;line-height:2;\"><strong>字段字符集设置：</strong></span><br />
+<span style=\"line-height:2;\"> ALTER TABLE table表名 MODIFY 字段名 字段类型 [CHARSET gbk] 字段属性</span><br />
+<span style=\"color:#E53333;line-height:2;\"><span style=\"color:#E53333;\">注意：</span><span style=\"color:#E53333;\">字段字符集应该在属性之前，类型之后来添加</span></span><br />
+<span style=\"color:#E53333;\"></span><br />
+<span></span>' WHERE `id` = 48 [ RunTime:0.0480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+
+[ 2016-06-07T15:21:19+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001221s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('timestamp和datetime字段二者的区别？','<p>
+	这两种字段类型在cmd下显示的是一样的结果，但是timestamp只能插入一个整型，不能是其它，而datetime是只能以规定的格式输入。
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	datetime字段类型长度是19位的字符串。像“2016-03-12&nbsp;00:00:00”格式。直接输入19个字符的日期时间字符串；
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp一般插入一个整型(int)类型的数据，该字段的内容一般不手动输入，通常用now()函数插入，会自动获得当前的时间戳
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp类型的字段当你要更新某一条<span></span>某个数据时，timestamp所在的列的值会自动更新
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	<br />
+</p>
+<p>
+	<span style=\"color:#E53333;\"><strong>提示：</strong></span>一般在数据表中，发布时间、更新时间这些字段的值用int类型。也就是将PHP的时间戳存到数据表中。读取时，再用PHP<span></span>的date()函数格式化成想要的格式。
+</p>') [ RunTime:0.1886s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011536s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001070s ]
+
+[ 2016-06-07T15:21:20+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001622s ]
+
+[ 2016-06-07T15:21:44+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 51  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001739s ]
+
+[ 2016-06-07T15:22:07+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001285s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='timestamp和datetime字段二者的区别？',`content`='<p>
+	这两种字段类型在cmd下显示的结果<span>是一样的</span>，但是timestamp只能插入一个整型，不能是其它，而datetime是只能以规定的格式输入。
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	datetime字段类型长度是19位的字符串。像“2016-03-12&nbsp;00:00:00”格式。直接输入19个字符的日期时间字符串；
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp一般插入一个整型(int)类型的数据，该字段的内容一般不手动输入，通常用now()函数插入，会自动获得当前的时间戳
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp类型的字段当你要更新某一条<span></span>某个数据时，timestamp所在的列的值会自动更新
+</p>
+<p>
+	<span style=\"color:#E53333;\"><strong>提示：</strong></span>一般在数据表中，发布时间、更新时间这些字段的值用int类型。也就是将PHP的时间戳存到数据表中。读取时，再用PHP<span></span>的date()函数格式化成想要的格式。
+</p>' WHERE `id` = 51 [ RunTime:0.0518s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000477s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001129s ]
+
+[ 2016-06-07T15:22:25+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 51  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011595s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001838s ]
+
+[ 2016-06-07T15:24:07+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='timestamp和datetime字段二者的区别？',`content`='<p>
+	这两种字段类型在cmd下显示的结果<span>是一样的</span>，但是timestamp只能插入一个整型，不能是其它，而datetime是只能以规定的格式输入。
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	datetime字段类型长度是19位的字符串。像“2016-03-12&nbsp;00:00:00”格式。直接输入19个字符的日期时间字符串；
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp一般插入一个整型(int)类型的数据，该字段的内容一般不手动输入，通常用now()函数插入，会自动获得当前的时间戳
+</p>
+<p style=\"margin-left:21.0000pt;text-indent:-21.0000pt;\">
+	timestamp类型的字段当你要更新某一条<span></span>某个数据时，timestamp所在的列的值会自动更新
+</p>
+<p>
+	<span style=\"color:#E53333;\"><strong>提示：</strong></span>一般在数据表中，发布时间、更新时间这些字段用int类型表示。也就是将PHP的时间戳（time()函数获得）存到数据表中。在读取时再用PHP中<span></span>的date()函数格式化成想要的格式。
+</p>' WHERE `id` = 51 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-06-07T15:27:55+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001298s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('如果id已经设置了一个not null的属性，那么在插入一条记录的时候是否可以对id字段的值添加一个值为null的数据？','<p>
+	可以，但首先要保证id主键要是自增长的。
+</p>
+<p>
+	<p>
+		因为id字段它的属性有auto_increment、primary&nbsp;key。
+	</p>
+	<p>
+		primary&nbsp;key列的值：不能重复，也不能为空，但是<span style=\"line-height:1.5;\">id字段的值，可以用关键字NULL代替</span>
+	</p>
+</p>') [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+
+[ 2016-06-07T15:27:56+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2016-06-07T15:49:20+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001853s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('在设置sex字段类型的时候，如果默认设置了属性 not null，而我又设置了default \'男\'，那么我的这个not null 类型的属性可以去掉吗','<p>
+	如果去掉not&nbsp;null属性，则sex列的值可以写入NULL值。
+</p>
+<p>
+	例如：enum(‘男’,&nbsp;‘女’)，并省略了not&nbsp;null，则可以添加一个NULL值。
+</p>
+<p>
+	not null表示该字段是否可以为空，default 表示的是默认值，如果要插入的字段有值，则不会插入默认值，加上not null表示该字段不能插入null空值
+</p>') [ RunTime:0.0392s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002570s ]
+
+[ 2016-06-07T15:49:21+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-06-07T15:51:40+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/53
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 53  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001994s ]
+
+[ 2016-06-07T15:52:46+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/53
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: UPDATE `sc_message` SET `title`='在设置字段类型的时候，如果默认设置了属性 not null，而我又设置了default ，那么这个not null 类型的属性可以去掉吗？',`content`='<p>
+	如果去掉not&nbsp;null属性，则该列的值可以写入NULL值。
+</p>
+<p>
+	例如：enum(‘男’,&nbsp;‘女’)，并省略了not&nbsp;null，则可以添加一个NULL值。
+</p>
+<p>
+	not null表示该字段是否可以为空，default 表示的是默认值，如果要插入的字段有值，则不会插入默认值，加上not null表示该字段不能插入null空值
+</p>' WHERE `id` = 53 [ RunTime:0.0047s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000775s ]
+
+[ 2016-06-07T15:53:03+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/53
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 53  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001323s ]
+
+[ 2016-06-07T15:53:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/53
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: UPDATE `sc_message` SET `title`='在设置字段类型的时候，如果默认设置了属性not null，而我又设置了default，那么这个not null类型的属性可以去掉吗？',`content`='<p>
+	如果去掉not&nbsp;null属性，则该列的值可以写入NULL值。
+</p>
+<p>
+	例如：enum(‘男’,&nbsp;‘女’)，并省略了not&nbsp;null，则可以添加一个NULL值。
+</p>
+<p>
+	not null表示该字段是否可以为空，default 表示的是默认值，如果要插入的字段有值，则不会插入默认值，加上not null表示该字段不能插入null空值
+</p>' WHERE `id` = 53 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000816s ]
+
+[ 2016-06-07T15:57:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sc_message` (`title`,`content`) VALUES ('关于字段类型中比如int(8)中的这个8怎么理解？','<p>
+	首先要了解对于不同整型int tinyint smallint bigint这几个默认的占据空间（或者存储空间）是多大？
+</p>
+<p>
+	tinyint:(1)&nbsp;占用1个字节(8位2进制)&nbsp;&nbsp;&nbsp;
+</p>
+<p>
+	smallint:(2)&nbsp;&nbsp;占用2个字节(16位2进制)&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p>
+	mediumint:(3)&nbsp;&nbsp;占用3个字节(24位2进制)&nbsp;&nbsp;
+</p>
+<p>
+	int(4)&nbsp;&nbsp;&nbsp;占用4个字节(32位2进制)
+</p>
+<p>
+	bigint:(8)&nbsp;&nbsp;占用8个字节(64位2进制)
+</p>
+<p>
+	int(8)对于整数类型&nbsp;括号里面的值不影响类型实际可以存储的范围，只是代表显示宽度，当实际内容不到这个宽度的时候在前面用0填充（只有在创建表的时候使用了ZEROFILL才有这个效果）
+</p>
+<p>
+	也就是说<span style=\"line-height:1.5;\">int(4) int(6) int(8)不会影响它的可存储范围，它还是-2147483648-2147483647，它还是占用4个字节，只是如果在创建表的时候指定这一列用ZEROFILL修饰了，那么取回值得时候如果不够这里指定的位数，会在前面填0</span>
+</p>
+<p>
+	<span style=\"line-height:1.5;\">
+	<p>
+		int(8)理解：如果整型值不够8位，则左边用空格填充。如果超过8位，则不用填充空格。这个空格是看不见的，可以使用zerofill来验证。
+	</p>
+	<p>
+		例如：int(1)能不能存储1000这个数。int中的最大值不能超过2147483647。<span style=\"line-height:1.5;\"></span>
+	</p>
+</span>
+</p>') [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001611s ]
+
+[ 2016-06-07T15:57:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008150s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001018s ]
+
+[ 2016-06-07T15:59:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 54  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2016-06-07T16:02:10+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: UPDATE `sc_message` SET `title`='关于字段类型中比如int(8)中的这个8怎么理解？',`content`='<p>
+	<span style=\"line-height:1.5;\">首先要了解对于不同整型int tinyint smallint bigint这几个默认的占据空间（或者存储空间）是多大？</span><br />
+<span style=\"line-height:1.5;\">tinyint:(1) 占用1个字节(8位2进制) &nbsp;&nbsp;</span><br />
+<span style=\"line-height:1.5;\">smallint:(2) &nbsp;占用2个字节(16位2进制) &nbsp; &nbsp;</span><br />
+<span style=\"line-height:1.5;\">mediumint:(3) &nbsp;占用3个字节(24位2进制) &nbsp;</span><br />
+<span style=\"line-height:1.5;\">int(4) &nbsp; 占用4个字节(32位2进制)</span><br />
+<span style=\"line-height:1.5;\">bigint:(8) &nbsp;占用8个字节(64位2进制)</span><br />
+<span style=\"line-height:1.5;\">int(8)对于整数类型 括号里面的值不影响类型实际可以存储的范围，只是代表显示宽度，当实际内容不到这个宽度的时候在前面用0填充（只有在创建表的时候使用了ZEROFILL才有这个效果）</span><br />
+<span style=\"line-height:1.5;\">也就是说int(4) int(6) int(8)不会影响它的可存储范围，它还是（-2147483648-2147483647），它还是占用4个字节，只是如果在创建表的时候指定这一列用ZEROFILL修饰了，那么取回值得时候如果不够这里指定的位数，会在前面填0</span><br />
+<span style=\"line-height:1.5;\">int(8)理解：如果整型值不够8位，则左边用空格填充。如果超过8位，则不用填充空格。这个空格是看不见的，可以使用zerofill来验证。</span><br />
+<span style=\"line-height:1.5;\">例如：int(1)能不能存储1000这个数。int中的最大值如果是有符号的（默认）：2147483647，如果是无符号的： 4294967295</span><br />
+<br />
+<span style=\"line-height:1.5;\"></span>
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 54 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000866s ]
+

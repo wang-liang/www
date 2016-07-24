@@ -1,0 +1,177 @@
+[ 2016-07-11T18:40:31+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.3840s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.036002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-11T18:43:49+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.1230s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('jquery判断复选框选中状态以及区分attr和prop','15','<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	最近项目中需要用jquery判断input里checkbox是否被选中，发现用attr（）获取不到复选框改变后的状态，最后查资料发现jQuery 1.6以后新增加了prop（）方法，借用官方的一段描述就是：
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	<span style=\"line-height:21.6px;font-size:12px;color:#333333;\"><strong>The difference between attributes and properties can be important in specific situations. Before jQuery 1.6, the .attr() method sometimes took property values into account when retrieving some attributes, which could cause inconsistent behavior. As of jQuery 1.6, the .prop() method provides a way to explicitly retrieve property values, while .attr() retrieves attributes.<br />
+</strong></span>上面翻译过来大概就是：prop（）处理来自节点对象自带的属性，它包含了很多原生的property；而attr（）来自对象的attributes，可能是我们在元素节点上添加属性节点才会有的。当然，前面的翻译仅代表本人观点，如有错误，可以提出来~~
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	简单的来说就是：
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。<br />
+对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。<br />
+上面的描述也许有点模糊，引用一些大神的博客内容加上我的测试，举几个例子就知道了。
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	&nbsp;<strong>第一个例子：</strong><span style=\"line-height:21.6px;font-size:12px;color:#800000;\"><strong>元素的固有属性以及自定义属性说明</strong></span>
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	&lt;a href=\"<a href=\"http://www.baidu.com/\">http://www.baidu.com</a>\" target=\"_self\" class=\"btn\"&gt;百度&lt;/a&gt;<br />
+&nbsp;这个例子里&lt;a&gt;元素的DOM属性有“href、target和class\"，这些属性就是&lt;a&gt;元素本身就带有的属性，也是W3C标准里就包含有这几个属性，或者说在IDE里能够智能提示出的属性，这些就叫做固有属性。处理这些属性时，建议使用prop方法。
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	&lt;a href=\"#\" id=\"link1\" action=\"delete\"&gt;删除&lt;/a&gt;<br />
+这个例子里&lt;a&gt;元素的DOM属性有“href、id和action”，很明显，前两个是固有属性，而后面一个“action”属性是我们自己自定义上去的，&lt;a&gt;元素本身是没有这个属性的。这种就是自定义的DOM属性。处理这些属性时，建议使用attr方法。使用prop方法取值和设置属性值时，都会返回undefined值。
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	<strong>第二个例子：</strong><span style=\"line-height:21.6px;font-size:12px;color:#800000;\"><strong>prop（）与attr（）在表单应用上的区别</strong></span>
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	先来看一段用attr（）方法代码：
+</p>
+<div style=\"margin:0px;padding:0px;font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+<pre class=\"brush:xhtml;\">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=\"utf-8\" /&gt;
+  &lt;title&gt; attr() vs prop()&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h3&gt;用attr（）判断是否选中&lt;/h3&gt;
+  &lt;input type=\"checkbox\" id=\"input01\" /&gt;我是第一个复选框A&lt;br /&gt;
+  &lt;input type=\"checkbox\" id=\"input02\" checked=\"checked\"/&gt;我是第二个复选框B&lt;br /&gt;
+  &lt;input type=\"button\" id=\"button01\" value=\"获取A的checked状态\" /&gt;
+  &lt;input type=\"button\" id=\"button02\" value=\"获取B的checked状态\" /&gt;
+  &lt;script src=\"js/jquery-1.11.0.js\" type=\"text/javascript\" charset=\"utf-8\"&gt;&lt;/script&gt;
+  &lt;script type=\"text/javascript\"&gt;
+   $(function(){
+    $(\"#button01\").click(function(){
+     var $state01=$(\"#input01\").attr(\"checked\");
+     alert($state01);
+    })
+    $(\"#button02\").click(function(){
+     var $state02=$(\"#input02\").attr(\"checked\");
+     alert($state02);
+    })
+   })
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	上面这段程序的测试结果是：
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;text-align:center;background-color:#FFFFFF;\">
+	<img src=\"http://files.jb51.net/file_images/article/201512/2015121890526239.gif?201511189536\" alt=\"\" style=\"border:1px solid #CCCCCC;\" />
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	从动态图可以看出来，用attr（）获取不到用户选中的状态，它只返回表单的初始值。
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	&nbsp;再来看一段用prop（）方法代码：
+</p>
+<div style=\"margin:0px;padding:0px;font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+<pre class=\"brush:xhtml;\">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=\"utf-8\" /&gt;
+  &lt;title&gt; attr() vs prop()&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h3&gt;用prop（）判断是否选中&lt;/h3&gt;
+  &lt;input type=\"checkbox\" id=\"input01\" /&gt;我是第一个复选框A&lt;br /&gt;
+  &lt;input type=\"checkbox\" id=\"input02\" checked=\"checked\"/&gt;我是第二个复选框B&lt;br /&gt;
+  &lt;input type=\"button\" id=\"button01\" value=\"获取A的checked状态\" /&gt;
+  &lt;input type=\"button\" id=\"button02\" value=\"获取B的checked状态\" /&gt;
+  &lt;script src=\"js/jquery-1.11.0.js\" type=\"text/javascript\" charset=\"utf-8\"&gt;&lt;/script&gt;
+  &lt;script type=\"text/javascript\"&gt;
+   $(function(){
+    $(\"#button01\").click(function(){
+     var $state01=$(\"#input01\").prop(\"checked\");
+     alert($state01);
+    })
+    $(\"#button02\").click(function(){
+     var $state02=$(\"#input02\").prop(\"checked\");
+     alert($state02);
+    })
+   })
+  &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	上面这段程序的测试结果是：
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;text-align:center;background-color:#FFFFFF;\">
+	<img src=\"http://files.jb51.net/file_images/article/201512/2015121890549489.gif?201511189558\" alt=\"\" style=\"border:1px solid #CCCCCC;\" />
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	从动态图可以看出来，用prop（）可以实时获取用户的选中与取消操作状态。
+</p>
+<p style=\"font-size:14px;font-family:tahoma, arial, 宋体;background-color:#FFFFFF;\">
+	因此我总结的差别就是：property记录的值会按照用户操作实时更新，而attribute记录的都是初始值
+</p>') [ RunTime:0.1710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-11T18:43:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

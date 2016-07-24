@@ -1,0 +1,94 @@
+[ 2016-07-16T17:49:00+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.068004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.2670s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.114007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.037002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009001s ]
+
+[ 2016-07-16T17:50:00+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0760s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中的G方法实现标记位置和区间统计功能','11','<span style=\"line-height:1.5;\">ThinkPHP长期以来需要通过debug_start、debug_end方法甚至Debug类才能完成的功能，3.1版本中被一个简单的G方法取代了，不可不谓是一次华丽升级，G方法的作用包括标记位置和区间统计两个功能，下面来看下具体用法：</span><br />
+<span style=\"line-height:1.5;\">　　标记位置</span><br />
+<span style=\"line-height:1.5;\">　　G方法的第一个用法就是标记位置，例如：</span><br />
+<span style=\"line-height:1.5;\">G(\'begin\');&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　表示把当前位置标记为begin标签，并且记录当前位置的执行时间，如果环境支持的话，还能记录内存占用情况。可以在任何位置调用G方法标记。</span><br />
+<span style=\"line-height:1.5;\">　　运行时间统计</span><br />
+<span style=\"line-height:1.5;\">　　标记位置后，我们就可以再次调用G方法进行区间统计了，例如：</span><br />
+<span style=\"line-height:1.5;\">G(\'begin\');&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">// ...其他代码段&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">G(\'end\');&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">// ...也许这里还有其他代码&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">// 进行统计区间&nbsp;</span><br />
+<span style=\"line-height:1.5;\">&nbsp;</span><br />
+<span style=\"line-height:1.5;\">echo G(\'begin\',\'end\').\'s\';</span><br />
+<span style=\"line-height:1.5;\">　　G(\'begin\',\'end\') 表示统计begin位置到end位置的执行时间(单位是秒)，begin必须是一个已经标记过的位置，如果这个时候end位置还没被标记过，则会自动把当前位置标记为end标签，输出的结果类似于：</span><br />
+<span style=\"line-height:1.5;\">0.0056s&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　默认的统计精度是小数点后4位，如果觉得这个统计精度不够，还可以设置例如：</span><br />
+<span style=\"line-height:1.5;\">G(\'begin\',\'end\',6).\'s\';&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　可能的输出会变成：</span><br />
+<span style=\"line-height:1.5;\">0.005587s&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　内存开销统计</span><br />
+<span style=\"line-height:1.5;\">　　如果你的环境支持内存占用统计的话，还可以使用G方法进行区间内存开销统计(单位为kb)，例如：</span><br />
+<span style=\"line-height:1.5;\">echo G(\'begin\',\'end\',\'m\').\'kb\';&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　第三个参数使用m表示进行内存开销统计，输出的结果可能是：</span><br />
+<span style=\"line-height:1.5;\">625kb&nbsp;</span><br />
+<span style=\"line-height:1.5;\">　　同样，如果end标签没有被标记的话，会自动把当前位置先标记位end标签。</span><br />
+<span style=\"line-height:1.5;\">　　如果环境不支持内存统计，则该参数无效，仍然会进行区间运行时间统计。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-16T17:50:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

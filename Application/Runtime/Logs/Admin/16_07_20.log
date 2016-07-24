@@ -1,0 +1,94 @@
+[ 2016-07-20T19:22:22+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.035002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010001s ]
+
+[ 2016-07-20T19:23:11+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0840s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('Mysql错误消息 语言设置','1','<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	今天操作数据库的时候，mysql错误返回语句 ，一直报的是非英语的语言 ，百般纠结 ，简单的还大致能猜出意思 , 复杂了就会实在看不懂的 ，举个简单的如下：
+</p>
+<pre class=\"brush:html;toolbar: true; auto-links: false;\">[Err]&nbsp;1064&nbsp;-&nbsp;Erreur&nbsp;de&nbsp;syntaxe&nbsp;pr&amp;egrave;s&nbsp;de&nbsp;\'2\'&nbsp;&amp;agrave;&nbsp;la&nbsp;ligne&nbsp;1</pre>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	于是在网上搜了好多资料 ，几乎搜不到相关的信息， 后来终于找到一篇信息里提到 ，说是与mysqld相关&nbsp;
+</p>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	最后在mysql安装目录下 果然找到share/目录下 有许多的语言包
+</p>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	于是打开my.ini &nbsp; 找到
+</p>
+<pre class=\"brush:html;toolbar: true; auto-links: false;\">[mysqld]port=3306explicit_defaults_for_timestamp&nbsp;=&nbsp;TRUE</pre>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	找到[mysqld]节点 在下面加上下面这句
+</p>
+<pre class=\"brush:html;toolbar: true; auto-links: false;\">language=d:/wamp/bin/mysql/mysql5.6.17/share/english</pre>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	然后重启
+</p>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	Ok , 搞定
+</p>
+<pre class=\"brush:html;toolbar: true; auto-links: false;\">[Err]&nbsp;1064&nbsp;-&nbsp;You&nbsp;have&nbsp;an&nbsp;error&nbsp;in&nbsp;your&nbsp;SQL&nbsp;syntax;&nbsp;check&nbsp;the&nbsp;manual&nbsp;that&nbsp;corresponds&nbsp;to&nbsp;your&nbsp;MySQL&nbsp;server&nbsp;version&nbsp;for&nbsp;the&nbsp;right&nbsp;syntax&nbsp;to&nbsp;use&nbsp;near&nbsp;\'2\'&nbsp;at&nbsp;line&nbsp;1</pre>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	<strong>注 :　</strong>
+</p>
+<pre class=\"brush:html;toolbar: true; auto-links: false;\">d:/wamp/bin/mysql/mysql5.6.17/share/english</pre>
+<p style=\"color:#010101;font-family:宋体, tahoma, Srial, helvetica, sans-serif;font-size:14px;background-color:#F5F8FD;\">
+	目录路径一定要写成 / , 开始的时候写的方向的 , mysql就无法启动了&nbsp;
+</p>') [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-20T19:23:13+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

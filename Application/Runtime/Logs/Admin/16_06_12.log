@@ -1,0 +1,2137 @@
+[ 2016-06-12T10:32:52+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.2209s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020715s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2016-06-12T10:33:15+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2016-06-12T10:54:48+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('请说明php中传值与传引用的区别？值传递和引用传递的优缺点是什么?','4','<span style=\"line-height:1.5;\">值传递是将变量的值复制一份给了另外一个变量，二者指向不同的内存空间</span><br />
+<span style=\"line-height:1.5;\">引用传递是将变量的地址传给了另一变量，二者指向同一内存空间</span><br />
+<span style=\"line-height:1.5;\">按值传递：函数范围内对值的任何改变在函数外部都会被忽略</span><br />
+<span style=\"line-height:1.5;\">按引用传递：函数范围内对值的任何改变在函数外部也能反映出这些修改</span><br />
+<span style=\"line-height:1.5;\">优缺点：按值传递时，php必须复制值。特别是对于大型的字符串和对象来说，这将会是一个代价很大的操作。</span><br />
+<span style=\"line-height:1.5;\">按引用传递则不需要复制值，对于性能提高很有好处</span><br />
+<span style=\"line-height:1.5;\"></span><br />') [ RunTime:0.0461s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001106s ]
+
+[ 2016-06-12T10:54:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001045s ]
+
+[ 2016-06-12T10:59:40+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0041s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('在面向对象中什么是隐藏（hide）？什么是重载（overloading）？什么是重写（override）？','6','<p>
+	<span style=\"line-height:1.5;\">什么是隐藏（hide）？（了解）</span><br />
+<span style=\"line-height:1.5;\">隐藏其实就是子类的方法和属性屏蔽了与其同名的父类的方法和属性，就叫做隐藏。</span><br />
+<span style=\"line-height:1.5;\">隐藏一词可以这么理解：在调用一个类的成员方法的时候,编译器会沿着类的继承链逐级的向上查找方法的定义，如果找到了那么就停止查找了，所以如果一个子类和一个父类都有同一个同名（暂且不论参数是否相同）的方法，而编译器最终选择了在子类中的方法，那么我们就说这个子类的成员方法“隐藏”了父类的成员方法，也就是说它阻止了编译器继续向上查找方法的定义。</span><br />
+<span style=\"line-height:1.5;\">什么是重载（overloading）？</span><br />
+<span style=\"line-height:1.5;\">重载在通常的面向对象语言中含义：</span><br />
+<span style=\"line-height:1.5;\">是指，在一个类（对象）中，有多个名字相同但形参不同的方法的现象；</span><br />
+<span style=\"line-height:1.5;\">重载在“php语言”中的含义：</span><br />
+<span style=\"line-height:1.5;\">是指，当对一个对象或类使用其未定义的属性或方法的时候，会自动调用其对应的魔术方法。</span><br />
+<span style=\"line-height:1.5;\">重载其实就是给我们这样一个机会，来应对上述“出错”的情况，使代码不产生错误。</span><br />
+<span style=\"line-height:1.5;\">重载主要分为属性重载和方法重载。</span><br />
+<span style=\"line-height:1.5;\">什么是重写（override）？</span><br />
+<span style=\"line-height:1.5;\">重写又叫“覆盖”，就是将从父类继承下来的属性或方法重新定义。只有保护的或公有的属性或方法能够被覆盖。</span><br />
+<span style=\"line-height:1.5;\">私有属性和私有方法的重写问题：私有属性和方法都不能覆盖，但其实子类可以定义跟父类私有的同名属性或方法。只是当作一个自身的新的属性或方法来看待而已。不过方法的参数必须一致。</span><br />
+<span style=\"line-height:1.5;\">构造方法的重写问题：构造方法不但可以像其他普通方法一样重写，而且，比普通方法更宽松：重写的时候参数可以不一致。</span><br />
+	<div>
+		<span style=\"line-height:1.5;\">总结：</span><br />
+<span style=\"line-height:1.5;\">静态方法和属性可以被继承</span><br />
+<span style=\"line-height:1.5;\">静态方法和属性只有一份数据，他不属于任何一个对象，而只属于该类本身，</span><br />
+<span style=\"line-height:1.5;\">也可以理解为该类所有对象所共有的数据。</span><br />
+<span style=\"line-height:1.5;\">如果子类中出现和父类同名的静态方法和属性，将重新创建新的同名的静态方法和属性，隐藏原来的静态方法和属性，而不是重写和覆盖。</span><br />
+<span style=\"line-height:1.5;\">静态属性和方法，在类被调用时创建。每一个类在创建的时候如果有静态属性，则系统会在静态空间内为每一个类开辟一个静态区，用来标识该静态属性属于哪一个类。</span><br />
+<span style=\"line-height:1.5;\"></span><span style=\"line-height:1.5;\"></span><br />
+	</div>
+<span style=\"line-height:1.5;\"></span>
+</p>') [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000559s ]
+
+[ 2016-06-12T10:59:41+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-06-12T10:59:52+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001150s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 96  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000980s ]
+
+[ 2016-06-12T11:00:18+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/96
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: UPDATE `sc_message` SET `title`='在面向对象中什么是隐藏？什么是重载？什么是重写？',`cat_id`='6',`content`='<p>
+	<span style=\"line-height:1.5;\">什么是隐藏（hide）？（了解）</span><br />
+<span style=\"line-height:1.5;\">隐藏其实就是子类的方法和属性屏蔽了与其同名的父类的方法和属性，就叫做隐藏。</span><br />
+<span style=\"line-height:1.5;\">隐藏一词可以这么理解：在调用一个类的成员方法的时候,编译器会沿着类的继承链逐级的向上查找方法的定义，如果找到了那么就停止查找了，所以如果一个子类和一个父类都有同一个同名（暂且不论参数是否相同）的方法，而编译器最终选择了在子类中的方法，那么我们就说这个子类的成员方法“隐藏”了父类的成员方法，也就是说它阻止了编译器继续向上查找方法的定义。</span><br />
+<span style=\"line-height:1.5;\">什么是重载（overloading）？</span><br />
+<span style=\"line-height:1.5;\">重载在通常的面向对象语言中含义：</span><br />
+<span style=\"line-height:1.5;\">是指，在一个类（对象）中，有多个名字相同但形参不同的方法的现象；</span><br />
+<span style=\"line-height:1.5;\">重载在“php语言”中的含义：</span><br />
+<span style=\"line-height:1.5;\">是指，当对一个对象或类使用其未定义的属性或方法的时候，会自动调用其对应的魔术方法。</span><br />
+<span style=\"line-height:1.5;\">重载其实就是给我们这样一个机会，来应对上述“出错”的情况，使代码不产生错误。</span><br />
+<span style=\"line-height:1.5;\">重载主要分为属性重载和方法重载。</span><br />
+<span style=\"line-height:1.5;\">什么是重写（override）？</span><br />
+<span style=\"line-height:1.5;\">重写又叫“覆盖”，就是将从父类继承下来的属性或方法重新定义。只有保护的或公有的属性或方法能够被覆盖。</span><br />
+<span style=\"line-height:1.5;\">私有属性和私有方法的重写问题：私有属性和方法都不能覆盖，但其实子类可以定义跟父类私有的同名属性或方法。只是当作一个自身的新的属性或方法来看待而已。不过方法的参数必须一致。</span><br />
+<span style=\"line-height:1.5;\">构造方法的重写问题：构造方法不但可以像其他普通方法一样重写，而且，比普通方法更宽松：重写的时候参数可以不一致。</span>
+</p>
+<div>
+	<span style=\"line-height:1.5;\">总结：</span><br />
+<span style=\"line-height:1.5;\">静态方法和属性可以被继承</span><br />
+<span style=\"line-height:1.5;\">静态方法和属性只有一份数据，他不属于任何一个对象，而只属于该类本身，</span><br />
+<span style=\"line-height:1.5;\">也可以理解为该类所有对象所共有的数据。</span><br />
+<span style=\"line-height:1.5;\">如果子类中出现和父类同名的静态方法和属性，将重新创建新的同名的静态方法和属性，隐藏原来的静态方法和属性，而不是重写和覆盖。</span><br />
+<span style=\"line-height:1.5;\">静态属性和方法，在类被调用时创建。每一个类在创建的时候如果有静态属性，则系统会在静态空间内为每一个类开辟一个静态区，用来标识该静态属性属于哪一个类。</span><br />
+<span style=\"line-height:1.5;\"></span><span style=\"line-height:1.5;\"></span><br />
+</div>
+<span style=\"line-height:1.5;\"></span> 
+<p>
+	<br />
+</p>' WHERE `id` = 96 [ RunTime:0.0709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-06-12T11:03:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 93  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-06-12T11:03:27+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: UPDATE `sc_message` SET `title`='PHP中数组常用的堆栈与队列结构的处理函数是什么？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">在PHP中数组常被当作堆栈（后进先出：LIFO）与队列（先进先出：FIFO）结构来使用。PHP提供了一组函数可以用于push与pop（堆栈）还有shift与unshift（队列）来操作数组元素。堆栈与列队在实践中应用非常广泛。</span><br />
+<span style=\"line-height:1.5;\">我们可以先看下堆栈：</span><br />
+<span style=\"line-height:1.5;\">代码如下:</span><br />
+<span style=\"line-height:1.5;\">&nbsp;<!--?php<br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr = array();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_push($arr,\'aaa\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_push($arr,\'bbb\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr.pop();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">?&gt;</span><br />
+<span style=\"line-height:1.5;\">如果你打算把数组作为队列来使用（FIFO），你可以使用array_unshift()来增加元素，使用array_shift()删除：</span><br />
+<span style=\"line-height:1.5;\">代码如下:</span><br />
+<span style=\"line-height:1.5;\"><!--?php<br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr = array();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_unshift($arr,\'aaa\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_unshift($arr,\'bbb\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_shift($arr);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">?&gt;</span><br />
+<div>
+	<br />
+</div>
+</span></span>' WHERE `id` = 93 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-06-12T11:03:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 93  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2016-06-12T11:04:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 93  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2016-06-12T11:04:50+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/93
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0041s ]
+SQL: UPDATE `sc_message` SET `title`='PHP中数组常用的堆栈与队列结构的处理函数是什么？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">在PHP中数组常被当作堆栈（后进先出：LIFO）与队列（先进先出：FIFO）结构来使用。PHP提供了一组函数可以用于push与pop（堆栈）还有shift与unshift（队列）来操作数组元素。堆栈与列队在实践中应用非常广泛。</span><br />
+<span style=\"line-height:1.5;\">我们可以先看下堆栈：</span><br />
+<span style=\"line-height:1.5;\">代码如下:</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&lt;?php</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr = array();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_push($arr,\'aaa\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_push($arr,\'bbb\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr.pop();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">?&gt;</span><br />
+<span style=\"line-height:1.5;\">如果你打算把数组作为队列来使用（FIFO），你可以使用array_unshift()来增加元素，使用array_shift()删除：</span><br />
+<span style=\"line-height:1.5;\">代码如下:</span><br />
+<span style=\"line-height:1.5;\">&lt;?php</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;$arr = array();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_unshift($arr,\'aaa\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_unshift($arr,\'bbb\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;array_shift($arr);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp;print_r($arr);</span><br />
+<span style=\"line-height:1.5;\">?&gt;</span><br />
+<div>
+	<br />
+</div>' WHERE `id` = 93 [ RunTime:0.0492s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001006s ]
+
+[ 2016-06-12T11:12:58+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('面向对象中的__autoload()魔术方法是如何运作的？','6','<span style=\"line-height:1.5;\">使用这个魔术方法</span><span style=\"line-height:1.5;\">的基本条件是类文件的文件名要和类的名字保持一致。</span><br />
+<span style=\"line-height:1.5;\">当程序执行到实例化某个类的时候，如果在实例化前没有引入这个类文件，那么就自动执行__autoload()方法</span><span style=\"line-height:1.5;\">。</span><br />
+<span style=\"line-height:1.5;\">这个方法</span><span style=\"line-height:1.5;\">会根据实例化的类的名称来查找这个类文件的路径，当判断这个类文件路径下确实存在这个类文件后就执行include或者require来载入该类，然后程序继续执行，如果这个路径下不存在该文件时就提示错误。</span><br />
+<span style=\"line-height:1.5;\">使用自动载入的魔术方法</span><span style=\"line-height:1.5;\">可以不必要写很多个include或者require函数。</span><br />') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-06-12T11:13:00+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2016-06-12T11:37:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('函数内怎么使用局部变量和全局变量？','4','<span style=\"line-height:1.5;\">局部变量是函数内部定义的变量，其作用域是所在的函数。如果函数外还有一个跟局部变量名字一样的变量，</span><br />
+<span style=\"line-height:1.5;\">程序会认为它们两个是完全不同的两个变量。当退出函数的时候，其中的局部变量就同时被清除。</span><br />
+<span style=\"line-height:1.5;\">全局变量是定义在所有函数以外的变量，其作用域是整个php文件，但是在用户自定义的函数内部是无法使用的。</span><br />
+<span style=\"line-height:1.5;\">如果一定要在用户自定义的函数内部使用全局变量，那么就需要使用global关键字声明。</span><br />
+<span style=\"line-height:1.5;\">也就是说如果在函数内的变量前加上golbal来修饰，那么函数内部就可以访问到这个全局变量，</span><br />
+<span style=\"line-height:1.5;\">不仅可以利用这个全局变量进行运算而且可以对这个全局变量进行重新赋值。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-06-12T11:37:26+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002849s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2016-06-12T11:38:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('页面字符出现乱码，怎么解决？','4','<span style=\"line-height:1.5;\">1.首先考虑当前文件是不是设置了字符集。查看是不是meta标签中写了charset，如果是php页面还可以看看是不是在header()函数中指定了charset；</span><br />
+<span style=\"line-height:1.5;\">2.如果设置了字符集（也就是charset），那么判断当前文件保存的编码格式是否跟页面设置的字符集保持一致，两者必须保持统一；</span><br />
+<span style=\"line-height:1.5;\">3.如果涉及到从数据库提取数据，那么判断数据库查询时的字符集是否跟当前页面设置的字符集一致，两者必须统一。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+
+[ 2016-06-12T11:38:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001047s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006854s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-06-12T11:40:44+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0091s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('php访问数据库有哪几步？','1','<span style=\"line-height:1.5;\">1.连接数据库服务器：</span><br />
+<span style=\"line-height:1.5;\">mysql_connect(\'数据库服务器的主机名或ip\',\'数据库服务器的用户名\',\'数据库服务器的密码\');</span><br />
+<span style=\"line-height:1.5;\">2.选择数据库： </span><br />
+<span style=\"line-height:1.5;\">mysql_select_db(数据库名);</span><br />
+<span style=\"line-height:1.5;\">3.设置从数据库提取数据的字符集：</span><br />
+<span style=\"line-height:1.5;\">mysql_query(\"set names utf8\");</span><br />
+<span style=\"line-height:1.5;\">4.执行sql语句：</span><br />
+<span style=\"line-height:1.5;\">mysql_query(sql语句);</span><br />
+<span style=\"line-height:1.5;\">5.关闭结果集，释放资源：</span><br />
+<span style=\"line-height:1.5;\">mysql_free_result($result);</span><br />
+<span style=\"line-height:1.5;\">6.关闭与数据库服务器的连接：</span><br />
+<span style=\"line-height:1.5;\">mysql_close($link);</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+
+[ 2016-06-12T11:40:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001958s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003275s ]
+
+[ 2016-06-12T11:43:55+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('php文件上传应该注意哪些细节？','17','<span style=\"line-height:1.5;\">1.首现要在php.ini中开启文件上传；</span><br />
+<span style=\"line-height:1.5;\">2.在php.ini中有一个允许上传的最大值，必要的时候可以更改；</span><br />
+<span style=\"line-height:1.5;\">3.上传表单一定要记住在form标签中写上enctype=\"multipart/form-data\"；</span><br />
+<span style=\"line-height:1.5;\">4.要注意上传文件的大小、文件类型是否符合要求，上传后存放的路径是否存在。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+
+[ 2016-06-12T11:43:57+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000893s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001756s ]
+
+[ 2016-06-12T11:44:08+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 100  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2016-06-12T11:44:13+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001628s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0098s ]
+SQL: UPDATE `sc_message` SET `title`='php访问数据库有哪几步？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">1.连接数据库服务器：</span><br />
+<span style=\"line-height:1.5;\">mysql_connect(\'数据库服务器的主机名或ip\',\'数据库服务器的用户名\',\'数据库服务器的密码\');</span><br />
+<span style=\"line-height:1.5;\">2.选择数据库： </span><br />
+<span style=\"line-height:1.5;\">mysql_select_db(数据库名);</span><br />
+<span style=\"line-height:1.5;\">3.设置从数据库提取数据的字符集：</span><br />
+<span style=\"line-height:1.5;\">mysql_query(\"set names utf8\");</span><br />
+<span style=\"line-height:1.5;\">4.执行sql语句：</span><br />
+<span style=\"line-height:1.5;\">mysql_query(sql语句);</span><br />
+<span style=\"line-height:1.5;\">5.关闭结果集，释放资源：</span><br />
+<span style=\"line-height:1.5;\">mysql_free_result($result);</span><br />
+<span style=\"line-height:1.5;\">6.关闭与数据库服务器的连接：</span><br />
+<span style=\"line-height:1.5;\">mysql_close($link);</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 100 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000337s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-06-12T11:44:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 99  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009990s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001868s ]
+
+[ 2016-06-12T11:44:24+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/99
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='页面字符出现乱码，怎么解决？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">1.首先考虑当前文件是不是设置了字符集。查看是不是meta标签中写了charset，如果是php页面还可以看看是不是在header()函数中指定了charset；</span><br />
+<span style=\"line-height:1.5;\">2.如果设置了字符集（也就是charset），那么判断当前文件保存的编码格式是否跟页面设置的字符集保持一致，两者必须保持统一；</span><br />
+<span style=\"line-height:1.5;\">3.如果涉及到从数据库提取数据，那么判断数据库查询时的字符集是否跟当前页面设置的字符集一致，两者必须统一。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 99 [ RunTime:0.0792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-06-12T11:44:31+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001647s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 98  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2016-06-12T11:44:36+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='函数内怎么使用局部变量和全局变量？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">局部变量是函数内部定义的变量，其作用域是所在的函数。如果函数外还有一个跟局部变量名字一样的变量，</span><br />
+<span style=\"line-height:1.5;\">程序会认为它们两个是完全不同的两个变量。当退出函数的时候，其中的局部变量就同时被清除。</span><br />
+<span style=\"line-height:1.5;\">全局变量是定义在所有函数以外的变量，其作用域是整个php文件，但是在用户自定义的函数内部是无法使用的。</span><br />
+<span style=\"line-height:1.5;\">如果一定要在用户自定义的函数内部使用全局变量，那么就需要使用global关键字声明。</span><br />
+<span style=\"line-height:1.5;\">也就是说如果在函数内的变量前加上golbal来修饰，那么函数内部就可以访问到这个全局变量，</span><br />
+<span style=\"line-height:1.5;\">不仅可以利用这个全局变量进行运算而且可以对这个全局变量进行重新赋值。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 98 [ RunTime:0.0546s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-06-12T11:44:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 97  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008678s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2016-06-12T11:44:47+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: UPDATE `sc_message` SET `title`='面向对象中的__autoload()魔术方法是如何运作的？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">使用这个魔术方法</span><span style=\"line-height:1.5;\">的基本条件是类文件的文件名要和类的名字保持一致。</span><br />
+<span style=\"line-height:1.5;\">当程序执行到实例化某个类的时候，如果在实例化前没有引入这个类文件，那么就自动执行__autoload()方法</span><span style=\"line-height:1.5;\">。</span><br />
+<span style=\"line-height:1.5;\">这个方法</span><span style=\"line-height:1.5;\">会根据实例化的类的名称来查找这个类文件的路径，当判断这个类文件路径下确实存在这个类文件后就执行include或者require来载入该类，然后程序继续执行，如果这个路径下不存在该文件时就提示错误。</span><br />
+<span style=\"line-height:1.5;\">使用自动载入的魔术方法</span><span style=\"line-height:1.5;\">可以不必要写很多个include或者require函数。</span><br />' WHERE `id` = 97 [ RunTime:0.0813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001283s ]
+
+[ 2016-06-12T11:44:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001792s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 95  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000917s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2016-06-12T11:44:58+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='请说明php中传值与传引用的区别？值传递和引用传递的优缺点是什么?',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">值传递是将变量的值复制一份给了另外一个变量，二者指向不同的内存空间</span><br />
+<span style=\"line-height:1.5;\">引用传递是将变量的地址传给了另一变量，二者指向同一内存空间</span><br />
+<span style=\"line-height:1.5;\">按值传递：函数范围内对值的任何改变在函数外部都会被忽略</span><br />
+<span style=\"line-height:1.5;\">按引用传递：函数范围内对值的任何改变在函数外部也能反映出这些修改</span><br />
+<span style=\"line-height:1.5;\">优缺点：按值传递时，php必须复制值。特别是对于大型的字符串和对象来说，这将会是一个代价很大的操作。</span><br />
+<span style=\"line-height:1.5;\">按引用传递则不需要复制值，对于性能提高很有好处</span><br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 95 [ RunTime:0.0468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001064s ]
+
+[ 2016-06-12T11:49:09+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('你是怎么理解正则表达式的？','17','<span style=\"line-height:1.5;\">正则表达式是用于描述字符排列模式的一种语法规则。正则表达式也叫做模式表达式。</span><br />
+<span style=\"line-height:1.5;\">网站开发中正则表达式最常用于表单提交信息前的客户端验证。</span><br />
+<span style=\"line-height:1.5;\">比如验证用户名是否输入正确，密码输入是否符合要求，email、手机号码等信息的输入是否合法。</span><br />
+<span style=\"line-height:1.5;\">在php中正则表达式主要用于字符串的分割、匹配、查找和替换操作。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000645s ]
+
+[ 2016-06-12T11:49:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001125s ]
+
+[ 2016-06-12T11:50:32+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('你是如何认识ajax的？','17','<span style=\"line-height:1.5;\">ajax是asynchronous javascript and xml的缩写，是javascript、xml、css、DOM等多个技术的组合。</span><br />
+<span style=\"line-height:1.5;\">Ajax的工作原理是一个页面的指定位置可以加载另一个页面所有的输出内容，这样就实现了一个静态页面也能获取到</span><br />
+<span style=\"line-height:1.5;\">数据库中的返回数据信息了。所以ajax技术实现了一个静态网页在不刷新整个页面的情况下与服务器通信，</span><br />
+<span style=\"line-height:1.5;\">减少了用户等待时间，同时也从而降低了网络流量，增强了客户体验的友好程度。</span><br />
+<span style=\"line-height:1.5;\">Ajax的优点是：</span><br />
+<span style=\"line-height:1.5;\">1.减轻了服务器端负担，将一部分以前由服务器负担的工作转移到客户端执行，利用客户端闲置的资源进行处理；</span><br />
+<span style=\"line-height:1.5;\">2.在只局部刷新的情况下更新页面，增加了页面反应速度，使用户体验更友好。</span><br />
+<span style=\"line-height:1.5;\">Ajax的缺点是不利于seo推广优化，因为搜索引擎无法直接访问到ajax请求的内容。</span><br />
+<span style=\"line-height:1.5;\">ajax的核心技术是XMLHttpRequest，它是javascript中的一个对象。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009348s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+
+[ 2016-06-12T11:50:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-06-12T11:52:01+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('你如何理解smarty，smarty的运用过程中注意哪些细节？','0','<span style=\"line-height:1.5;\">Smarty是基于MVC概念的一种模板引擎，它将一个页面程序分成了两部分来实现：即视图层和控制层，</span><br />
+<span style=\"line-height:1.5;\">也就是说smarty技术将用户UI与php代码分离开。</span><br />
+<span style=\"line-height:1.5;\">这样程序员和美工各司其职，互不干扰。</span><br />
+<span style=\"line-height:1.5;\">smarty运用过程中要注意以下几个问题：</span><br />
+<span style=\"line-height:1.5;\">1.正确配置smarty。主要要配置smarty模板文件的路径；</span><br />
+<span style=\"line-height:1.5;\">2.php页面中使用assign赋值 和 display显示页面；</span><br />
+<span style=\"line-height:1.5;\">3.smarty模板文件中不允许出现php代码段，所有的注释，变量，函数都要包含在定界符内。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-06-12T11:52:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001957s ]
+
+[ 2016-06-12T11:52:25+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/104
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001476s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 104  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000931s ]
+
+[ 2016-06-12T11:52:29+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/104
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='你如何理解smarty，smarty的运用过程中注意哪些细节？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">Smarty是基于MVC概念的一种模板引擎，它将一个页面程序分成了两部分来实现：即视图层和控制层，</span><br />
+<span style=\"line-height:1.5;\">也就是说smarty技术将用户UI与php代码分离开。</span><br />
+<span style=\"line-height:1.5;\">这样程序员和美工各司其职，互不干扰。</span><br />
+<span style=\"line-height:1.5;\">smarty运用过程中要注意以下几个问题：</span><br />
+<span style=\"line-height:1.5;\">1.正确配置smarty。主要要配置smarty模板文件的路径；</span><br />
+<span style=\"line-height:1.5;\">2.php页面中使用assign赋值 和 display显示页面；</span><br />
+<span style=\"line-height:1.5;\">3.smarty模板文件中不允许出现php代码段，所有的注释，变量，函数都要包含在定界符内。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 104 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001108s ]
+
+[ 2016-06-12T11:55:07+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 23  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000448s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003392s ]
+
+[ 2016-06-12T11:56:48+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0061s ]
+SQL: UPDATE `sc_message` SET `title`='简述什么是面向对象编程？',`cat_id`='6',`content`='<span style=\"line-height:1.5;\">OOP(object oriented programming)，即面向对象编程，其中两个最重要的概念就是类和对象。</span><br />
+<span style=\"line-height:1.5;\">世间万物都具有自身的属性和方法，通过这些属性和方法可以区分出不同的物质。</span><br />
+<span style=\"line-height:1.5;\">属性和方法的集合就形成了类，类是面向对象编程的核心和基础，</span><br />
+<span style=\"line-height:1.5;\">通过类就将零散的用于实现某个功能的代码有效地管理起来了。</span><br />
+<span style=\"line-height:1.5;\">类只是具备了某些功能和属性的抽象模型，而实际应用中需要一个一个实体，也就是需要对类进行实例化，</span><br />
+<span style=\"line-height:1.5;\">类在实例化之后就是对象。</span><br />
+<span style=\"line-height:1.5;\">OOP具有三大特点：</span><br />
+<span style=\"line-height:1.5;\">1. 封装性：</span><br />
+<span style=\"line-height:1.5;\">也称为信息隐藏，就是将一个类的使用和实现分开，只保留部分接口和方法与外部联系，或者说只公开了一些供开发人员使用的方法。</span><br />
+<span style=\"line-height:1.5;\">于是开发人员只需要关注这个类如何使用，而不用去关心其具体的实现过程，这样就能实现MVC分工合作，也能有效避免程序间相互依赖，</span><br />
+<span style=\"line-height:1.5;\">实现代码模块间松藕合。</span><br />
+<span style=\"line-height:1.5;\">2. 继承性：</span><br />
+<span style=\"line-height:1.5;\">就是子类自动继承其父级类中的属性和方法，并可以添加新的属性和方法或者对部分属性和方法进行重写。继承增加了代码的可重用性。</span><br />
+<span style=\"line-height:1.5;\">php只支持单继承，也就是说一个子类只能有一个父类。</span><br />
+<span style=\"line-height:1.5;\">3. 多态性：</span><br />
+<span style=\"line-height:1.5;\">子类继承了来自父级类中的属性和方法，并对其中部分方法进行重写。</span><br />
+<span style=\"line-height:1.5;\">于是多个子类中虽然都具有同一个方法，但是这些子类实例化的对象调用这些相同的方法后却可以获得完全不同的结果，这种技术就是多态性。</span><br />
+<span style=\"line-height:1.5;\">多态性增强了软件的灵活性。</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">也可以这样理解：</span><br />
+<span style=\"line-height:1.5;\">OOP核心思想：使用人类思考问题、解决问题的方式来编写程序。</span><br />
+<span style=\"line-height:1.5;\">面向对象的三大特征：</span><br />
+<span style=\"line-height:1.5;\">封装，通常有两层含义，第一层，将属性和方法封装到一起（通过class），形成一个完整的对象。第二层，对外隐藏具体的实现细节，提供一个可调用的接口（访问权限修饰符）。</span><br />
+<span style=\"line-height:1.5;\">继承，子类继承了父类的属性和方法（非私有的），使用继承可以实现代码的重用</span><br />
+<span style=\"line-height:1.5;\">多态，在不同的上下文中表现出不同的形态。php本身就是多态的语言，原因在于它是弱类型的。</span><br />' WHERE `id` = 23 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000870s ]
+
+[ 2016-06-12T11:57:23+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 23  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009596s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009705s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001238s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001353s ]
+
+[ 2016-06-12T11:58:23+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0120s ]
+SQL: UPDATE `sc_message` SET `title`='简述什么是面向对象编程（或如何理解OOP思想）？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">OOP(object oriented programming)，即面向对象编程，其中两个最重要的概念就是类和对象。<br />
+世间万物都具有自身的属性和方法，通过这些属性和方法可以区分出不同的物质。<br />
+属性和方法的集合就形成了类，类是面向对象编程的核心和基础，<br />
+通过类就将零散的用于实现某个功能的代码有效地管理起来了。<br />
+类只是具备了某些功能和属性的抽象模型，而实际应用中需要一个一个实体，也就是需要对类进行实例化，<br />
+类在实例化之后就是对象。<br />
+OOP具有三大特点：<br />
+1. 封装性：<br />
+也称为信息隐藏，就是将一个类的使用和实现分开，只保留部分接口和方法与外部联系，或者说只公开了一些供开发人员使用的方法。<br />
+于是开发人员只需要关注这个类如何使用，而不用去关心其具体的实现过程，这样就能实现MVC分工合作，也能有效避免程序间相互依赖，<br />
+实现代码模块间松藕合。<br />
+2. 继承性：<br />
+就是子类自动继承其父级类中的属性和方法，并可以添加新的属性和方法或者对部分属性和方法进行重写。继承增加了代码的可重用性。<br />
+php只支持单继承，也就是说一个子类只能有一个父类。<br />
+3. 多态性：<br />
+子类继承了来自父级类中的属性和方法，并对其中部分方法进行重写。<br />
+于是多个子类中虽然都具有同一个方法，但是这些子类实例化的对象调用这些相同的方法后却可以获得完全不同的结果，这种技术就是多态性。<br />
+多态性增强了软件的灵活性。<br />
+<span style=\"background-color:#00D5FF;\">也可以这样理解：</span><br />
+OOP核心思想：使用人类思考问题、解决问题的方式来编写程序。<br />
+面向对象的三大特征：<br />
+封装，通常有两层含义，第一层，将属性和方法封装到一起（通过class），形成一个完整的对象。<br />
+第二层，对外隐藏具体的实现细节，提供一个可调用的接口（访问权限修饰符）。<br />
+继承，子类继承了父类的属性和方法（非私有的），使用继承可以实现代码的重用<br />
+多态，在不同的上下文中表现出不同的形态。php本身就是多态的语言，原因在于它是弱类型的。<br />
+</span><span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 23 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001202s ]
+
+[ 2016-06-12T11:59:00+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 23  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008882s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2016-06-12T11:59:43+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: UPDATE `sc_message` SET `title`='简述什么是面向对象编程？你如何理解OOP思想？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">OOP(object oriented programming)，即面向对象编程，其中两个最重要的概念就是类和对象。<br />
+世间万物都具有自身的属性和方法，通过这些属性和方法可以区分出不同的物质。<br />
+属性和方法的集合就形成了类，类是面向对象编程的核心和基础，<br />
+通过类就将零散的用于实现某个功能的代码有效地管理起来了。<br />
+类只是具备了某些功能和属性的抽象模型，而实际应用中需要一个一个实体，也就是需要对类进行实例化，<br />
+类在实例化之后就是对象。<br />
+OOP具有三大特点：<br />
+1. 封装性：<br />
+也称为信息隐藏，就是将一个类的使用和实现分开，只保留部分接口和方法与外部联系，或者说只公开了一些供开发人员使用的方法。<br />
+于是开发人员只需要关注这个类如何使用，而不用去关心其具体的实现过程，这样就能实现MVC分工合作，也能有效避免程序间相互依赖，<br />
+实现代码模块间松藕合。<br />
+2. 继承性：<br />
+就是子类自动继承其父级类中的属性和方法，并可以添加新的属性和方法或者对部分属性和方法进行重写。继承增加了代码的可重用性。<br />
+php只支持单继承，也就是说一个子类只能有一个父类。<br />
+3. 多态性：<br />
+子类继承了来自父级类中的属性和方法，并对其中部分方法进行重写。<br />
+于是多个子类中虽然都具有同一个方法，但是这些子类实例化的对象调用这些相同的方法后却可以获得完全不同的结果，这种技术就是多态性。<br />
+多态性增强了软件的灵活性。<br />
+<span style=\"background-color:#00D5FF;\">也可以这样理解：</span><br />
+OOP核心思想：使用人类思考问题、解决问题的方式来编写程序。<br />
+面向对象的三大特征：<br />
+封装，通常有两层含义，第一层，将属性和方法封装到一起（通过class），形成一个完整的对象。<br />
+第二层，对外隐藏具体的实现细节，提供一个可调用的接口（访问权限修饰符）。<br />
+继承，子类继承了父类的属性和方法（非私有的），使用继承可以实现代码的重用<br />
+多态，在不同的上下文中表现出不同的形态。php本身就是多态的语言，原因在于它是弱类型的。<br />
+</span><span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 23 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009186s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-12T12:02:42+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0072s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('session有什么用？怎么使用？','17','<span style=\"line-height:1.5;\">session在web开发中具有非常重要的份量。它可以将用户正确登录后的信息记录到服务器的内存中，当用户以此身份</span><br />
+<span style=\"line-height:1.5;\">访问网站的管理后台时，无需再次登录即可得到身份确认。而没有正确登录的用户则不分配session空间，即便输入了</span><span style=\"line-height:1.5;\">管理后台的访问地址也不能看到页面内容。通过session确定了用户对页面的操作权限。</span><br />
+<span style=\"line-height:1.5;\">使用session的步骤：</span><br />
+<span style=\"line-height:1.5;\">1. 启动session：</span><br />
+<span style=\"line-height:1.5;\">使用session_start()函数来启动。</span><br />
+<span style=\"line-height:1.5;\">2. 注册会话：</span><br />
+<span style=\"line-height:1.5;\">直接给$_SESSION数组添加元素即可。</span><br />
+<span style=\"line-height:1.5;\">3. 使用会话：</span><br />
+<span style=\"line-height:1.5;\">判断session是否为空或者是否已经注册，如果已经存在则像普通数组使用即可。</span><br />
+<span style=\"line-height:1.5;\">4. 删除会话：</span><br />
+<span style=\"line-height:1.5;\">1.可以使用unset删除单个session；</span><br />
+<span style=\"line-height:1.5;\">2.使用$_SESSION=array()的方式，一次注销所有的会话变量；</span><br />
+<span style=\"line-height:1.5;\">3.使用session_destroy()函数来彻底销毁session。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-06-12T12:02:43+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002058s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2016-06-12T14:52:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 39  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2016-06-12T14:52:13+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 39  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000369s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001845s ]
+
+[ 2016-06-12T14:52:18+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='JS如何实现鼠标放上某行高亮显示',`cat_id`='15',`content`='' WHERE `id` = 39 [ RunTime:0.0514s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+
+[ 2016-06-12T15:59:35+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ajax中的responseText对象是什么意思？它的返回值是1或者0吗？在什么情况下是0，什么情况下是1','10','<span style=\"line-height:1.5;\">responseText 返回的值不是1和0，而是获得字符串形式的响应数据&nbsp;</span><br />
+<span style=\"line-height:1.5;\">responseText 不是对象，是XMLHttpRequest对象的属性</span><br />
+<span style=\"line-height:1.5;\">比如向php文件发送请求后，</span><br />
+<span style=\"line-height:1.5;\">传回来的数据可以给你用定义xhr这个名字的XMLHttpRequest对象接收</span><br />
+<span style=\"line-height:1.5;\">你可以将接收到的内容再发送给需要显示的地方：</span><br />
+<span style=\"line-height:1.5;\">document.getElementById(\"需要显示的元素id\").innerHTML=xmlhttp.responseText;</span><br />
+<span style=\"line-height:1.5;\">如果是XML文件 就使用responseXML属性</span><br />
+<span style=\"line-height:1.5;\">document.getElementById(\"需要显示的元素id\").innerHTML=xmlhttp.responseXML;</span><br />') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+
+[ 2016-06-12T15:59:36+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002472s ]
+
+[ 2016-06-12T16:00:44+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/106
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 106  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001987s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002154s ]
+
+[ 2016-06-12T16:02:33+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/106
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0064s ]
+SQL: UPDATE `sc_message` SET `title`='ajax中的responseText对象是什么意思？它的返回值是1或者0吗？在什么情况下是0，什么情况下是1',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">responseText 返回的值不是1和0，而是获得字符串形式的响应数据&nbsp;</span><br />
+<span style=\"line-height:1.5;\">responseText 不是对象，是XMLHttpRequest对象的属性</span><br />
+<span style=\"line-height:1.5;\">比如向php文件发送请求后，</span><br />
+<span style=\"line-height:1.5;\">传回来的数据可以给你用定义xhr这个名字的XMLHttpRequest对象接收</span><br />
+<span style=\"line-height:1.5;\">你可以将接收到的内容再发送给需要显示的地方：</span><br />
+<span style=\"line-height:1.5;\">document.getElementById(\"需要显示的元素id\").innerHTML=xhr.responseText;</span><br />
+<span style=\"line-height:1.5;\">如果是XML文件 就使用responseXML属性</span><br />
+<span style=\"line-height:1.5;\">document.getElementById(\"需要显示的元素id\").innerHTML=xhr.responseXML;</span><br />' WHERE `id` = 106 [ RunTime:0.0519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001397s ]
+
+[ 2016-06-12T16:23:20+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('Ajax中的get请求分哪几步走？','10','<span style=\"background-color:#FFE500;\">第一步：创建Ajax对象</span><br />
+<span style=\"background-color:#FFE500;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"background-color:#FFE500;\">第三步：初始化Ajax对象</span><br />
+<span style=\"background-color:#FFE500;\">第四步：发送Ajax请求</span><br />
+<span style=\"background-color:#FFE500;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+<span>&lt;script&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//定义页面载入事件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;window.onload = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取按钮并绑定相关事件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"background-color:#FFE500;\">$</span>(\'btnok\').onclick = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一步：创建Ajax对象<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xhr =<span style=\"background-color:#FFE500;\"> createXhr()</span>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第二步：设置回调函数<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.onreadystatechange = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第五步：判断与执行<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(xhr.readyState==4) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//输出结果<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(xhr.responseText);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第三步：初始化Ajax对象<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.open(\'get\',\'demo01.php\');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第四步：发送Ajax请求<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span></span>xhr.send(null);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+<span style=\"background-color:#FFE500;\">//封装$函数</span><br />
+<span style=\"background-color:#FFE500;\">function $(id) {</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;return document.getElementById(id);</span><br />
+<span style=\"background-color:#FFE500;\">}</span><br />
+<span style=\"background-color:#FFE500;\">//封装一个createXhr函数，用于创建Ajax对象</span><br />
+<span style=\"background-color:#FFE500;\">function createXhr() {</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;//使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;try {</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new XMLHttpRequest();</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;} catch(e) {</span><br />
+<br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;try {</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#FFE500;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#FFE500;\">//IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#FFE500;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#FFE500;\">return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;} catch(e) {</span><br />
+<br />
+<span style=\"background-color:#FFE500;\"> &nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span style=\"background-color:#FFE500;\">&nbsp; &nbsp; </span><span style=\"background-color:#FFE500;\">alert(\'您的浏览器不支持Ajax技术</span><span></span><span style=\"background-color:#FFE500;\">，丢了吧！</span><span></span><span style=\"background-color:#FFE500;\">\');</span><br />
+<span></span><span style=\"background-color:#FFE500;\">}</span><br />
+<div>
+	<span>&lt;/script&gt;</span><br />
+</div>
+</span>') [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000615s ]
+
+[ 2016-06-12T16:23:22+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2016-06-12T16:23:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001771s ]
+
+[ 2016-06-12T16:24:52+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='Ajax中的get请求分哪几步走？',`cat_id`='10',`content`='<p style=\"font-family:Simsun;font-size:medium;\">
+	<span style=\"background-color:#FFE500;\">第一步：创建Ajax对象</span><br />
+<span style=\"background-color:#FFE500;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"background-color:#FFE500;\">第三步：初始化Ajax对象</span><br />
+<span style=\"background-color:#FFE500;\">第四步：发送Ajax请求</span><br />
+<span style=\"background-color:#FFE500;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+&lt;script&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//定义页面载入事件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;window.onload = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取按钮并绑定相关事件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"background-color:#FFE500;\">$</span>(\'btnok\').onclick = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第一步：创建Ajax对象<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xhr =<span style=\"background-color:#FFE500;\">&nbsp;createXhr()</span>;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第二步：设置回调函数<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.onreadystatechange = function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第五步：判断与执行<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(xhr.readyState==4) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//输出结果<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(xhr.responseText);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第三步：初始化Ajax对象<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.open(\'get\',\'demo01.php\');<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//第四步：发送Ajax请求<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xhr.send(null);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+<span style=\"background-color:#00D5FF;\">//封装$函数</span><br />
+<span style=\"background-color:#00D5FF;\">function $(id) {</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;return document.getElementById(id);</span><br />
+<span style=\"background-color:#00D5FF;\">}</span><br />
+<span style=\"background-color:#00D5FF;\">//封装一个createXhr函数，用于创建Ajax对象</span><br />
+<span style=\"background-color:#00D5FF;\">function createXhr() {</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;//使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;try {</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return new XMLHttpRequest();</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;} catch(e) {</span><br />
+<br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;try {</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#00D5FF;\">//IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"background-color:#00D5FF;\">return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;} catch(e) {</span><br />
+<br />
+<span style=\"background-color:#00D5FF;\">&nbsp;&nbsp;&nbsp;&nbsp;}</span><br />
+<span style=\"background-color:#00D5FF;\">&nbsp; &nbsp;&nbsp;</span><span style=\"background-color:#00D5FF;\">alert(\'您的浏览器不支持Ajax技术</span><span style=\"background-color:#00D5FF;\">，丢了吧！</span><span style=\"background-color:#00D5FF;\">\');</span><br />
+<span style=\"background-color:#00D5FF;\">}</span>
+</p>
+<div style=\"font-family:Simsun;font-size:medium;\">
+	&lt;/script&gt;<br />
+</div>
+<div>
+	<br />
+</div>
+<p style=\"font-family:Simsun;font-size:medium;\">
+	<br />
+</p>
+<span></span>' WHERE `id` = 107 [ RunTime:0.0558s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+
+[ 2016-06-12T16:25:03+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001426s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000403s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002424s ]
+
+[ 2016-06-12T16:26:13+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000421s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001891s ]
+
+[ 2016-06-12T16:27:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='Ajax中的get请求分哪几步走？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\">第一步：创建Ajax对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第三步：初始化Ajax对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第四步：发送Ajax请求</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+<span style=\"line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; //定义页面载入事件</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; window.onload = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //获取按钮并绑定相关事件</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; $(\'btnok\').onclick = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第一步：创建Ajax对象</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var xhr = createXhr();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第二步：设置回调函数</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.onreadystatechange = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第五步：判断与执行</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(xhr.readyState==4) {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //输出结果</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(xhr.responseText);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第三步：初始化Ajax对象</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.open(\'get\',\'demo01.php\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第四步：发送Ajax请求</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.send(null);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&lt;/script&gt;</span><br />
+<br />
+<span style=\"line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"line-height:1.5;background-color:#00D5FF;\">//封装$函数</span><br />
+<span style=\"line-height:1.5;\">function $(id) {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; return document.getElementById(id);</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;background-color:#00D5FF;\">//封装一个createXhr函数，用于创建Ajax对象</span><br />
+<span style=\"line-height:1.5;\">function createXhr() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; //使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new XMLHttpRequest();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; alert(\'您的浏览器不支持Ajax技术，丢了吧！\');</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&lt;/script&gt;</span><br />
+<br />
+<br />' WHERE `id` = 107 [ RunTime:0.0554s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000936s ]
+
+[ 2016-06-12T16:27:50+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-06-12T16:29:52+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0069s ]
+SQL: UPDATE `sc_message` SET `title`='Ajax中的get请求分哪几步走？',`cat_id`='10',`content`='<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第一步：创建Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第三步：初始化Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第四步：发送Ajax请求</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\"><span></span><span style=\"color:#4C33E5;\">&lt;script&gt;</span></span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; //定义页面载入事件</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; window.onload = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; //获取按钮并绑定相关事件</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; $(\'btnok\').onclick = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第一步：创建Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; var xhr = createXhr();</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第二步：设置回调函数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.onreadystatechange = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第五步：判断与执行</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(xhr.readyState==4) {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //输出结果</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(xhr.responseText);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第三步：初始化Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.open(\'get\',\'demo01.php\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //第四步：发送Ajax请求</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; xhr.send(null);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; &nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#4C33E5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\"><span style=\"color:#4C33E5;\">&lt;/script&gt;</span><span></span></span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&lt;script&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;background-color:#00D5FF;\">//封装$函数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">function $(id) {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; return document.getElementById(id);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;background-color:#00D5FF;\">//封装一个createXhr函数，用于创建Ajax对象</span><br />
+<span></span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">function createXhr() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; //使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; &nbsp; &nbsp; //W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; &nbsp; &nbsp; return new XMLHttpRequest();</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; &nbsp; &nbsp; //IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; &nbsp; &nbsp; return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&nbsp; &nbsp; alert(\'您的浏览器不支持Ajax技术，丢了吧！\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;color:#E53333;\">&lt;/script&gt;</span><span></span><br />
+<br />
+<br />' WHERE `id` = 107 [ RunTime:0.0566s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001510s ]
+
+[ 2016-06-12T16:30:29+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001168s ]
+
+[ 2016-06-12T16:31:11+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001982s ]
+
+[ 2016-06-12T16:33:35+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0138s ]
+SQL: UPDATE `sc_message` SET `title`='Ajax中的get请求分哪几步走？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\">第一步：创建Ajax对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第三步：初始化Ajax对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第四步：发送Ajax请求</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+<span style=\"line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"line-height:1.5;\">//定义页面载入事件</span><br />
+<span style=\"line-height:1.5;\">window.onload = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//获取按钮并绑定相关事件</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; </span><span style=\"line-height:1.5;\">$(\'btnok\').onclick = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//第一步：创建Ajax对象</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">var xhr = createXhr();</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//第二步：设置回调函数</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">xhr.onreadystatechange = function() {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//第五步：判断与执行</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">if(xhr.readyState==4) {</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//输出结果</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">alert(xhr.responseText);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//第三步：初始化Ajax对象</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">xhr.open(\'get\',\'demo01.php\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">//第四步：发送Ajax请求</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style=\"line-height:1.5;\">xhr.send(null);</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; </span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">&lt;/script&gt;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"color:#E53333;line-height:1.5;background-color:#00D5FF;\">//封装$函数</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">function $(id) {</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; return document.getElementById(id);</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">}</span><br />
+<span style=\"color:#E53333;line-height:1.5;background-color:#00D5FF;\">//封装一个createXhr函数，用于创建Ajax对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">function createXhr() {</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; //使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new XMLHttpRequest();</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; &nbsp; alert(\'您的浏览器不支持Ajax技术，丢了吧！\');</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">}</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&lt;/script&gt;</span><br />
+<br />
+<br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 107 [ RunTime:0.1403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000712s ]
+
+[ 2016-06-12T22:49:52+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002194s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001559s ]
+
+[ 2016-06-12T22:50:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 107  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001259s ]
+
+[ 2016-06-12T22:51:28+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/107
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0039s ]
+SQL: UPDATE `sc_message` SET `title`='Ajax中的get请求分哪几步走？',`cat_id`='10',`content`='<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第一步：创建Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第二步：设置回调函数 &nbsp;onreadystatechange</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第三步：初始化Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第四步：发送Ajax请求</span><br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">第五步：判断与执行 &nbsp;判断Ajax状态为4，输出相应结果（responseText、responseXML）</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//定义页面载入事件</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">window.onload = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//获取按钮并绑定相关事件</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">$(\'btnok\').onclick = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//第一步：创建Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">var xhr = createXhr();</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//第二步：设置回调函数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">xhr.onreadystatechange = function() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//第五步：判断与执行</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">if(xhr.readyState==4) {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//输出结果</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">alert(xhr.responseText);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//第三步：初始化Ajax对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">xhr.open(\'get\',\'demo01.php\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">//第四步：发送Ajax请求</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">xhr.send(null);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp;&nbsp;</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;/script&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;script&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;background-color:#00D5FF;\"><strong>//封装$函数</strong></span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">function $(id) {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; return document.getElementById(id);</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;background-color:#00D5FF;\"><strong>//封装一个createXhr函数，用于创建Ajax对象</strong></span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">function createXhr() {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; //使用try...catch...解决Ajax的兼容问题</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //W3C内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new XMLHttpRequest();</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; try {</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; //IE内核浏览器中Ajax对象的创建方式</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; return new ActiveXObject(\'Microsoft.XMLHTTP\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; } catch(e) {</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; }</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; alert(\'您的浏览器不支持Ajax技术，丢了吧！\');</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;/script&gt;</span><br />
+<span style=\"color:;\"></span><br />' WHERE `id` = 107 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-06-12T22:54:29+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+

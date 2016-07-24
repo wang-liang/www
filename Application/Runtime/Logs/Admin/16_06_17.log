@@ -1,0 +1,1919 @@
+[ 2016-06-17T16:40:01+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001742s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0532s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011200s ]
+
+[ 2016-06-17T16:42:24+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.1044s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('什么是目录安全文件？','11','<span style=\"line-height:1.5;\">在自动生成的目录中会看到一些index.html文件，但是打开后会发现是空的文件。这些文件有个高大上的名字叫“目录安全文件”。</span><br />
+<span style=\"line-height:1.5;\">其作用是防止在没有默认文档的时候服务器会列出整个目录下的目录结构。</span><br />
+<span style=\"line-height:1.5;\">如果不想生成index.html，可以通过在入口文件（index.php）中定义一个常量来禁止自动生成目录安全文件。</span><br />
+<span style=\"line-height:1.5;\">#定义目录安全文件是否生成（默认是true）</span><br />
+<span style=\"line-height:1.5;\">define(\'BUILD_DIR_SECURE\',false);</span><br />') [ RunTime:0.0228s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001080s ]
+
+[ 2016-06-17T16:42:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-06-17T16:42:33+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006691s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2016-06-17T16:42:42+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2016-06-17T16:42:48+08:00 ] 127.0.0.1 /index.php/admin/category
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001390s ]
+
+[ 2016-06-17T16:42:55+08:00 ] 127.0.0.1 /index.php/admin/category/edit/cat_id/15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category` WHERE `cat_id` = 15 LIMIT 1   [ RunTime:0.0838s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-06-17T16:43:04+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-06-17T16:43:19+08:00 ] 127.0.0.1 /index.php/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-06-17T16:43:31+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2016-06-17T16:55:14+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('首次运行index.php文件的时候会有多少个流程要执行？','11','<p>
+	当系统运行时会执行68个流程，经过系统自己的判断是否是第一次访问，如果是第一次访问则产生<span style=\"line-height:1.5;\">三个目录和一系列的文件</span>
+</p>') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-17T16:55:15+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2016-06-17T16:59:34+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('首次运行index.php时，出现的“笑脸”是怎么来的？','11','<span style=\"line-height:1.5;\">系统在收集到需要访问的（入口文件收集）分组、控制器、方法等信息后自动去加载相关的控制器和方法。</span><br />
+<span style=\"line-height:1.5;\">虽然我们没有指定任何的分组、控制器和方法，但是在ThinkPHP主配置文件（convention.php）中设置了默认的分组、控制器和方法。</span><br />
+<span style=\"line-height:1.5;\">在ThinkPHP框架中默认的分组是Home，默认的控制器是Index，默认的方法是index。（需要注意大小写）</span><br />') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-06-17T16:59:35+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-06-17T17:00:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/120
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 120  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.151342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.151474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001543s ]
+
+[ 2016-06-17T17:00:57+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 119  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2016-06-17T17:01:23+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: UPDATE `sc_message` SET `title`='首次运行index.php文件的时候会执行执行多少个流程？',`cat_id`='11',`content`='<p>
+	当系统运行时会执行68个流程，经过系统自己的判断是否是第一次访问，如果是第一次访问则产生<span style=\"line-height:1.5;\">三个目录和一系列的文件</span> 
+</p>' WHERE `id` = 119 [ RunTime:0.0548s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-06-17T17:01:42+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 119  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-06-17T17:01:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: UPDATE `sc_message` SET `title`='TP首次运行index.php文件的时候会执行执行多少个流程？',`cat_id`='11',`content`='<p>
+	当系统运行时会执行68个流程，经过系统自己的判断是否是第一次访问，如果是第一次访问则产生<span style=\"line-height:1.5;\">三个目录和一系列的文件</span> 
+</p>' WHERE `id` = 119 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007902s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-06-17T17:01:57+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/120
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 120  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-06-17T17:02:06+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/120
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000826s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: UPDATE `sc_message` SET `title`='TP首次运行index.php时，出现的“笑脸”是怎么来的？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">系统在收集到需要访问的（入口文件收集）分组、控制器、方法等信息后自动去加载相关的控制器和方法。</span><br />
+<span style=\"line-height:1.5;\">虽然我们没有指定任何的分组、控制器和方法，但是在ThinkPHP主配置文件（convention.php）中设置了默认的分组、控制器和方法。</span><br />
+<span style=\"line-height:1.5;\">在ThinkPHP框架中默认的分组是Home，默认的控制器是Index，默认的方法是index。（需要注意大小写）</span><br />' WHERE `id` = 120 [ RunTime:0.0550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013315s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+
+[ 2016-06-17T17:09:09+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('TP中编写一个控制器文件？','11','<span style=\"line-height:1.5;\">第一步：声明当前类的命名空间；</span><br />
+<span style=\"line-height:1.5;\">第二步：引入父类控制器（类元素）；</span><br />
+<span style=\"line-height:1.5;\">第三步：定义控制器并且继承父类控制器；</span><br />
+<span style=\"line-height:1.5;\">#声明当前控制器的命名空间</span><br />
+<span style=\"line-height:1.5;\">namespace Home\\Controller;</span><br />
+<span style=\"line-height:1.5;\">#引入父类控制器类元素</span><br />
+<span style=\"line-height:1.5;\">use Think\\Controller;</span><br />
+<span style=\"line-height:1.5;\">#定义当前控制器并且继承父类控制器</span><br />
+<span style=\"line-height:1.5;\">class TestController extends Controller{</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#创建默认操作方法</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">public function index(){</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#获取当前时间</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$date = date(\'Y-m-d H:i:s\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#传递数据给模版</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$this -&gt; assign(\'date\',$date);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#展示模版</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$this -&gt; display(\'Index/index\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\"></span><br />') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-06-17T17:09:10+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2016-06-17T17:09:31+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/121
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 121  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007274s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-17T17:09:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/121
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: UPDATE `sc_message` SET `title`='TP中如何编写一个控制器文件？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">第一步：声明当前类的命名空间；</span><br />
+<span style=\"line-height:1.5;\">第二步：引入父类控制器（类元素）；</span><br />
+<span style=\"line-height:1.5;\">第三步：定义控制器并且继承父类控制器；</span><br />
+<span style=\"line-height:1.5;\">#声明当前控制器的命名空间</span><br />
+<span style=\"line-height:1.5;\">namespace Home\\Controller;</span><br />
+<span style=\"line-height:1.5;\">#引入父类控制器类元素</span><br />
+<span style=\"line-height:1.5;\">use Think\\Controller;</span><br />
+<span style=\"line-height:1.5;\">#定义当前控制器并且继承父类控制器</span><br />
+<span style=\"line-height:1.5;\">class TestController extends Controller{</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#创建默认操作方法</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">public function index(){</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#获取当前时间</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$date = date(\'Y-m-d H:i:s\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#传递数据给模版</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$this -&gt; assign(\'date\',$date);</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">#展示模版</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">$this -&gt; display(\'Index/index\');</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 121 [ RunTime:0.0795s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000916s ]
+
+[ 2016-06-17T17:14:56+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('什么是命名空间？TP中使用命名空间应该注意什么？','11','<span><span style=\"line-height:1.5;\">在php语法中，语法要求，在同一次请求中不允许出现相同名称的相同元素（常量、方法、类），但是在一些特殊的应用场景中（例如ThinkPHP框架，里面引入了许多第三方的扩展，例如smarty和视频播放技术等）不得已必须要出现相同名称的相同元素，那么就需要将其放到不同的空间当中去，这个空间就叫做命名空间。</span><br />
+<span style=\"line-height:1.5;\">使用命名空间需要注意事项：</span><br />
+<span style=\"line-height:1.5;\">1、声明使用关键词：namespace关键词</span><br />
+<span style=\"line-height:1.5;\">2、引入空间或者元素（类元素）：use关键词</span><br />
+<span style=\"line-height:1.5;\">3、要求php版本大于5.3，因为命名空间是从php5.3之后才引入的；</span><br />
+<span style=\"line-height:1.5;\">4、在当前文档的第一个namespace声明之前不能有任何的（除了注释外）输出，header头也不行。</span><br />
+<span style=\"line-height:1.5;\">命名空间本身对命名空间的名字没有特别的要求，只要命名规范符合php语法中变量命名规范就可以，在ThinkPHP中要求命名空间必须跟目录挂钩。在ThinkPHP中有自动加载机制（autoload），通过自动加载机制将命名空间中的目录转化成真实的路径，从而引入对应的空间或者元素。</span></span>') [ RunTime:0.1892s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-06-17T17:14:57+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2016-06-17T17:30:53+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('TP中的四种路由形式分别是什么？','11','<span style=\"line-height:1.5;background-color:#FFE500;\">1、get路由形式</span><br />
+<span style=\"line-height:1.5;\">Get形式：就是将参数在地址栏中显示的一种形式。</span><br />
+<span style=\"line-height:1.5;\">格式：http://www.</span><span style=\"line-height:1.5;\">0615.com/index.php?m=分组&amp;c=控制器&amp;a=方法&amp;参数名=参数值</span><br />
+<span style=\"line-height:1.5;\">M：表示module</span><br />
+<span style=\"line-height:1.5;\">C：表示controller</span><br />
+<span style=\"line-height:1.5;\">A：表示action</span><br />
+<span style=\"line-height:1.5;\">缺点：将全部的参数暴露在地址栏中，既不安全也不好看</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">2、pathinfo路由形式（默认路由形式）</span><br />
+<span style=\"line-height:1.5;\">格式：http://www.0615.com/index.php/分组/控制器/方法/参数名/参数值(.html)</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">3、rewrite路由形式（需要配置才能使用）</span><br />
+<span style=\"line-height:1.5;\">格式：http://www.</span><span style=\"line-height:1.5;\">0615.com/分组/控制器/方法/参数名/参数值(.html)</span><br />
+<span style=\"line-height:1.5;\">配置方法：</span><br />
+<span style=\"line-height:1.5;\">第一步：修改Apache的主配置文件httpd.conf</span><br />
+<span style=\"line-height:1.5;\">找到rewrite扩展位置，将其前面的注释符去掉（150行）</span><br />
+<span style=\"line-height:1.5;\">第二步：修改全部的allowoverride，全部修改成all</span><br />
+<span style=\"line-height:1.5;\">第三步：修改extra目录下的httpd_vhosts.conf，添加如下的代码：</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">&lt;Directory \"这里写站点所在目录路径\"&gt;</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">#允许全部访问</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">allow from all</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">#是否允许重写</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">allowOverride all</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">#是否列出站点的文件列表（在没有默认文档的时候）</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">Options +indexes</span><br />
+<span style=\"color:#4C33E5;line-height:1.5;\">&lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">第四步：将分布式配置文件.htaccess复制到与index.php入口文件同级的位置</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">#以下为.htaccess中的内容</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&lt;IfModule mod_rewrite.c&gt;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; Options +FollowSymlinks</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; RewriteEngine On</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; RewriteCond %{REQUEST_FILENAME} !-d</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; RewriteCond %{REQUEST_FILENAME} !-f</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; #apache调用php5模块使用</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; #RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp;&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; #fast-cgi模式使用</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&nbsp; RewriteRule ^(.*)$ index.php?s=$1 [QSA,PT,L]</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">&lt;/IfModule&gt;</span><br />
+<span style=\"line-height:1.5;\">第五步：重启Apache服务器</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">4、兼容路由形式</span><br />
+<span style=\"line-height:1.5;\">格式：http://www.0615.com/index.php?s=/分组/控制器/方法/参数名/参数值(.html)</span><br />
+<span style=\"line-height:1.5;\">需要注意：这个形式只有1个参数，参数名是s。</span><br />
+<br />
+<br />') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+
+[ 2016-06-17T17:30:54+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006715s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2016-06-17T17:37:41+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('TP中关于模版的展示display()的三种用法？','11','<span style=\"line-height:1.5;\">$this -&gt; display();		//没有参数，表示展示当前控制器下与当前请求方法名一致的模版文件。</span><br />
+<span style=\"line-height:1.5;\">$this -&gt; display(‘test’);	//表示展示当前控制器下的指定名称的模版文件</span><br />
+<span style=\"line-height:1.5;\">$this -&gt; display(‘Index/index’);	//表示展示指定控制器下指定名称的模版文件</span><br />') [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-06-17T17:37:42+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-06-17T17:41:58+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('在TP中模版变量的分隔符是什么样的？','11','<span style=\"line-height:1.5;\">在ThinkPHP中默认的模版变量左右标记是</span><br />
+<span style=\"line-height:1.5;\">左：{</span><br />
+<span style=\"line-height:1.5;\">右：}</span><br />
+<span style=\"line-height:1.5;\">我们可以根据实际的情况对其进行修改，修改可以在配置文件（别在主配置文件convention.php中修改，去应用层级或者分组层级文件中修改）中去修改。</span><br />
+<span style=\"line-height:1.5;\">\'TMPL_L_DELIM\' 和 \'TMPL_R_DELIM\' 两个常量</span><br />
+<span style=\"line-height:1.5;\">一般情况下默认即可。左右标记的配置只对Think模版引擎生效，对于smarty是不生效的。</span><br />') [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000796s ]
+
+[ 2016-06-17T17:41:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-06-17T17:45:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('在TP中模版的常量替换机制都有哪些常量？模版引擎是如何将模版中的上述字符串替换成变量真实表达的值呢？','11','<span style=\"line-height:1.5;\">__MODULE__：表示从入口文件开始向后，一直找到分组为止</span><br />
+<span style=\"line-height:1.5;\">__CONTROLLER__：表示从入口文件开始向后，一直找到控制器为止；</span><br />
+<span style=\"line-height:1.5;\">__ACTION__：表示从入口文件开始向后，一直找到方法为止；</span><br />
+<span style=\"line-height:1.5;\">__SELF__：表示从入口文件开始向后，一直找到最后（包括了参数）；</span><br />
+<span style=\"line-height:1.5;\">__PUBLIC__：表示站点根目录下的Public目录地址；</span><br />
+<br />
+<span style=\"line-height:1.5;\">是通过行为文件（ContentReplaceBehavior.class.php）中的$replace = array( );来实现</span><br />') [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+
+[ 2016-06-17T17:45:26+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2016-06-17T17:50:39+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0042s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('TP中U()函数实现了对url的组装，那么这个U函数有哪些用法呢？','11','<span style=\"line-height:1.5;\">在ThinkPHP中提供了一个内置的快捷函数（都是以大写字母命名的函数）U函数来实现对url的组装。</span><br />
+<span style=\"line-height:1.5;\">语法：U(参数);</span><br />
+<span style=\"line-height:1.5;\">第一种用法：U(‘方法名’)	表示组装出当前控制器下的指定方法名的url路由</span><br />
+<span style=\"line-height:1.5;\">第二种用法：U(‘控制器/方法’） &nbsp;表示组装指定控制器下指定方法的url路由</span><br />
+<span style=\"line-height:1.5;\">第三种用法：U(‘分组/控制器/方法’)表示组装指定分组下的指定控制器下的指定方法的url路由</span><br />
+<br />
+<span style=\"line-height:1.5;\">关于使用U方法组装地址时如何去传递参数？</span><br />
+<span style=\"line-height:1.5;\">语法：U(第一个参数,array(‘参数名’ =&gt; 参数值,’参数名’=&gt; 参数值…))；</span><br />') [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-06-17T17:50:41+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-06-17T17:50:59+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/127
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 127  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2016-06-17T17:51:04+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/127
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: UPDATE `sc_message` SET `title`='TP中的U()函数实现了对url的组装，那么这个U函数有哪些用法呢？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">在ThinkPHP中提供了一个内置的快捷函数（都是以大写字母命名的函数）U函数来实现对url的组装。</span><br />
+<span style=\"line-height:1.5;\">语法：U(参数);</span><br />
+<span style=\"line-height:1.5;\">第一种用法：U(‘方法名’)	表示组装出当前控制器下的指定方法名的url路由</span><br />
+<span style=\"line-height:1.5;\">第二种用法：U(‘控制器/方法’） &nbsp;表示组装指定控制器下指定方法的url路由</span><br />
+<span style=\"line-height:1.5;\">第三种用法：U(‘分组/控制器/方法’)表示组装指定分组下的指定控制器下的指定方法的url路由</span><br />
+<br />
+<span style=\"line-height:1.5;\">关于使用U方法组装地址时如何去传递参数？</span><br />
+<span style=\"line-height:1.5;\">语法：U(第一个参数,array(‘参数名’ =&gt; 参数值,’参数名’=&gt; 参数值…))；</span><br />' WHERE `id` = 127 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-06-17T17:51:35+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/127
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 127  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007539s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-06-17T17:52:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/127
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: UPDATE `sc_message` SET `title`='TP中的U()函数实现了对url的组装，那么这个U函数如何使用？又是如何去传递参数的？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">在ThinkPHP中提供了一个内置的快捷函数（都是以大写字母命名的函数）U函数来实现对url的组装。</span><br />
+<span style=\"line-height:1.5;\">语法：U(参数);</span><br />
+<span style=\"line-height:1.5;\">第一种用法：U(‘方法名’)	表示组装出当前控制器下的指定方法名的url路由</span><br />
+<span style=\"line-height:1.5;\">第二种用法：U(‘控制器/方法’） &nbsp;表示组装指定控制器下指定方法的url路由</span><br />
+<span style=\"line-height:1.5;\">第三种用法：U(‘分组/控制器/方法’)表示组装指定分组下的指定控制器下的指定方法的url路由</span><br />
+<br />
+<span style=\"line-height:1.5;\">关于使用U方法组装地址时如何去传递参数？</span><br />
+<span style=\"line-height:1.5;\">语法：U(第一个参数,array(‘参数名’ =&gt; 参数值,’参数名’=&gt; 参数值…))；</span><br />' WHERE `id` = 127 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-06-17T17:54:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0042s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中的跳转成功和失败的方法分别是什么？','11','<p>
+	<span style=\"line-height:1.5;\">在ThinkPHP中跳转方法分为两种：成功跳转、失败跳转</span><br />
+<span style=\"line-height:1.5;\">成功跳转：$this -&gt; success(跳转提示信息，跳转地址，等待时间);	笑脸</span><br />
+<span style=\"line-height:1.5;\">失败跳转：$this -&gt; error(跳转提示信息，跳转地址，等待时间);	哭脸</span><br />
+<span style=\"line-height:1.5;\"></span>
+</p>') [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+
+[ 2016-06-17T17:54:49+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-06-17T17:59:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中可以使用display()和fetch()这两个方法的区别是什么？','11','<span style=\"line-height:1.5;\">在ThinkPHP中可以使用display方法去展示模版，但是还有一个方法与display方法有点相似，这个方法是fetch方法，它的作用是获取模版文件的内容。</span><br />
+<span style=\"line-height:1.5;\">Display方法：获取模版文件的内容 -&gt; 替换里面的常量 -&gt; 渲染模版</span><br />
+<span style=\"line-height:1.5;\">Fetch方法：获取模版文件的内容 -&gt; 替换里面的常量</span><br />
+<span style=\"line-height:1.5;\"></span><br />
+<span style=\"line-height:1.5;\">区别：display方法会展示出模版，而fetch方法不会展示模版；display方法没有返回值，而fetch方法是有返回值的（字符串类型）</span><br />
+<span style=\"line-height:1.5;\">扩展：</span><br />
+<span style=\"line-height:1.5;\">在ThinkPHP中封装了一个友好的打印方法：dump(常量/变量/字符串/对象/数组…)；这方法是ThinkPHP封装的方法，所以只能在ThinkPHP中使用。</span><br />') [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-06-17T17:59:17+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002101s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-06-17T18:03:15+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中的注释和html模版中的注释有什么区别？','11','<span style=\"line-height:1.5;\">html模版中的注释写法：&lt;!—注释内容 --&gt;</span><br />
+<span style=\"line-height:1.5;\">在ThinkPHP中的2种注释方法，行注释、块注释：</span><br />
+<span style=\"line-height:1.5;\">行注释：{//行注释的内容（不能横跨多行）}</span><br />
+<span style=\"line-height:1.5;\">块注释：{/* 块注释的内容（可以横跨多行） */}</span><br />
+<br />
+<span style=\"line-height:1.5;\">常规的html注释和ThinkPHP中的模版注释的区别：</span><br />
+<span style=\"line-height:1.5;\">常规的html注释会被输出到浏览器端，并且在源码中得以体现，而ThinkPHP中的模版注释属于服务器端的注释，不会被输出到浏览器端，在源码中的体现是显示一行空白行。</span><br />') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-06-17T18:03:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2016-06-17T18:15:38+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('在TP中数组和对象的分配形式都是怎样的？如何取值？','11','<span style=\"line-height:1.5;\">索引数组：</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">使用中括号的形式：</span><br />
+<span style=\"line-height:1.5;\">{$arr1[0]}-{$arr1[1]}-{$arr1[2]}-{$arr1[3]}&lt;br/&gt;</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">使用点方法的形式：</span><br />
+<span style=\"line-height:1.5;\">{$arr1.0}-{$arr1.1}-{$arr1.2}-{$arr1.3}&lt;hr/&gt;</span><br />
+<span style=\"line-height:1.5;\">键值数组：</span><br />
+<span style=\"line-height:1.5;\">{$arr2[\'art1\']}-{$arr2[\'art2\']}-{$arr2[\'art3\']}-{$arr2[\'art4\']}&lt;br/&gt;</span><br />
+<span style=\"line-height:1.5;\">{$arr2.art1}-{$arr2.art2}-{$arr2.art3}-{$arr2.art4}&lt;hr/&gt;</span><br />
+<br />
+<span style=\"line-height:1.5;\">二维数组：</span><br />
+<span style=\"line-height:1.5;\">{$arr[0][\'name\']}-{$arr[0][\'age\']}-{$arr[0][\'sex\']}或者{$arr.1.name}-{$arr.1.age}-{$arr.1.sex}</span><br />
+<br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">对象：支持箭头写法和冒号写法。</span><br />
+<span style=\"line-height:1.5;\">箭头写法：{$stu -&gt; id} - {$stu -&gt; name} - {$stu -&gt; age}</span><br />
+<span style=\"line-height:1.5;\">冒号写法：{$stu:id} - {$stu:name} - {$stu:age}</span><br />') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+
+[ 2016-06-17T18:15:39+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2016-06-17T18:16:31+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 131  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2016-06-17T18:16:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: UPDATE `sc_message` SET `title`='在ThinkPHP中数组和对象的分配形式都是怎样的？如何取值？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">索引数组：</span><br />
+<span style=\"line-height:1.5;\">使用中括号的形式：</span><br />
+<span style=\"line-height:1.5;\">{$arr1[0]}-{$arr1[1]}-{$arr1[2]}-{$arr1[3]}&lt;br/&gt;</span><br />
+<span style=\"line-height:1.5;\">使用点方法的形式：</span><br />
+<span style=\"line-height:1.5;\">{$arr1.0}-{$arr1.1}-{$arr1.2}-{$arr1.3}&lt;hr/&gt;</span><br />
+<span style=\"line-height:1.5;\">键值数组：</span><br />
+<span style=\"line-height:1.5;\">{$arr2[\'art1\']}-{$arr2[\'art2\']}-{$arr2[\'art3\']}-{$arr2[\'art4\']}&lt;br/&gt;</span><br />
+<span style=\"line-height:1.5;\">{$arr2.art1}-{$arr2.art2}-{$arr2.art3}-{$arr2.art4}&lt;hr/&gt;</span><br />
+<br />
+<span style=\"line-height:1.5;\">二维数组：</span><br />
+<span style=\"line-height:1.5;\">{$arr[0][\'name\']}-{$arr[0][\'age\']}-{$arr[0][\'sex\']}或者{$arr.1.name}-{$arr.1.age}-{$arr.1.sex}</span><br />
+<br />
+<span style=\"line-height:1.5;\">对象：</span><br />
+<span style=\"line-height:1.5;\">支持箭头写法和冒号写法。</span><br />
+<span style=\"line-height:1.5;\">箭头写法：{$stu -&gt; id} - {$stu -&gt; name} - {$stu -&gt; age}</span><br />
+<span style=\"line-height:1.5;\">冒号写法：{$stu:id} - {$stu:name} - {$stu:age}</span><br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 131 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-06-17T18:17:11+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 129  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2016-06-17T18:17:30+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/129
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP中的display()和fetch()这两个方法的区别是什么？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">在ThinkPHP中可以使用display方法去展示模版，但是还有一个方法与display方法有点相似，这个方法是fetch方法，它的作用是获取模版文件的内容。</span><br />
+<span style=\"line-height:1.5;\">Display方法：获取模版文件的内容 -&gt; 替换里面的常量 -&gt; 渲染模版</span><br />
+<span style=\"line-height:1.5;\">Fetch方法：获取模版文件的内容 -&gt; 替换里面的常量</span><br />
+<span style=\"line-height:1.5;\"></span><br />
+<span style=\"line-height:1.5;\">区别：display方法会展示出模版，而fetch方法不会展示模版；display方法没有返回值，而fetch方法是有返回值的（字符串类型）</span><br />
+<span style=\"line-height:1.5;\">扩展：</span><br />
+<span style=\"line-height:1.5;\">在ThinkPHP中封装了一个友好的打印方法：dump(常量/变量/字符串/对象/数组…)；这方法是ThinkPHP封装的方法，所以只能在ThinkPHP中使用。</span><br />' WHERE `id` = 129 [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-06-17T18:20:20+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP视图中的系统变量有哪些，方便我们在模版中输出内容？','11','<span style=\"line-height:1.5;\">在ThinkPHP中为了方便开发，系统支持一些常用的全局变量。</span><br />
+<span style=\"line-height:1.5;\">•$Think.server	表示服务器端的一些信息（环境变量等等）等价于$_SERVER</span><br />
+<span style=\"line-height:1.5;\">•$Think.get		表示get中的信息，等价于$_GET</span><br />
+<span style=\"line-height:1.5;\">•$Think.post	表示post中的信息，等价于$_POST</span><br />
+<span style=\"line-height:1.5;\">•$Think.request	是post和get信息的集合，等价于$_REQUEST</span><br />
+<span style=\"line-height:1.5;\">•$Think.cookie	表示cookie中的信息，等价于$_COOKIE</span><br />
+<span style=\"line-height:1.5;\">•$Think.session	表示session中的信息，等价于$_SESSION</span><br />
+<span style=\"line-height:1.5;\">•$Think.config	用于输出ThinkPHP中的配置信息</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+
+[ 2016-06-17T18:20:21+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001742s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-06-17T18:20:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 132  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000782s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2016-06-17T18:20:48+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0038s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP视图中的系统变量有哪些，方便我们在模版中取值？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">在ThinkPHP中为了方便开发，系统支持一些常用的全局变量。</span><br />
+<span style=\"line-height:1.5;\">•$Think.server	表示服务器端的一些信息（环境变量等等）等价于$_SERVER</span><br />
+<span style=\"line-height:1.5;\">•$Think.get		表示get中的信息，等价于$_GET</span><br />
+<span style=\"line-height:1.5;\">•$Think.post	表示post中的信息，等价于$_POST</span><br />
+<span style=\"line-height:1.5;\">•$Think.request	是post和get信息的集合，等价于$_REQUEST</span><br />
+<span style=\"line-height:1.5;\">•$Think.cookie	表示cookie中的信息，等价于$_COOKIE</span><br />
+<span style=\"line-height:1.5;\">•$Think.session	表示session中的信息，等价于$_SESSION</span><br />
+<span style=\"line-height:1.5;\">•$Think.config	用于输出ThinkPHP中的配置信息</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 132 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+
+[ 2016-06-17T18:21:25+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 132  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-06-17T18:21:42+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0033s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP视图中的系统变量有哪些，方便我们在模版中取值？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">在ThinkPHP中为了方便开发，系统支持一些常用的全局变量。</span><br />
+<span style=\"line-height:1.5;\">•$Think.server	表示服务器端的一些信息（环境变量等等）等价于$_SERVER</span><br />
+<span style=\"line-height:1.5;\">•$Think.get		表示get中的信息，等价于$_GET</span><br />
+<span style=\"line-height:1.5;\">•$Think.post	表示post中的信息，等价于$_POST</span><br />
+<span style=\"line-height:1.5;\">•$Think.request	是post和get信息的集合，等价于$_REQUEST</span><br />
+<span style=\"line-height:1.5;\">•$Think.cookie	表示cookie中的信息，等价于$_COOKIE</span><br />
+<span style=\"line-height:1.5;\">•$Think.session	表示session中的信息，等价于$_SESSION</span><br />
+<span style=\"line-height:1.5;\">•$Think.config	用于输出ThinkPHP中的配置信息</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 132 [ RunTime:0.1434s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001084s ]
+
+[ 2016-06-17T18:42:15+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001171s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中如何在视图中使用函数','11','<span style=\"line-height:1.5;\">一般情况下，在数据库中存放时间的时候存放的格式是时间戳类型，但是读取的时候需要进行格式化，如果在php脚本中进行循环转化是一个比较麻烦的事情，所以我们可以在模版中使用函数进行处理。</span><br />
+<span style=\"line-height:1.5;\">•语法：{$name|fn1|fn2=arg1,arg2,###}</span><br />
+<span style=\"line-height:1.5;\">$name：模版中的变量；</span><br />
+<span style=\"line-height:1.5;\">|：变量修饰器（Linux中也会用到，在Linux中叫管道）</span><br />
+<span style=\"line-height:1.5;\">fn1：需要使用的第一个函数名</span><br />
+<span style=\"line-height:1.5;\">fn2：需要使用的第二个函数名</span><br />
+<span style=\"line-height:1.5;\">arg1：表示函数所使用到的参数</span><br />
+<span style=\"line-height:1.5;\">arg2：表示函数所使用到的参数</span><br />
+<span style=\"line-height:1.5;\">###：表示变量自身（表示$name），###有个名字叫“占位符”。</span><br />
+<br />
+<span style=\"line-height:1.5;\">函数名的个数不一定是1个，需要根据实际情况来确定，函数要求要是php内置的函数或者是ThinkPHP函数库文件（系统函数库functions.php，应用层级函数库function.php，分组层级function.php）中声明的函数。</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">特别说明：模版中使用函数的时候，如果函数只有一个参数，则可以不写参数，如果参数不止一个，并且第一个参数是变量自身，则也可以不写。</span><br />
+<span style=\"line-height:1.5;\"></span><br />
+<span style=\"line-height:1.5;\">如果函数有多个参数需要调用，则使用：</span><br />
+<span style=\"line-height:1.5;\">{$create_time|date=\"y-m-d\",###}</span><br />
+<span style=\"line-height:1.5;\">表示date函数传入两个参数，每个参数用逗号分割，这里第一个参数是y-m-d，第二个参数是前面要输出的create_time变量，因为该变量是第二个参数，因此需要用###标识变量位置，编译后的结果是：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (date(\"y-m-d\",$create_time)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">如果前面输出的变量在后面定义的函数的第一个参数，则可以直接使用：</span><br />
+<span style=\"line-height:1.5;\">{$data.name|substr=0,3}</span><br />
+<span style=\"line-height:1.5;\">表示输出：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (substr($data[\'name\'],0,3)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">还可以支持多个函数过滤，多个函数之间用“|”分割即可，例如：</span><br />
+<span style=\"line-height:1.5;\">{$name|md5|strtoupper|substr=0,3}</span><br />
+<span style=\"line-height:1.5;\">编译后的结果是：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (substr(strtoupper(md5($name)),0,3)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">函数会按照从左到右的顺序依次调用。</span><br />
+<br />
+<span></span><span style=\"color:#E53333;line-height:1.5;\">注：变量输出使用的函数可以支持内置的PHP函数或者用户自定义函数，甚至是静态方法。</span><span></span><br />
+<br />
+<br />') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+
+[ 2016-06-17T18:42:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2016-06-17T18:42:32+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 133  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-17T18:42:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP中如何在视图中使用函数？',`cat_id`='11',`content`='<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">一般情况下，在数据库中存放时间的时候存放的格式是时间戳类型，但是读取的时候需要进行格式化，如果在php脚本中进行循环转化是一个比较麻烦的事情，所以我们可以在模版中使用函数进行处理。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">•语法：{$name|fn1|fn2=arg1,arg2,###}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">$name：模版中的变量；</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">|：变量修饰器（Linux中也会用到，在Linux中叫管道）</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">fn1：需要使用的第一个函数名</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">fn2：需要使用的第二个函数名</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">arg1：表示函数所使用到的参数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">arg2：表示函数所使用到的参数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">###：表示变量自身（表示$name），###有个名字叫“占位符”。</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">函数名的个数不一定是1个，需要根据实际情况来确定，函数要求要是php内置的函数或者是ThinkPHP函数库文件（系统函数库functions.php，应用层级函数库function.php，分组层级function.php）中声明的函数。</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">特别说明：模版中使用函数的时候，如果函数只有一个参数，则可以不写参数，如果参数不止一个，并且第一个参数是变量自身，则也可以不写。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\"></span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">如果函数有多个参数需要调用，则使用：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$create_time|date=\"y-m-d\",###}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">表示date函数传入两个参数，每个参数用逗号分割，这里第一个参数是y-m-d，第二个参数是前面要输出的create_time变量，因为该变量是第二个参数，因此需要用###标识变量位置，编译后的结果是：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;?php echo (date(\"y-m-d\",$create_time)); ?&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">如果前面输出的变量在后面定义的函数的第一个参数，则可以直接使用：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$data.name|substr=0,3}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">表示输出：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;?php echo (substr($data[\'name\'],0,3)); ?&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">还可以支持多个函数过滤，多个函数之间用“|”分割即可，例如：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$name|md5|strtoupper|substr=0,3}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">编译后的结果是：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&lt;?php echo (substr(strtoupper(md5($name)),0,3)); ?&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">函数会按照从左到右的顺序依次调用。</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:normal;\"></span><span style=\"font-family:Simsun;font-size:medium;color:#E53333;line-height:1.5;\">注：变量输出使用的函数可以支持内置的PHP函数或者用户自定义函数，甚至是静态方法。</span><br />' WHERE `id` = 133 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-06-17T18:46:39+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 131  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007619s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-17T18:46:47+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP中数组和对象的分配形式都是怎样的？如何取值？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\"><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">索引数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">使用中括号的形式：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr1[0]}-{$arr1[1]}-{$arr1[2]}-{$arr1[3]}&lt;br/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">使用点方法的形式：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr1.0}-{$arr1.1}-{$arr1.2}-{$arr1.3}&lt;hr/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">键值数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr2[\'art1\']}-{$arr2[\'art2\']}-{$arr2[\'art3\']}-{$arr2[\'art4\']}&lt;br/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr2.art1}-{$arr2.art2}-{$arr2.art3}-{$arr2.art4}&lt;hr/&gt;</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">二维数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr[0][\'name\']}-{$arr[0][\'age\']}-{$arr[0][\'sex\']}或者{$arr.1.name}-{$arr.1.age}-{$arr.1.sex}</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">对象：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">支持箭头写法和冒号写法。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">箭头写法：{$stu -&gt; id} - {$stu -&gt; name} - {$stu -&gt; age}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">冒号写法：{$stu:id} - {$stu:name} - {$stu:age}</span><br />
+</span> <span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 131 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-06-17T18:49:10+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 133  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2016-06-17T18:49:51+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0041s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP中如何在视图中使用函数？',`cat_id`='11',`content`='<span style=\"line-height:1.5;\">一般情况下，在数据库中存放时间的时候存放的格式是时间戳类型，但是读取的时候需要进行格式化，如果在php脚本中进行循环转化是一个比较麻烦的事情，所以我们可以在模版中使用函数进行处理。</span><br />
+<span style=\"line-height:1.5;\">•语法：{$name|fn1|fn2=arg1,arg2,###}</span><br />
+<span style=\"line-height:1.5;\">$name：模版中的变量；</span><br />
+<span style=\"line-height:1.5;\">|：变量修饰器（Linux中也会用到，在Linux中叫管道）</span><br />
+<span style=\"line-height:1.5;\">fn1：需要使用的第一个函数名</span><br />
+<span style=\"line-height:1.5;\">fn2：需要使用的第二个函数名</span><br />
+<span style=\"line-height:1.5;\">arg1：表示函数所使用到的参数</span><br />
+<span style=\"line-height:1.5;\">arg2：表示函数所使用到的参数</span><br />
+<span style=\"line-height:1.5;\">###：表示变量自身（表示$name），###有个名字叫“占位符”。</span><br />
+<br />
+<span style=\"line-height:1.5;\">函数名的个数不一定是1个，需要根据实际情况来确定，函数要求要是php内置的函数或者是ThinkPHP函数库文件（系统函数库functions.php，应用层级函数库function.php，分组层级function.php）中声明的函数。</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">特别说明：模版中使用函数的时候，如果函数只有一个参数，则可以不写参数，如果参数不止一个，并且第一个参数是变量自身，则也可以不写。</span><br />
+<br />
+<span style=\"line-height:1.5;\">使用函数：</span><br />
+<span style=\"line-height:1.5;\">{$data.name|md5}&nbsp;</span><br />
+<span style=\"line-height:1.5;\">编译后的结果是：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (md5($data[\'name\'])); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">如果函数有多个参数需要调用，则使用：</span><br />
+<span style=\"line-height:1.5;\">{$create_time|date=\"y-m-d\",###}</span><br />
+<span style=\"line-height:1.5;\">表示date函数传入两个参数，每个参数用逗号分割，这里第一个参数是y-m-d，第二个参数是前面要输出的create_time变量，因为该变量是第二个参数，因此需要用###标识变量位置，编译后的结果是：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (date(\"y-m-d\",$create_time)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">如果前面输出的变量在后面定义的函数的第一个参数，则可以直接使用：</span><br />
+<span style=\"line-height:1.5;\">{$data.name|substr=0,3}</span><br />
+<span style=\"line-height:1.5;\">表示输出：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (substr($data[\'name\'],0,3)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">还可以支持多个函数过滤，多个函数之间用“|”分割即可，例如：</span><br />
+<span style=\"line-height:1.5;\">{$name|md5|strtoupper|substr=0,3}</span><br />
+<span style=\"line-height:1.5;\">编译后的结果是：</span><br />
+<span style=\"line-height:1.5;\">&lt;?php echo (substr(strtoupper(md5($name)),0,3)); ?&gt;</span><br />
+<span style=\"line-height:1.5;\">函数会按照从左到右的顺序依次调用。</span><br />
+<br />
+<span style=\"color:#E53333;line-height:1.5;\">注：变量输出使用的函数可以支持内置的PHP函数或者用户自定义函数，甚至是静态方法。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"></span><br />' WHERE `id` = 133 [ RunTime:0.0543s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001179s ]
+
+[ 2016-06-17T18:50:46+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 7  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2016-06-17T19:21:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0038s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('ThinkPHP中实例化模型D方法和M方法以及new实例化模型的区别？','11','<span style=\"line-height:1.5;\">1、使用D方法实例化：</span><br />
+<span style=\"line-height:1.5;\">$model = D(\'模型名\')；表示实例化自定义的模型类</span><br />
+<span style=\"line-height:1.5;\">实例化结果跟使用new实例化的结果是一致的。</span><br />
+<span style=\"line-height:1.5;\">2、使用M方法实例化：</span><br />
+<span style=\"line-height:1.5;\">$model = M(); &nbsp;没有参数，就是实例化模型，但是不关联任何表，一般用他执行原生的sql语句。</span><br />
+<span style=\"line-height:1.5;\">$model = M(\'表名\'); &nbsp;表名不带前缀，首字母尽量大写，实例化模型并且关联指定的表。</span><br />
+<span style=\"line-height:1.5;\">注意：不带参数实例化父类，会不关联任何表，而带参数实例化则会关联相关的数据表</span><br />
+<span style=\"line-height:1.5;\">3、使用new实例化：</span><br />
+<span style=\"line-height:1.5;\">$model = new \\Admin\\Model\\UserModel();	这种方式实例化的时候系统会自动为我们关联user这张表，和$model = M(\'表名\');实例化的结果一致</span><br />
+<br />
+<span style=\"line-height:1.5;\"><span style=\"color:#E53333;\">D</span><span style=\"color:#E53333;\">方法是实例化自定义的模型类，而M方法可以实例化父类模型。</span></span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000610s ]
+
+[ 2016-06-17T19:22:00+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-06-17T20:28:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 131  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007752s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2016-06-17T20:28:45+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 131  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2016-06-17T20:28:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 131  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-06-17T20:29:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0033s ]
+SQL: UPDATE `sc_message` SET `title`='ThinkPHP中数组和对象在模版中如何取值？',`cat_id`='11',`content`='<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">索引数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">使用中括号的形式：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr1[0]}-{$arr1[1]}-{$arr1[2]}-{$arr1[3]}&lt;br/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">使用点方法的形式：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr1.0}-{$arr1.1}-{$arr1.2}-{$arr1.3}&lt;hr/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">键值数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr2[\'art1\']}-{$arr2[\'art2\']}-{$arr2[\'art3\']}-{$arr2[\'art4\']}&lt;br/&gt;</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr2.art1}-{$arr2.art2}-{$arr2.art3}-{$arr2.art4}&lt;hr/&gt;</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">二维数组：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">{$arr[0][\'name\']}-{$arr[0][\'age\']}-{$arr[0][\'sex\']}或者{$arr.1.name}-{$arr.1.age}-{$arr.1.sex}</span><br />
+<br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">对象：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">支持箭头写法和冒号写法。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">箭头写法：{$stu -&gt; id} - {$stu -&gt; name} - {$stu -&gt; age}</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">冒号写法：{$stu:id} - {$stu:name} - {$stu:age}</span><br />
+<br />' WHERE `id` = 131 [ RunTime:0.0649s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000884s ]
+

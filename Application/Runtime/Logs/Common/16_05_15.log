@@ -1,0 +1,30 @@
+[ 2016-05-15T21:16:04+08:00 ] 127.0.0.1 /index.php/order-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+ERR: 无法加载模块:Order-list
+
+[ 2016-05-15T21:16:05+08:00 ] 127.0.0.1 /index.php/recharge-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+ERR: 无法加载模块:Recharge-list
+
+[ 2016-05-15T21:16:20+08:00 ] 127.0.0.1 /index.php/member-level.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+ERR: 无法加载模块:Member-level
+
+[ 2016-05-15T21:16:21+08:00 ] 127.0.0.1 /index.php/member-level.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+ERR: 无法加载模块:Member-level
+
+[ 2016-05-15T21:16:21+08:00 ] 127.0.0.1 /index.php/member-scoreoperation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+ERR: 无法加载模块:Member-scoreoperation
+

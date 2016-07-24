@@ -1,0 +1,42 @@
+[ 2016-05-30T19:52:21+08:00 ] 127.0.0.1 /index.php/content.php?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+ERR: 无法加载模块:Content
+
+[ 2016-05-30T20:23:56+08:00 ] 127.0.0.1 /index.php/hoem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+ERR: 无法加载模块:Hoem
+
+[ 2016-05-30T20:38:43+08:00 ] 127.0.0.1 /index.php/hoem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+ERR: 无法加载模块:Hoem
+
+[ 2016-05-30T21:11:06+08:00 ] 127.0.0.1 /index.php/index.php/admin/edit/index/id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-05-30T21:45:50+08:00 ] 127.0.0.1 /index.php/index.php/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-05-30T21:46:57+08:00 ] 127.0.0.1 /index.php/index.php/admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+ERR: 无法加载模块:Index.php
+
+[ 2016-05-30T21:47:04+08:00 ] 127.0.0.1 /index.php/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+ERR: 无法加载模块:Index.php
+

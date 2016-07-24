@@ -1,0 +1,4 @@
+1.先将本地的数据库mysqldump备份出来
+2.将备份的SQL文件中的图片路径由 /Public/Admin/js/editor/attached全部替换为/wentiku/Public/Admin/js/editor/attached，然后保存
+3.将保存好的SQL文件导入到DMS下的数据库中
+4.测试访问带图片的文件内容

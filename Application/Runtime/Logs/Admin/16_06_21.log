@@ -1,0 +1,180 @@
+[ 2016-06-21T00:46:02+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('linux vsftpd 550 create directory operation failed解决方法？','12','<span style=\"line-height:1.5;\">前提: &nbsp; 今天配置好了vsftp, 但登陆后，除了浏览，什么也干不了。（如新建文件/文件夹, 删除文件, 重命名等都不可操作) 都是弹出 \"550 create directory operation failed\" 的错误信息. 查看文件夹属性, 然后改了什么用户都可读写, 结果还是一样. 配置文件有问题? 应该不会啊, 以前一向都是这样配置的啊. 还是有点不相信自己, 拿了以前的 vsftpd.conf 配置文件过来. 问题依旧, 郁闷ing.....</span><br />
+<span style=\"line-height:1.5;\">正解: &nbsp; &nbsp; &nbsp; 是SELinux(Security-Enhanced Linux----是美国国家安全局对于强制访问控制的实现, 是Linux 上最杰出的新安全子系统.)安装机制搞的鬼.&nbsp;</span><br />
+<span style=\"line-height:1.5;\">只要disable SELinux就可以了.(简单吧!)&nbsp;</span><br />
+<br />
+<span style=\"line-height:1.5;\">PS: 关闭SELinux方法# vi /etc/selinux/config将 SELINUX=XXX --&gt;XXX 代表级别改为SELINUX=disabled 重启就OK了!</span><br />
+<span style=\"line-height:1.5;\">上网查找原因，说是selinux的原因，服务器确实开着selinux的，更改selinux的配置文件将其设为disable，可我不想重启服务器，有以下解决办法：</span><br />
+<span style=\"line-height:1.5;\">执行命令：setenforce 0</span><br />
+<span style=\"line-height:1.5;\">就可以不重启关闭selinux了</span><br />') [ RunTime:0.0127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000825s ]
+
+[ 2016-06-21T00:46:03+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001021s ]
+
+[ 2016-06-21T17:02:39+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001043s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 187  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2016-06-21T17:06:26+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0086s ]
+SQL: UPDATE `sc_message` SET `title`='linux vsftpd 550 create directory operation failed解决方法？',`cat_id`='12',`content`='<span style=\"line-height:1.5;\">前提: &nbsp; 今天<span></span>配置好了vsftp, 但登陆后，除了浏览，什么也干不了。（如新建文件/文件夹, 删除文件, 重命名等都不可操作) 都是弹出 \"550 create directory operation failed\" 的错误信息。 查看文件夹属性， 然后改了什么用户都可读写， 结果还是一样。</span><br />
+<span style=\"line-height:1.5;\">正解:：如果是新开通的万网共享虚拟主机，需要将上传的文件通过FTP上传到服务器所在的htdocs目录下，然后就可以正常上传了</span><br />' WHERE `id` = 187 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000708s ]
+
+[ 2016-06-21T17:06:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001340s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 187  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011857s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2016-06-21T17:07:38+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0068s ]
+SQL: UPDATE `sc_message` SET `title`='linux vsftpd 550 create directory operation failed解决方法？',`cat_id`='12',`content`='<span style=\"line-height:1.5;\">前提：在配置好了vsftp， 连接到服务器之后，除了浏览，什么也干不了。（如新建文件/文件夹, 删除文件, 重命名等都不可操作) 都是弹出 \"550 create directory operation failed\" 的错误信息。 查看文件夹属性， 然后改了什么用户都可读写， 结果还是一样。</span><br />
+<span style=\"line-height:1.5;\">正解:：如果是新开通的万网共享虚拟主机，需要将上传的文件通过FTP上传到服务器所在的htdocs目录下，然后就可以正常上传了</span><br />' WHERE `id` = 187 [ RunTime:0.0509s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000873s ]
+
+[ 2016-06-21T17:07:48+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 187  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2016-06-21T17:07:51+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000185s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0073s ]
+SQL: UPDATE `sc_message` SET `title`='linux vsftpd 550 create directory operation failed解决方法？',`cat_id`='12',`content`='<span style=\"line-height:1.5;\">前提：在配置好了vsftp， 连接到服务器之后，除了浏览，什么也干不了。（如新建文件/文件夹, 删除文件, 重命名等都不可操作) 都是弹出 \"550 create directory operation failed\" 的错误信息。 查看文件夹属性， 然后改了什么用户都可读写， 结果还是一样。</span><br />
+<span style=\"line-height:1.5;\">正解：如果是新开通的万网共享虚拟主机，需要将上传的文件通过FTP上传到服务器所在的htdocs目录下，然后就可以正常上传了</span><br />' WHERE `id` = 187 [ RunTime:0.0511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+

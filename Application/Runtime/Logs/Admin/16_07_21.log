@@ -1,0 +1,327 @@
+[ 2016-07-21T19:25:14+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-21T19:27:17+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('LAMP服务器环境搭建 svn自动更新网站配置 这是最详细的教程,没有之一  ','12','<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">一、</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">安装：</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">wget&nbsp;-c&nbsp;http://lamp.phpstudy.net/phpstudy.bin&nbsp;</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">#<span>获取安装包</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"><br />
+</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">chmod&nbsp;+x&nbsp;phpstudy.bin&nbsp;&nbsp;&nbsp;&nbsp;#<span>权限设置</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"><br />
+</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">./phpstudy.bin&nbsp;<span>　　　　</span><span>#</span><span>运行安装</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">安装完成</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">访问</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">IP<span>即可看到</span><span>phpstudy</span><span>页面</span></span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">二、创建网站根目录</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">mkdir&nbsp;/www</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">mkdir&nbsp;/www/web</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">cd&nbsp;/root</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">&nbsp;&nbsp;#<span>切换到</span><span>root</span><span>的家目录（</span><span>home</span><span>）</span></span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">vim&nbsp;.vimrc&nbsp;#<span>编辑</span><span>vimrc</span><span>文件</span><span>,,</span><span>自动显示行号</span></span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">&nbsp;</span><img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img1.ph.126.net/3-shjBS7Z_0hm57-4zjEwA==/6631528461071212378.png\" style=\"height:auto;\" /><span style=\"line-height:17.25pt;\">&nbsp;</span><span style=\"line-height:28px;font-size:12pt;font-family:宋体;\">&nbsp;:x&nbsp;&nbsp;&nbsp;#</span><span>保存并退出</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">vim&nbsp;/phpstudy/server/httpd/conf/httpd.conf&nbsp;&nbsp;&nbsp;#<span>打开配置文件</span><span>,</span><span>修改网站目录为</span><span>/www/web</span></span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\"></span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img1.ph.126.net/YV0Ed_k_LKgVhA-ktC00bA==/6631749462908400175.png\" style=\"height:auto;\" /><span>&nbsp;</span><span style=\"font-size:12pt;font-family:宋体;\">:x&nbsp;&nbsp;&nbsp;#<span>保存并退出</span></span>
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">三、</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">添加<span>httpd&nbsp;&nbsp;mysql&nbsp;</span><span>服务</span></span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">ln&nbsp;-s&nbsp;/phpstudy/server/httpd/bin/httpd&nbsp;/usr/bin</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">&nbsp;#apache</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">ln&nbsp;-s&nbsp;/phpstudy/</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">mysql</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">/bin/</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">mysql</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">&nbsp;/usr/bin</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">&nbsp;&nbsp;&nbsp;&nbsp;#mysql</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">vim&nbsp;/www/web/index.php&nbsp;&nbsp;#<span>建立</span><span>php</span><span>文件</span><span>,</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img1.ph.126.net/uaq5umjCJyJz0ROpIJux1Q==/6631729671699083827.png\" style=\"height:auto;\" />
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;\">&nbsp;</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">&nbsp;</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">&nbsp;httpd&nbsp;-k&nbsp;restart</span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">&nbsp;&nbsp;#<span>重启</span><span>apache&nbsp;&nbsp;</span><span>访问</span><span>IP,</span><span>检查网站路径是否设置成功&nbsp;</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img2.ph.126.net/CdTFXaclTwNA2SZMbLD_tw==/6631617521513057663.png\" style=\"height:auto;\" />&nbsp;
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;\">&nbsp;</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">路径没问题</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">四、</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">修改</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">mysql<span>密码</span></span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:Calibri;font-size:12pt;\">mysql&nbsp;-uroot&nbsp;-p</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">root&nbsp;&nbsp;&nbsp;&nbsp;#<span>登录</span><span>mysql</span></span><span style=\"line-height:28px;font-family:Calibri;font-size:12pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:Calibri;font-size:12pt;\">&nbsp;SET&nbsp;PASSWORD&nbsp;FOR&nbsp;\'root\'@\'localhost\'&nbsp;=&nbsp;PASSWORD(\'yckj\');</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">&nbsp;&nbsp;#<span>设置新密码为</span><span>yckj</span></span><span style=\"line-height:28px;font-family:Calibri;font-size:12pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">五、</span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">安装<span>svn(</span><span>记得退出</span><span>mysql)</span></span><span style=\"line-height:28px;font-family:宋体;font-size:12pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">1</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">.<span>安装</span><span>svn</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">yum&nbsp;-y&nbsp;install&nbsp;subversion</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">2</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">.<span>配置</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">建立版本库目录</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">mkdir&nbsp;/www/svndata</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">svnserve&nbsp;-d&nbsp;-r&nbsp;/www/svndata</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">3</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">.<span>建立版本库</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">创建一个新的<span>Subversion</span></span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">仓库</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">svnadmin&nbsp;create&nbsp;/www/svndata/</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">yckj</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">配置允许用户</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">xx</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">访问</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">cd&nbsp;/www/svndata/</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">yckj</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">/conf</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">vi&nbsp;svnserve.conf</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">anon-access=none</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">auth-access=write</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">password-db=passwd</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;color:#FF0000;font-size:10.5pt;\">注：修改的文件前面不能有空格，否则启动<span>svn&nbsp;server</span><span>出错</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img0.ph.126.net/J8KaObNUk4fLRGbAnJpJrA==/6631670298071199405.png\" style=\"height:auto;\" />
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;\">&nbsp;</span><span style=\"line-height:28px;font-family:Calibri;font-size:12pt;\">&nbsp;</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:28px;font-family:宋体;font-size:12pt;\">:x&nbsp;&nbsp;&nbsp;#<span>保存并退出</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">vi&nbsp;passwd</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">&nbsp;&nbsp;&nbsp;#<span>设置用户和密码</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img0.ph.126.net/aIqSoFO7CoPR5udq6HCaAQ==/6631628516629341696.png\" style=\"height:auto;\" /><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">:x&nbsp;&nbsp;</span><span>保存并退出</span>
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\">至此<span>,</span><span>可以使用</span><span>svn</span><span>向仓库提交版本了</span></span><span style=\"line-height:31.5px;font-family:宋体;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">4.</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">客户端连接</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">svn://IP地址/</span><span style=\"line-height:24.5px;font-size:10.5pt;\"><span>仓库名</span></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">5.</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">.<span>大招</span></span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"><br />
+</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">配置linux上的apache用户&nbsp;&nbsp;</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">groupadd&nbsp;apache</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">useradd&nbsp;apache&nbsp;-g&nbsp;apache&nbsp;-s&nbsp;/bin/nologin</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">更改Apache用户</span>
+</p>
+<div style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<img alt=\"LAMP服务器环境搭建  svn自动更新网站配置  这是最详细的教程,没有之一 - 蒙奇·D·路飞 - 蒙奇·D·路飞\" src=\"http://img2.ph.126.net/btrcVtpqXR-5rCpTtcfmeQ==/6631598829815486237.png\" style=\"height:auto;\" />
+</div>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">Apache默认用户和组是 &nbsp;daemon</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span><span style=\"line-height:24.5px;font-size:14px;\">重启Apache &nbsp;httpd -k restart</span></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"><br />
+</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">C</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">heckout&nbsp;<span>一份仓库</span></span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">svn&nbsp;co&nbsp;svn://localhost/yckj /www/web</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">修改权限为</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">apache</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">用户</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">chown&nbsp;-R&nbsp;apache:apache&nbsp;/www/we</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">b</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">给最高权限</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">chmod&nbsp;-R&nbsp;700&nbsp;</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">/www/web&nbsp;&nbsp;#<span>没有这句</span><span>,</span><span>网站运行生成模板时会导致没权限而报错</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">&nbsp;</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">建立同步脚本</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">:</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">cd&nbsp;/www/svndata/yckj/hooks/</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">cp&nbsp;post-commit.tmpl&nbsp;post-commit</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">编辑</span><span style=\"line-height:24.5px;font-family:Verdana;color:#FF0000;font-size:10.5pt;\">post-commit</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">,<span>在文件最后添加以下内容</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">export&nbsp;LANG=en_US.UTF-8</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">SVN=/usr/bin/svn</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">WEB=/www/web/</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">$SVN&nbsp;update&nbsp;$WEB&nbsp;–username&nbsp;</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">xx</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">&nbsp;–password&nbsp;</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">yckj</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"><br />
+</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">chown&nbsp;-R&nbsp;apache:apache&nbsp;$WEB &nbsp;#方式一(1)</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span><span style=\"line-height:24.5px;font-size:14px;\">chmod -R 700&nbsp;</span></span><span style=\"line-height:24.5px;font-family:Verdana;font-size:14px;\">$WEB</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">&nbsp; #方式一(2)</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">chmod -R 007 $WEB &nbsp;#另一种方式</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">增加脚本执行权限</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\">chmod&nbsp;+x&nbsp;post-commit</span><span style=\"line-height:24.5px;font-family:Verdana;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">&nbsp;</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">重启<span>svn:</span></span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">killall&nbsp;svnserve</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">svnserve&nbsp;-d&nbsp;-r&nbsp;/www/svndata</span><span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;background-color:#FFFFFF;\">
+	<span style=\"line-height:24.5px;font-family:宋体;font-size:10.5pt;\">&nbsp;</span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">phpstudy<span>使用说明：</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"></span>
+</p>
+<p style=\"color:#333333;font-family:\'Hiragino Sans GB W3\', \'Hiragino Sans GB\', Arial, Helvetica, simsun, u5b8bu4f53;font-size:16px;text-indent:0pt;background-color:#FFFFFF;\">
+	<span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">服务进程管理：<span>phpstudy&nbsp;(start|stop|restart|uninstall)</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"><br />
+</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">站点主机管理：<span>phpstudy&nbsp;(add|del|list)</span></span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\"><br />
+</span><span style=\"line-height:31.5px;font-family:Verdana;font-size:13.5pt;\">ftpd<span>用户管理：</span><span>phpstudy&nbsp;ftp&nbsp;(add|del|list)</span></span>
+</p>') [ RunTime:0.0850s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-21T19:27:18+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-21T19:28:02+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 202  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

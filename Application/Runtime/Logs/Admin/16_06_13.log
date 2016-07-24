@@ -1,0 +1,734 @@
+[ 2016-06-13T14:27:19+08:00 ] 192.168.130.200 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008897s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2016-06-13T14:28:24+08:00 ] 192.168.130.200 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0053s ]
+SQL: UPDATE `sc_message` SET `title`='如何配置apache和php？',`cat_id`='4',`content`='<p>
+	邹志鹏路过~~~
+</p>
+<p>
+	徐新路过~~~
+</p>
+<p>
+	吕衍福路过~~~
+</p>
+<p>
+	php：缩写：Personal Home Page ==&gt;&gt;PHP：HypeText Preprocessor<br />
+命令行脚本：<br />
+运行php文件：php.exe &nbsp;-f &nbsp;\"php文件路径\"<br />
+运行php代码：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+直接运行php代码：形式：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+web软件的运行模式中，总是先在客户端（浏览器端），发起一个“请求”，然后，服务器端才产生反馈动作（就是“运行”程序），并因此而返回给该浏览器一定的信息——就是应答（响应）；<br />
+<span style=\"color:#E53333;\">配置apache 以运行php程序：</span><br />
+分2步：<br />
+第一步：装载php“模块”——其实就是指php语言包中的一个文件而已！<br />
+A：首先，我们将php语言模块，拷贝到计划的目录中来：<br />
+B：打开apache的配置文件：apache安装位置/ conf / httpd.conf<br />
+//需要给出php5apache2_2.dll的完整路径<br />
+131 ： LoadModule php5_module \"....amp/php/php5apache2_2.dll\"<br />
+第二步：告知apache，凡是“.php”后缀文件找php语言模块，这里称（application/x-httpd-php）<br />
+136行：AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp;.phtml<br />
+然后重启apache<br />
+检测apache的配置语法的命令：<br />
+命令所在位置：apache安装位置/bin/httpd.exe<br />
+命令使用方式：httpd.exe &nbsp;-t<br />
+如果配置文件httpd.conf没有语法错误，就返回： syntax &nbsp;OK<br />
+用法1：强行拖入法<br />
+用法2：配置环境变量法：<br />
+在path路径中加入刚才httpd.exe文件所在的完整目录路径，注意使用英文分号（;）跟以前的内容分开<br />
+<span style=\"color:#E53333;\">php的配置：</span><br />
+时区配置：<br />
+php的配置文件位置：php语言包/php.ini<br />
+第一步：<br />
+查找关键字：timezone:<br />
+修改为 date.timezone = PRC<br />
+第二步：<br />
+在apache的配置文件（httpd.conf)中，设置php.ini文件的路径（位置）：<br />
+143行-------&gt; &nbsp;PHPIniDir &nbsp;\"....../amp/php\" &nbsp;//此时不要写php.ini文件名，只要目录<br />
+然后重启apache；<br />
+php的模块配置：<br />
+第一步：<br />
+在php.ini文件中，设定php模块所在的路径（查找关键字extension_dir)：<br />
+extension_dir = \"......./amp/php/ext\"<br />
+第二步：<br />
+“打开”mysql这个模块就可以了（查找关键字php_mysql.dll）：<br />
+将extension=php_mysql.dll 打开，然后，重启apache<br />
+<span style=\"color:#E53333;\">分布式权限配置：</span>就是针对某个网站的任何一个下级目录，都可以单独去设置其访问权限，并且可以不重启apache就生效。<br />
+第1步：<br />
+在该站点对应目录权限的Directorty配置中添加一条：<br />
+AllowOverride &nbsp;all &nbsp; &nbsp;//表示当前目录，允许“分布式”权限配置<br />
+第2步：<br />
+在该目录下的任何子目录中，创建一个特殊的文件（ .htaccess ），在该文件中写所需要的“权限内容”：<br />
+Deny &nbsp;from &nbsp;all<br />
+Allow from 192.168.3.4<br />
+然后访问站点路径，将会报错：Forbidden
+</p>
+<div>
+	<br />
+</div>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 1 [ RunTime:0.0584s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+
+[ 2016-06-13T14:29:17+08:00 ] 192.168.130.81 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2016-06-13T14:46:42+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2016-06-13T14:48:22+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('什么是同源策略？','10','<span style=\"line-height:1.5;\">同源策略（Same origin policy）是一种约定，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。可以说Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。</span><br />
+<span style=\"line-height:1.5;\">同源策略，它是由Netscape提出的一个著名的安全策略。</span><br />
+<span style=\"line-height:1.5;\">现在所有支持JavaScript 的浏览器都会使用这个策略。</span><br />
+<span style=\"line-height:1.5;\">所谓同源是指，域名，协议，端口相同。</span><br />
+<span style=\"line-height:1.5;\">当一个浏览器的两个tab页中分别打开来自百度和谷歌的页面</span><br />
+<span style=\"line-height:1.5;\">当浏览器的百度tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，</span><br />
+<span style=\"line-height:1.5;\">即检查是否同源，只有和百度同源的脚本才会被执行。</span><br />
+<br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000863s ]
+
+[ 2016-06-13T14:48:23+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2016-06-13T14:50:36+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 19  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-06-13T14:54:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 25  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-06-13T14:56:03+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/19
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0055s ]
+SQL: UPDATE `sc_message` SET `title`='session和cookie会话技术总结',`cat_id`='5',`content`='<span style=\"color:#E53333;line-height:1.5;\">什么是会话控制？</span><br />
+<span style=\"line-height:1.5;\"> 出现原因:http是无状态协议的,每次都是不同的服务器请求,无法维护两个请求事务之间的关系.</span><br />
+<span style=\"line-height:1.5;\"> 会话控制:能够在网站中跟踪一个变量,通过对变量的跟踪,就可以使多个请求事物之间建立联系,根据授权和用户身份显示不同的内容,不同页面</span><br />
+<span style=\"line-height:1.5;\"> COOKIE:是服务器设置在客户端的文本文件,保存客户端的个人信息.</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">什么是COOKIE？</span><br />
+<span style=\"line-height:1.5;\"> 1.cookie是在http协议下,服务器或脚本在客户端保存维护信息的一种方式</span><br />
+<span style=\"line-height:1.5;\"> 2.cookie是web服务器保存在客户端的一个很小的文本文件,保存客户端的信息,提高网页的处理效率,降低服务器负担</span><br />
+<span style=\"line-height:1.5;\"> 3.cookie保存在客户端,通常在浏览器的cookie临时文件夹中,可以手动的删除.如果cookie太多超过系统的允许范围,系统将自动删除</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">cookie的工作原理：</span><br />
+<span style=\"line-height:1.5;\"> 1.当用户访问基于php技术的网站时,在php中可以使用setcookie()函数生成一个cookie,系统经过处理,将cookie发送到客户端并保存在C:\\Documents and Setting\\用户名\\Cookies目录下</span><br />
+<span style=\"line-height:1.5;\"> 2.cookie是http标头的一部分,在它之前不能有任何输出，空格和换行都不可以</span><br />
+<span style=\"line-height:1.5;\"> 3.当客户端再次访问网站时,浏览器会自动把cookie目录下与该站点对应的cookie信息发送到服务器,服务器将自动把客户端传来的cookie转化成php的变量,.php5中存放在$_COOKIE全局数据中</span><br />
+<span style=\"line-height:1.5;\"> 4.接受和处理cookie.使用$_COOKIE获取</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">COOKIE的参数设定：</span><br />
+<span style=\"line-height:1.5;\"> Setcookie(键，值，有效期=0，有效路径=‘’，有效域名=‘’，是否仅安全连接传输=false，是否HTTPonly=false)</span><br />
+<span style=\"line-height:1.5;\"> 1、 键：设置cookie的名字，数据是在响应阶段被传输到浏览器端的</span><br />
+<span style=\"line-height:1.5;\"> 2、 值：设置cookie的值</span><br />
+<span style=\"line-height:1.5;\"> Tip：增加，修改，删除，都使用该函数setcookie()完成！</span><br />
+<span style=\"line-height:1.5;\"> 3、 有效期：默认浏览器关闭（会话周期结束）时，COOKIE失效。也成之为：会话COOKIE（临时COOKIE）</span><br />
+<span style=\"line-height:1.5;\"> 允许设置COOKIE的有效期，语法上，使用setcookie的第三个参数进行设置，通过unix时间戳</span><br />
+<span style=\"line-height:1.5;\"> （从1970年到现在的秒数，PHP函数time()来获取当前时间戳。）来设置COOKIE的有效期。</span><br />
+<span style=\"line-height:1.5;\"> 当用户下次访问您的站点的时候，浏览器会先检查您站点的所有cookie,如果某个cookie已经过期，浏览器不会把这个cookie随页面请求一起发送给服务器，而是删除这个已经过期的cookie。时间点是从cookie被创建时候当前时间开始计算。</span><br />
+<span style=\"line-height:1.5;\"> 谁来判断该COOKIE是否过期？(是否在有效期内)</span><br />
+<span style=\"line-height:1.5;\"> 浏览器 &nbsp;OR &nbsp;服务器？</span><br />
+<span style=\"line-height:1.5;\"> 是浏览器判断该COOKIE是否过期的。</span><br />
+<span style=\"line-height:1.5;\"> 在设置COOKIE时，同时将COOKIE的有效期，告知（传输）到浏览器端。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">如何删除COOKIE：</span><br />
+<span style=\"line-height:1.5;\"> Time()-1:	删除COOKIE通用做法，强制设为过期。</span><br />
+<span style=\"line-height:1.5;\"> 注意: 当cookie被删除时,它的值在当前页面仍然有效.如果要把cookie设置成在浏览器关闭后就失效.那么可以把expiretime的值设为0,或者不设此值</span><br />
+<span style=\"line-height:1.5;\"> 4、 path有效路径（使用较少）：默认仅在当前目录及其后代目录有效。使用空字符串表示</span><br />
+<span style=\"line-height:1.5;\"> 默认值！通常如果需要设置，就是将COOKIE设置为 / 根目录下有效，表示整站有效。</span><br />
+<span style=\"line-height:1.5;\"> 5、 有效域（使用频率较高）：某个域名下设置的COOKIE，仅仅可以在当前域名下所使用</span><br />
+<span style=\"line-height:1.5;\"> COOKIE，支持在一级域名内（所有的二级域名之间）进行COOKIE数据共享。</span><br />
+<span style=\"line-height:1.5;\"> 6、 secure是否仅安全连接（https）传输：</span><br />
+<span style=\"line-height:1.5;\"> 告知浏览器，我们所设置的cookie，是否仅仅在https这个协议下，才会被发送到浏览器端！ 用 参数 第六个完成设置：默认值false，表示都可以（http和https）。</span><br />
+<span style=\"line-height:1.5;\"> 7、 HTTPONLY：</span><br />
+<span style=\"line-height:1.5;\"> 所设置好的COOKIE，是否仅仅在http请求时所使用。</span><br />
+<span style=\"line-height:1.5;\"> COOKIE还可以通过浏览器端的脚本（javascript）获取到。</span><br />
+<span style=\"line-height:1.5;\"> function getCookie(){</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; &nbsp;alert(document.cookie);</span><br />
+<span style=\"line-height:1.5;\"> }</span><br />
+<span style=\"line-height:1.5;\"> 如果需要禁止浏览器端其他脚本使用该cookie，则使用第七个参数即可，默认false，设置为true表示除了http请求，其它地方（javascript）不可以用</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">COOKIE的有效期：</span><br />
+<span style=\"line-height:1.5;\"> 设置方法如下：</span><br />
+<span style=\"line-height:1.5;\"> setcookie(\"cookie_name\", \"abcd\", time()+3600);</span><br />
+<span style=\"line-height:1.5;\"> 解释：这个cookie有3600秒的有效期；</span><br />
+<span style=\"line-height:1.5;\"> cookie有效期在退出作用域那一刻开始生效；</span><br />
+<span style=\"line-height:1.5;\"> 重新访问又有3600秒，设置cookie时，不会考虑之前的是否设置cookie和cookie是否有效，可以认为是强制设置。</span><br />
+<span style=\"line-height:1.5;\"> 如果关闭浏览器重新打开又重新算（当然这个要在浏览器端设置了关闭浏览器立即失效的开关）。cookie其实就是从打开页面产生cookie开始算起，如果你打开页面产生cookie的时间有1800秒了，假如设置的3600秒失效，再次刷新页面（不重新设置cookie的情况下）就剩1800秒了。</span><br />
+<span style=\"line-height:1.5;\"> PHP手册上关于setcookie函数的expire参数有这样一个解释：</span><br />
+<span style=\"line-height:1.5;\"> If set to 0, or omitted, the cookie will expire at the end of the session (when the browser closes).&nbsp;</span><br />
+<span style=\"line-height:1.5;\"> 如果设为0 或者忽略该参数, cookie将在session结束时(或关闭浏览器时)过期</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">COOKIE的注意事项：</span><br />
+<span style=\"line-height:1.5;\">1.setcookie()之后在当前页面echo时不会输出,必须刷新或到下一个页面才会输出</span><br />
+<span style=\"line-height:1.5;\">2.不同浏览对cookie的处理不同,客户端可以禁用cookie,而且对浏览器的数量有限制</span><br />
+<span style=\"line-height:1.5;\">3.避免过度依赖cookie,因为客户端会禁止掉cookie</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">什么是SESSION？</span><br />
+<span style=\"line-height:1.5;\"> 1.session从用户访问页面开始,到断开与网站的连接为止,形成一个会话的生命周期.在会话期间,分配客户唯一的一个sessionID,用来标识当前用户,与其他用户进行区分</span><br />
+<span style=\"line-height:1.5;\"> 2.session会话时,session会分别保存在客户端和服务器端的两个文件,对于客户端:使用临时的cookie保存(cookie的名称为PHPSESSID)或者通过url字符串的形式传递.服务器端也以文本的形式保存在指定的session目录中</span><br />
+<span style=\"line-height:1.5;\"> 3.session通过id接受每一次访问的请求,从而识别当前用户,跟踪和保持用户的具体资料,以及session变量,可在session中存储数字或文字资料.比如session_name.这些信息都保存在服务器端</span><br />
+<span style=\"line-height:1.5;\"> 4.sessionID可以作为会话信息保存到数据库中,进行session持久化.这样可以跟踪用户的登陆次数,在线与否,在线时间</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">如何销毁SESSION?</span><br />
+<span style=\"line-height:1.5;\"> 1、unset($_SESSION[\'XXX\']):用于删除单个session变量</span><br />
+<span style=\"line-height:1.5;\"> 注意:不要使用unset($_SESSION),此函数不可用,会删除全局的$_SESSION销毁</span><br />
+<span style=\"line-height:1.5;\"> 2、$_SESSION=array():删除多个session变量</span><br />
+<span style=\"line-height:1.5;\"> 3、销毁session_destroy():结束当前的会话,并清空会话中的所有资源.该函数不会unset(释放)和当前session相关的全局变量,也不会删除客户端的session对应的cookie</span><br />
+<span style=\"line-height:1.5;\"> 4、清空session值</span><br />
+<span style=\"line-height:1.5;\"> session_start();</span><br />
+<span style=\"line-height:1.5;\"> $_SESSION=array();</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">SESSION的过期时间：</span><br />
+<span style=\"line-height:1.5;\"> session的过期时间由两方面决定的：</span><br />
+<span style=\"line-height:1.5;\"> 1.存储在客户端的$_COOKIE[\'PHPSESSID\']的过期时间（默认cookie名称为PHPSESSID,可通过php.ini中的session.name修改。）</span><br />
+<span style=\"line-height:1.5;\"> 2.存储在服务器端的相对应的session文件（session文件名和上述cookie的值一一对应），默认为1440秒，即24分钟&nbsp;</span><br />
+<span style=\"line-height:1.5;\"> 两者的关系： 当执行session_start()的时候，其实是做了两件事：</span><br />
+<span style=\"line-height:1.5;\"> 一、检查客户端发送过来的的所有cookie（当然也包括$_COOKIE[\'PHPSESSID\'], 如果有的话），根据$_COOKIE[\'PHPSESSID\']的值（这是由apache产生的随机字符串，如0lkbd2se458r600m2m7o1r4ic5）来访问 相对应的 session文件，这两者是一 一对应的关系。当然文件里面的值是经过序列化的。</span><br />
+<span style=\"line-height:1.5;\"> 二、如果客户端没有传来$_COOKIE[\'PHPSESSID\']，就会有服务端产生一个随机的$_COOKIE[\'PHPSESSID\']并存储在客户端。</span><br />
+<span style=\"line-height:1.5;\"> 对session_start()的理解：</span><br />
+<span style=\"line-height:1.5;\"> 1、在session_start()开启之后，当session数据对应的PHPSESSIONID的cookie已经超时，无法传回到服务器端，此时由于session开启，系统会自动再重新分配一个SESSIONID标识，SESSIONID默认是存储于浏览器端。</span><br />
+<span style=\"line-height:1.5;\"> 2、同时在session_start开启之后，如果之前有存储过session，并且没有过期，则会获取到已经存好的session，如果没有存储过session，则session机制默认也会自动分配一个SESSIONID给浏览器，同时在服务器端生成对应的文件，此时的session是一个过期的会话</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">如何设置 session数据的属性？</span><br />
+<span style=\"line-height:1.5;\"> 设置COOKIE中session-ID这个COOKIE变量属性即可！</span><br />
+<span style=\"line-height:1.5;\"> 方案一，配置 php.ini</span><br />
+<span style=\"line-height:1.5;\"> 方案二，在脚本中，开启session之前使用函数进行配置</span><br />
+<span style=\"line-height:1.5;\"> ini_set(\'session.cookie_lifetime\',\'3600\');</span><br />
+<span style=\"line-height:1.5;\"> ini_set(\'sesssion.cookie_domain\',\' .baidu.com\');</span><br />
+<span style=\"line-height:1.5;\"> @session_start();</span><br />
+<span style=\"line-height:1.5;\"> 采用下面的函数进行设置：</span><br />
+<span style=\"line-height:1.5;\"> Session_set_cookie_params(有效期，有效路径，有效域，是否仅安全连接传输，是否HTTPONLY)</span><br />
+<span style=\"line-height:1.5;\"> 实际环境中，很少改session的有效期。经常改有效域名。</span><br />
+<span style=\"line-height:1.5;\"> session_set_cookie_params(0,\'/\', \'.baidu.com\');</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Session数据区操作：</span><br />
+<span style=\"line-height:1.5;\"> 重写session的存储机制：</span><br />
+<span style=\"line-height:1.5;\"> Session数据区默认以 文件的形式存储与服务器操作系统临时目录中！</span><br />
+<span style=\"line-height:1.5;\"> 当 session数据区过多时，文件形式的存储，操作速度变慢，磁盘的读写开销很大</span><br />
+<span style=\"line-height:1.5;\"> 重写session入数据库：</span><br />
+<span style=\"line-height:1.5;\"> 共6个函数</span><br />
+<span style=\"line-height:1.5;\"> Session_set_save_handler(开始函数，结束函数，读函数，写函数，删除函数，GC函数);</span><br />
+<span style=\"line-height:1.5;\"> 告知session机制，在需要读写时，使用用户自定义的读写函数完成！</span><br />
+<span style=\"line-height:1.5;\"> 这个函数仅仅是设置告知，不是调用，以上6个函数，在session机制运行到某个时间点时，</span><br />
+<span style=\"line-height:1.5;\"> 才会被调用！</span><br />
+<span style=\"line-height:1.5;\"> 垃圾回收操作： sessGC()</span><br />
+<span style=\"line-height:1.5;\"> 垃圾：服务器上过时的session数据区。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">垃圾如何判定？</span><br />
+<span style=\"line-height:1.5;\"> 如果一个session数据区已经超过多久没有使用（最后一次写操作）了，就是被视为垃圾数据。</span><br />
+<span style=\"line-height:1.5;\"> 该时间临界点：默认1440s。可以被配置：session.gc_maxlifetime = 1440</span><br />
+<span style=\"line-height:1.5;\"> 判断过期条件：Last_write &lt; 当前时间-1440&nbsp;</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">垃圾如何删除？</span><br />
+<span style=\"line-height:1.5;\"> 在 session_start()过程中，开启session机制过程中：有几率地执行 垃圾回收操作。</span><br />
+<span style=\"line-height:1.5;\"> 一旦执行，就会删除所有的过期的垃圾数据区。</span><br />
+<span style=\"line-height:1.5;\"> 默认的概率为1/1000。</span><br />
+<span style=\"line-height:1.5;\"> 可以设置该几率：</span><br />
+<span style=\"line-height:1.5;\"> 可能性：Session.gc_probability</span><br />
+<span style=\"line-height:1.5;\"> 基数（除数）：Session.gc_divisor</span><br />
+<span style=\"line-height:1.5;\"> 建议在脚本周期调整，使用函数ini_set(),在开启session机制前完成</span><br />
+<span style=\"line-height:1.5;\"> 实现 sessGC()：PHP的session机制将 最大有效期作为参数，传递过来！</span><br />
+<span style=\"line-height:1.5;\"> 语法细节：</span><br />
+<span style=\"line-height:1.5;\"> 要注意先设置再开启session机制</span><br />
+<span style=\"line-height:1.5;\"> PHP配置项：session.save_handler改为 user： 表示用户自定义！</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">会话技术总结：</span><br />
+<span style=\"line-height:1.5;\"> Session.save_handler	存储处理器： files|user</span><br />
+<span style=\"line-height:1.5;\"> Session.save_path	存储地址。</span><br />
+<span style=\"line-height:1.5;\"> Session.cookie_XXX	（lifetime，path，domain，secure，httponly）存储session-ID这个COOKIE变量的属性</span><br />
+<span style=\"line-height:1.5;\"> Session.gc_maxlifetime</span><br />
+<span style=\"line-height:1.5;\"> Session.gc_probability</span><br />
+<span style=\"line-height:1.5;\"> Session.gc_divisor</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">session和cookie的额外的一些理解：</span><br />
+<span style=\"line-height:1.5;\"> 1. 由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session.典型的场景比如购物车，当你点击下单按钮时，由于HTTP协议无状态，所以并不知道是哪个用户操作的，所以服务端要为特定的用户创建了特定的Session，用用于标识这个用户，并且跟踪用户，这样才知道购物车里面有几本书。这个Session是保存在服务端的，有一个唯一标识。在服务端保存Session的方法很多，内存、数据库、文件都有。集群的时候也要考虑Session的转移，在大型的网站，一般会有专门的Session服务器集群，用来保存用户会话，这个时候 Session 信息都是放在内存的，使用一些缓存服务比如Memcached之类的来放 Session。</span><br />
+<span style=\"line-height:1.5;\"> 2. 思考一下服务端如何识别特定的客户？这个时候Cookie就登场了。每次HTTP请求的时候，客户端都会发送相应的Cookie信息到服务端。实际上大多数的应用都是用 Cookie 来实现Session跟踪的，第一次创建Session的时候，服务端会在HTTP协议中告诉客户端，需要在 Cookie 里面记录一个Session ID，以后每次请求把这个会话ID发送到服务器，我就知道你是谁了。有人问，如果客户端的浏览器禁用了 Cookie 怎么办？一般这种情况下，会使用一种叫做URL重写的技术来进行会话跟踪，即每次HTTP交互，URL后面都会被附加上一个诸如 sid=xxxxx 这样的参数，服务端据此来识别用户。</span><br />
+<span style=\"line-height:1.5;\"> 3. Cookie其实还可以用在一些方便用户的场景下，设想你某次登陆过一个网站，下次登录的时候不想再次输入账号了，怎么办？这个信息可以写到Cookie里面，访问网站的时候，网站页面的脚本可以读取这个信息，就自动帮你把用户名给填了，能够方便一下用户。这也是Cookie名称的由来，给用户的一点甜头。</span><br />
+<span style=\"line-height:1.5;\"> 所以，总结一下：</span><br />
+<span style=\"line-height:1.5;\"> Session是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中；</span><br />
+<span style=\"line-height:1.5;\"> Cookie是客户端保存用户信息的一种机制，用来记录用户的一些信息，也是实现Session的一种方式。</span><br />' WHERE `id` = 19 [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-06-13T14:57:22+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('浏览器禁用COOKIE，session是否可用？[理论]','5','<span style=\"line-height:1.5;\">COOKIE被禁用，session-Id不能存储和传输。因此不可用！</span><br />
+<span style=\"line-height:1.5;\">理论上的解决方案：</span><br />
+<span style=\"line-height:1.5;\">通过 URL， 或者 POST数据数据向服务器端，每次传输session-ID！</span><br />
+<span style=\"line-height:1.5;\">例如下面的配置：php.ini</span><br />
+<span style=\"line-height:1.5;\">Session是否仅仅是用COOKIE完成传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_only_cookie = 1 &nbsp;开启（在session_start之前）</span><br />
+<span style=\"line-height:1.5;\">是否通过其他方式自动传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_trans_sid = 0 &nbsp;开启</span><br />
+<span style=\"line-height:1.5;\">然后通过表单的隐藏域向服务器端，每次传输session-ID！即可</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+
+[ 2016-06-13T14:57:23+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0147s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-06-13T14:58:15+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 109  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-06-13T14:58:23+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='浏览器禁用COOKIE，session是否可用？[理论]',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">COOKIE被禁用，session-Id不能存储和传输。因此不可用！</span><br />
+<span style=\"line-height:1.5;\">理论上的解决方案：</span><br />
+<span style=\"line-height:1.5;\">通过 URL， 或者 POST数据数据向服务器端，每次传输session-ID！</span><br />
+<span style=\"line-height:1.5;\">例如下面的配置：php.ini</span><br />
+<span style=\"line-height:1.5;\">Session是否仅仅是用COOKIE完成传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_only_cookie = 1 &nbsp;开启（在session_start之前）</span><br />
+<span style=\"line-height:1.5;\">是否通过其他方式自动传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_trans_sid = 0 &nbsp;开启</span><br />
+<span style=\"line-height:1.5;\">然后通过表单的隐藏域向服务器端，每次传输session-ID！即可</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 109 [ RunTime:0.1070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000499s ]
+
+[ 2016-06-13T16:43:04+08:00 ] 192.168.130.81 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000666s ]
+
+[ 2016-06-13T16:43:35+08:00 ] 192.168.130.81 /index.php/admin/index/edit/id/14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0158s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 14  [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2016-06-13T17:43:15+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 37  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2016-06-13T17:47:34+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001511s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0060s ]
+SQL: UPDATE `sc_message` SET `title`='ajax如何进行跨域请求',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">ajax只能取当前域名的数据，不能到其它域名下的数据</span><br />
+<span style=\"line-height:1.5;\">ajax跨域请求的两种解决方案：</span><br />
+<span style=\"line-height:1.5;\">1、使用PHP请求代理</span><br />
+<span style=\"line-height:1.5;\">服务器访问客户端，客户端返回js代码，js需要ajax请求另一个网站，那么就让ajax先请求自己的服务器 a.php ,通过php请求第三方的网站，使用 file_get_contents获取到请求的数据然后返回给js</span><br />
+<span style=\"line-height:1.5;\">2、jsonp格式：</span><br />
+<span style=\"line-height:1.5;\">jsonp限制：只能发GET请求</span><br />
+<span style=\"line-height:1.5;\">A. 接口服务器端 必须要把要返回的数据放到一个函数中【函数名先约定好】</span><br />
+<span style=\"line-height:1.5;\">$str = json_encode($arr);</span><br />
+<span style=\"line-height:1.5;\">echo \"abc($str)\";</span><br />
+<span style=\"line-height:1.5;\">B. 客户端 JS在请求时这样写：</span><br />
+&lt;script type=\"text/javascript\"&gt;<br />
+function abc(data){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;alert(data.name + data.age);<br />
+}<br />
+&lt;/script&gt;<br />
+&lt;script src=\"http://www.jxshop.com/bcd.php\"&gt;&lt;/script&gt;<br />
+<span style=\"background-color:#FFE500;\">注意jsonp正确的请求方式：将要请求的域名通过src方式加载进来，然后bcd.php文件就会调用abc函数，前提是abc()函数要和接口服务器端的函数名一致</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160613/20160613174545_82130.png\" alt=\"\" /><br />' WHERE `id` = 37 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000875s ]
+
+[ 2016-06-13T17:48:12+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 37  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001565s ]
+
+[ 2016-06-13T17:48:31+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: UPDATE `sc_message` SET `title`='ajax如何进行跨域请求',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">ajax只能取当前域名的数据，不能到其它域名下的数据</span><br />
+<span style=\"line-height:1.5;\">ajax跨域请求的两种解决方案：</span><br />
+<span style=\"line-height:1.5;\">1、使用PHP请求代理</span><br />
+<span style=\"line-height:1.5;\">服务器访问客户端，客户端返回js代码，js需要ajax请求另一个网站，那么就让ajax先请求自己的服务器 a.php ,通过php请求第三方的网站，使用 file_get_contents获取到请求的数据然后返回给js</span><br />
+<span style=\"line-height:1.5;\">2、jsonp格式：</span><br />
+<span style=\"line-height:1.5;\">jsonp限制：只能发GET请求</span><br />
+<span style=\"line-height:1.5;\">A. 接口服务器端 必须要把要返回的数据放到一个函数中【函数名先约定好】</span><br />
+<span style=\"line-height:1.5;\">$str = json_encode($arr);</span><br />
+<span style=\"line-height:1.5;\">echo \"abc($str)\";</span><br />
+<span style=\"line-height:1.5;\">B. 客户端 JS在请求时这样写：</span><br />
+<span style=\"line-height:1.5;background-color:#FFE500;\">注意jsonp正确的请求方式：将要请求的域名通过src方式加载进来，然后bcd.php文件就会调用abc函数，前提是abc()函数要和接口服务器端的函数名一致</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160613/20160613174545_82130.png\" alt=\"\" /><br />' WHERE `id` = 37 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001009s ]
+
+[ 2016-06-13T18:12:13+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-06-13T23:02:54+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.061708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019357s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.1605s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.034799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.034950s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010743s ]
+
+[ 2016-06-13T23:04:27+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+

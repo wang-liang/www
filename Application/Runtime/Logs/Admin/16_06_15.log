@@ -1,0 +1,2018 @@
+[ 2016-06-15T00:52:33+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('有关浏览器缓存以及ajax的缓存的一些疑问？','10','<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比，IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求并未出现If-Modified-Since参数，而只是给出No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是一直从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />') [ RunTime:0.0624s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+
+[ 2016-06-15T00:52:34+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2016-06-15T00:57:21+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008303s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2016-06-15T00:58:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0052s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求并未出现If-Modified-Since参数，而只是给出No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是一直从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.0564s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-06-15T00:59:51+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001625s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001415s ]
+
+[ 2016-06-15T01:00:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求(第一次和后续的请求都包含)并未出现If-Modified-Since参数，而只是给出No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是一直从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.0977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000901s ]
+
+[ 2016-06-15T01:01:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2016-06-15T01:02:13+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0051s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求(第一次和后续的请求都包含)并未出现If-Modified-Since参数，而第一次请求返回状态吗200，后续请求只给出 No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是一直从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.0714s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000333s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001296s ]
+
+[ 2016-06-15T01:02:40+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001427s ]
+
+[ 2016-06-15T01:02:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001963s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0071s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求(第一次和后续的请求都包含)并未出现If-Modified-Since参数，而第一次请求返回状态码是200，后续的请求只给出 No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是一直从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.0494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001252s ]
+
+[ 2016-06-15T01:14:30+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001944s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('浏览器缓存详解：expires,cache-control,last-modified,etag详细说明 ？','10','<span style=\"line-height:1.5;\">首先，为了方便理解，先看如下的图：</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160615/20160615011357_55346.png\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">每个状态的详细说明如下：</span><br />
+<span style=\"line-height:1.5;\">1、Last-Modified</span><br />
+<span style=\"line-height:1.5;\">在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是你请求的资源，同时有一个Last-Modified的属性标记(HttpReponse Header)此文件在服务期端最后被修改的时间，格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头(HttpRequest Header)，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回HTTP304（NotChanged.）状态码，内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。</span><br />
+<span style=\"line-height:1.5;\">注：如果If-Modified-Since的时间比服务器当前时间(当前的请求时间request_time)还晚，会认为是个非法请求</span><br />
+<span style=\"line-height:1.5;\">2、Etag工作原理</span><br />
+<span style=\"line-height:1.5;\">HTTP协议规格说明定义ETag为“被请求变量的实体标记”。简单点即服务器响应时给请求URL标记，并在HTTP响应头中将其传送到客户端，类似服务器端返回的格式：</span><br />
+<span style=\"line-height:1.5;\">Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">客户端的查询更新格式是这样的：</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">如果ETag没改变，则返回状态304。</span><br />
+<span style=\"line-height:1.5;\">即:在客户端发出请求后，HttpReponse Header中包含Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">标识，等于告诉Client端，你拿到的这个的资源有表示ID：5d8c72a5edda8d6a:3239。当下次需要发Request索要同一个URI的时候，浏览器同时发出一个If-None-Match报头(Http RequestHeader)此时包头中信息包含上次访问得到的Etag:“5d8c72a5edda8d6a:3239″标识。</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239“</span><br />
+<span style=\"line-height:1.5;\">,这样，Client端等于Cache了两份，服务器端就会比对2者的etag。如果If-None-Match为False，不返回200，返回304(Not Modified) Response。</span><br />
+<span style=\"line-height:1.5;\">3、Expires</span><br />
+<span style=\"line-height:1.5;\">给出的日期/时间后，被响应认为是过时。如Expires:Thu, 02 Apr 2009 05:14:08 GMT</span><br />
+<span style=\"line-height:1.5;\">需和Last-Modified结合使用。用于控制请求文件的有效时间，当请求数据在有效期内时客户端浏览器从缓存请求数据而不是服务器端.当缓存中数据失效或过期，才决定从服务器更新数据。</span><br />
+<span style=\"line-height:1.5;\">4、Last-Modified和Expires</span><br />
+<span style=\"line-height:1.5;\">Last-Modified标识能够节省一点带宽，但是还是逃不掉发一个HTTP请求出去，而且要和Expires一起用。而Expires标识却使得浏览器干脆连HTTP请求都不用发，比如当用户F5或者点击Refresh按钮的时候就算对于有Expires的URI，一样也会发一个HTTP请求出去，所以，Last-Modified还是要用的，而且要和Expires一起用。</span><br />
+<span style=\"line-height:1.5;\">5、Etag和Expires</span><br />
+<span style=\"line-height:1.5;\">如果服务器端同时设置了Etag和Expires时，Etag原理同样，即与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后，服务器才能返回304.</span><br />
+<span style=\"line-height:1.5;\">6、Last-Modified和Etag</span><br />
+<span style=\"line-height:1.5;\">分布式系统里多台机器间文件的last-modified必须保持一致，以免负载均衡到不同机器导致比对失败</span><br />
+<span style=\"line-height:1.5;\">分布式系统尽量关闭掉Etag(每台机器生成的etag都会不一样)</span><br />
+<span style=\"line-height:1.5;\">Last-Modified和ETags请求的http报头一起使用，服务器首先产生Last-Modified/Etag标记，服务器可在稍后使用它来判断页面是否已经被修改，来决定文件是否继续缓存</span><br />
+<span style=\"line-height:1.5;\">过程如下:</span><br />
+<span style=\"line-height:1.5;\">1.客户端请求一个页面（A）。</span><br />
+<span style=\"line-height:1.5;\">2.服务器返回页面A，并在给A加上一个Last-Modified/ETag。</span><br />
+<span style=\"line-height:1.5;\">3.客户端展现该页面，并将页面连同Last-Modified/ETag一起缓存。</span><br />
+<span style=\"line-height:1.5;\">4.客户再次请求页面A，并将上次请求时服务器返回的Last-Modified/ETag一起传递给服务器。</span><br />
+<span style=\"line-height:1.5;\">5.服务器检查该Last-Modified或ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304和一个空的响应体。</span><br />
+<span style=\"line-height:1.5;\">注：</span><br />
+<span style=\"line-height:1.5;\">1)Last-Modified和Etag头都是由WebServer发出的HttpReponse Header，WebServer应该同时支持这两种头。</span><br />
+<span style=\"line-height:1.5;\">2)WebServer发送完Last-Modified/Etag头给客户端后，客户端会缓存这些头；</span><br />
+<span style=\"line-height:1.5;\">3)客户端再次发起相同页面的请求时，将分别发送与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；</span><br />
+<span style=\"line-height:1.5;\">4)通过上述值到服务器端检查，判断文件是否继续缓存；</span><br />
+<span style=\"line-height:1.5;\">7、关于 Cache-Control: max-age=秒 和 Expires</span><br />
+<span style=\"line-height:1.5;\">Expires = 时间，HTTP 1.0 版本，缓存的载止时间，允许客户端在这个时间之前不去检查（发请求）</span><br />
+<span style=\"line-height:1.5;\">max-age = 秒，HTTP 1.1版本，资源在本地缓存多少秒。</span><br />
+<span style=\"line-height:1.5;\">如果max-age和Expires同时存在，则被Cache-Control的max-age覆盖。</span><br />
+<span style=\"line-height:1.5;\">Expires 的一个缺点就是，返回的到期时间是服务器端的时间，这样存在一个问题，如果客户端的时间与服务器的时间相差很大，那么误差就很大，所以在HTTP 1.1版开始，使用Cache-Control: max-age=秒替代。</span><br />
+<span style=\"line-height:1.5;\">Expires =max-age + &nbsp; “每次下载时的当前的request时间”</span><br />
+<span style=\"line-height:1.5;\">所以一旦重新下载的页面后，expires就重新计算一次，但last-modified不会变化&nbsp;</span><br />
+<div>
+	<br />
+</div>') [ RunTime:0.0194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-06-15T01:14:31+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001950s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001997s ]
+
+[ 2016-06-15T01:16:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000104s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001816s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001819s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0079s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('浏览器缓存详解：expires,cache-control,last-modified,etag详细说明 ？','10','<span style=\"line-height:1.5;\">首先，为了方便理解，先看如下的图：</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160615/20160615011625_16940.png\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">每个状态的详细说明如下：</span><br />
+<span style=\"line-height:1.5;\">1、Last-Modified</span><br />
+<span style=\"line-height:1.5;\">在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是你请求的资源，同时有一个Last-Modified的属性标记(HttpReponse Header)此文件在服务期端最后被修改的时间，格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头(HttpRequest Header)，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回HTTP304（NotChanged.）状态码，内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。</span><br />
+<span style=\"line-height:1.5;\">注：如果If-Modified-Since的时间比服务器当前时间(当前的请求时间request_time)还晚，会认为是个非法请求</span><br />
+<span style=\"line-height:1.5;\">2、Etag工作原理</span><br />
+<span style=\"line-height:1.5;\">HTTP协议规格说明定义ETag为“被请求变量的实体标记”。简单点即服务器响应时给请求URL标记，并在HTTP响应头中将其传送到客户端，类似服务器端返回的格式：</span><br />
+<span style=\"line-height:1.5;\">Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">客户端的查询更新格式是这样的：</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">如果ETag没改变，则返回状态304。</span><br />
+<span style=\"line-height:1.5;\">即:在客户端发出请求后，HttpReponse Header中包含Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">标识，等于告诉Client端，你拿到的这个的资源有表示ID：5d8c72a5edda8d6a:3239。当下次需要发Request索要同一个URI的时候，浏览器同时发出一个If-None-Match报头(Http RequestHeader)此时包头中信息包含上次访问得到的Etag:“5d8c72a5edda8d6a:3239″标识。</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239“</span><br />
+<span style=\"line-height:1.5;\">,这样，Client端等于Cache了两份，服务器端就会比对2者的etag。如果If-None-Match为False，不返回200，返回304(Not Modified) Response。</span><br />
+<span style=\"line-height:1.5;\">3、Expires</span><br />
+<span style=\"line-height:1.5;\">给出的日期/时间后，被响应认为是过时。如Expires:Thu, 02 Apr 2009 05:14:08 GMT</span><br />
+<span style=\"line-height:1.5;\">需和Last-Modified结合使用。用于控制请求文件的有效时间，当请求数据在有效期内时客户端浏览器从缓存请求数据而不是服务器端.当缓存中数据失效或过期，才决定从服务器更新数据。</span><br />
+<span style=\"line-height:1.5;\">4、Last-Modified和Expires</span><br />
+<span style=\"line-height:1.5;\">Last-Modified标识能够节省一点带宽，但是还是逃不掉发一个HTTP请求出去，而且要和Expires一起用。而Expires标识却使得浏览器干脆连HTTP请求都不用发，比如当用户F5或者点击Refresh按钮的时候就算对于有Expires的URI，一样也会发一个HTTP请求出去，所以，Last-Modified还是要用的，而且要和Expires一起用。</span><br />
+<span style=\"line-height:1.5;\">5、Etag和Expires</span><br />
+<span style=\"line-height:1.5;\">如果服务器端同时设置了Etag和Expires时，Etag原理同样，即与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后，服务器才能返回304.</span><br />
+<span style=\"line-height:1.5;\">6、Last-Modified和Etag</span><br />
+<span style=\"line-height:1.5;\">分布式系统里多台机器间文件的last-modified必须保持一致，以免负载均衡到不同机器导致比对失败</span><br />
+<span style=\"line-height:1.5;\">分布式系统尽量关闭掉Etag(每台机器生成的etag都会不一样)</span><br />
+<span style=\"line-height:1.5;\">Last-Modified和ETags请求的http报头一起使用，服务器首先产生Last-Modified/Etag标记，服务器可在稍后使用它来判断页面是否已经被修改，来决定文件是否继续缓存</span><br />
+<span style=\"line-height:1.5;\">过程如下:</span><br />
+<span style=\"line-height:1.5;\">1.客户端请求一个页面（A）。</span><br />
+<span style=\"line-height:1.5;\">2.服务器返回页面A，并在给A加上一个Last-Modified/ETag。</span><br />
+<span style=\"line-height:1.5;\">3.客户端展现该页面，并将页面连同Last-Modified/ETag一起缓存。</span><br />
+<span style=\"line-height:1.5;\">4.客户再次请求页面A，并将上次请求时服务器返回的Last-Modified/ETag一起传递给服务器。</span><br />
+<span style=\"line-height:1.5;\">5.服务器检查该Last-Modified或ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304和一个空的响应体。</span><br />
+<span style=\"line-height:1.5;\">注：</span><br />
+<span style=\"line-height:1.5;\">1)Last-Modified和Etag头都是由WebServer发出的HttpReponse Header，WebServer应该同时支持这两种头。</span><br />
+<span style=\"line-height:1.5;\">2)WebServer发送完Last-Modified/Etag头给客户端后，客户端会缓存这些头；</span><br />
+<span style=\"line-height:1.5;\">3)客户端再次发起相同页面的请求时，将分别发送与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；</span><br />
+<span style=\"line-height:1.5;\">4)通过上述值到服务器端检查，判断文件是否继续缓存；</span><br />
+<span style=\"line-height:1.5;\">7、关于 Cache-Control: max-age=秒 和 Expires</span><br />
+<span style=\"line-height:1.5;\">Expires = 时间，HTTP 1.0 版本，缓存的载止时间，允许客户端在这个时间之前不去检查（发请求）</span><br />
+<span style=\"line-height:1.5;\">max-age = 秒，HTTP 1.1版本，资源在本地缓存多少秒。</span><br />
+<span style=\"line-height:1.5;\">如果max-age和Expires同时存在，则被Cache-Control的max-age覆盖。</span><br />
+<span style=\"line-height:1.5;\">Expires 的一个缺点就是，返回的到期时间是服务器端的时间，这样存在一个问题，如果客户端的时间与服务器的时间相差很大，那么误差就很大，所以在HTTP 1.1版开始，使用Cache-Control: max-age=秒替代。</span><br />
+<span style=\"line-height:1.5;\">Expires =max-age + &nbsp; “每次下载时的当前的request时间”</span><br />
+<span style=\"line-height:1.5;\">所以一旦重新下载的页面后，expires就重新计算一次，但last-modified不会变化&nbsp;</span><br />
+<div>
+	<br />
+</div>') [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001458s ]
+
+[ 2016-06-15T01:16:30+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001783s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-06-15T01:21:50+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 111  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001707s ]
+
+[ 2016-06-15T01:22:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002089s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0093s ]
+SQL: UPDATE `sc_message` SET `title`='浏览器缓存详解：expires,cache-control,last-modified,etag详细说明 ？',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">首先，为了方便理解，先看如下的图：</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160615/20160615011357_55346.png\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">每个状态的详细说明如下：</span><br />
+<span style=\"line-height:1.5;\">1、Last-Modified</span><br />
+<span style=\"line-height:1.5;\">在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是你请求的资源，同时有一个Last-Modified的属性标记(HttpReponse Header)此文件在服务期端最后被修改的时间，格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，如果缓存的文件已经过期，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头(HttpRequest Header)，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回HTTP304（NotChanged.）状态码，内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。</span><br />
+<span style=\"line-height:1.5;\">注：如果If-Modified-Since的时间比服务器当前时间(当前的请求时间request_time)还晚，会认为是个非法请求</span><br />
+<span style=\"line-height:1.5;\">2、Etag工作原理</span><br />
+<span style=\"line-height:1.5;\">HTTP协议规格说明定义ETag为“被请求变量的实体标记”。简单点即服务器响应时给请求URL标记，并在HTTP响应头中将其传送到客户端，类似服务器端返回的格式：</span><br />
+<span style=\"line-height:1.5;\">Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">客户端的查询更新格式是这样的：</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">如果ETag没改变，则返回状态304。</span><br />
+<span style=\"line-height:1.5;\">即:在客户端发出请求后，HttpReponse Header中包含Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">标识，等于告诉Client端，你拿到的这个的资源有表示ID：5d8c72a5edda8d6a:3239。当下次需要发Request索要同一个URI的时候，浏览器同时发出一个If-None-Match报头(Http RequestHeader)此时包头中信息包含上次访问得到的Etag:“5d8c72a5edda8d6a:3239″标识。</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239“</span><br />
+<span style=\"line-height:1.5;\">,这样，Client端等于Cache了两份，服务器端就会比对2者的etag。如果If-None-Match为False，不返回200，返回304(Not Modified) Response。</span><br />
+<span style=\"line-height:1.5;\">3、Expires</span><br />
+<span style=\"line-height:1.5;\">给出的日期/时间后，被响应认为是过时。如Expires:Thu, 02 Apr 2009 05:14:08 GMT</span><br />
+<span style=\"line-height:1.5;\">需和Last-Modified结合使用。用于控制请求文件的有效时间，当请求数据在有效期内时客户端浏览器从缓存请求数据而不是服务器端.当缓存中数据失效或过期，才决定从服务器更新数据。</span><br />
+<span style=\"line-height:1.5;\">4、Last-Modified和Expires</span><br />
+<span style=\"line-height:1.5;\">Last-Modified标识能够节省一点带宽，但是还是逃不掉发一个HTTP请求出去，而且要和Expires一起用。而Expires标识却使得浏览器干脆连HTTP请求都不用发，比如当用户F5或者点击Refresh按钮的时候就算对于有Expires的URI，一样也会发一个HTTP请求出去，所以，Last-Modified还是要用的，而且要和Expires一起用。</span><br />
+<span style=\"line-height:1.5;\">5、Etag和Expires</span><br />
+<span style=\"line-height:1.5;\">如果服务器端同时设置了Etag和Expires时，Etag原理同样，即与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后，服务器才能返回304.</span><br />
+<span style=\"line-height:1.5;\">6、Last-Modified和Etag</span><br />
+<span style=\"line-height:1.5;\">分布式系统里多台机器间文件的last-modified必须保持一致，以免负载均衡到不同机器导致比对失败</span><br />
+<span style=\"line-height:1.5;\">分布式系统尽量关闭掉Etag(每台机器生成的etag都会不一样)</span><br />
+<span style=\"line-height:1.5;\">Last-Modified和ETags请求的http报头一起使用，服务器首先产生Last-Modified/Etag标记，服务器可在稍后使用它来判断页面是否已经被修改，来决定文件是否继续缓存</span><br />
+<span style=\"line-height:1.5;\">过程如下:</span><br />
+<span style=\"line-height:1.5;\">1.客户端请求一个页面（A）。</span><br />
+<span style=\"line-height:1.5;\">2.服务器返回页面A，并在给A加上一个Last-Modified/ETag。</span><br />
+<span style=\"line-height:1.5;\">3.客户端展现该页面，并将页面连同Last-Modified/ETag一起缓存。</span><br />
+<span style=\"line-height:1.5;\">4.客户再次请求页面A，并将上次请求时服务器返回的Last-Modified/ETag一起传递给服务器。</span><br />
+<span style=\"line-height:1.5;\">5.服务器检查该Last-Modified或ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304和一个空的响应体。</span><br />
+<span style=\"line-height:1.5;\">注：</span><br />
+<span style=\"line-height:1.5;\">1)Last-Modified和Etag头都是由WebServer发出的HttpReponse Header，WebServer应该同时支持这两种头。</span><br />
+<span style=\"line-height:1.5;\">2)WebServer发送完Last-Modified/Etag头给客户端后，客户端会缓存这些头；</span><br />
+<span style=\"line-height:1.5;\">3)客户端再次发起相同页面的请求时，将分别发送与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；</span><br />
+<span style=\"line-height:1.5;\">4)通过上述值到服务器端检查，判断文件是否重新缓存；</span><br />
+<span style=\"line-height:1.5;\">7、关于 Cache-Control: max-age=秒 和 Expires</span><br />
+<span style=\"line-height:1.5;\">Expires = 时间，HTTP 1.0 版本，缓存的载止时间，允许客户端在这个时间之前不去检查（发请求）</span><br />
+<span style=\"line-height:1.5;\">max-age = 秒，HTTP 1.1版本，资源在本地缓存多少秒。</span><br />
+<span style=\"line-height:1.5;\">如果max-age和Expires同时存在，则被Cache-Control的max-age覆盖。</span><br />
+<span style=\"line-height:1.5;\">Expires 的一个缺点就是，返回的到期时间是服务器端的时间，这样存在一个问题，如果客户端的时间与服务器的时间相差很大，那么误差就很大，所以在HTTP 1.1版开始，使用Cache-Control: max-age=秒替代。</span><br />
+<span style=\"line-height:1.5;\">Expires =max-age + &nbsp; “每次下载时的当前的request时间”</span><br />
+<span style=\"line-height:1.5;\">所以一旦重新下载的页面后，expires就重新计算一次，但last-modified不会变化&nbsp;</span><br />
+<div>
+	<br />
+</div>' WHERE `id` = 111 [ RunTime:0.0112s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000791s ]
+
+[ 2016-06-15T01:23:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 111  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001584s ]
+
+[ 2016-06-15T01:23:28+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: UPDATE `sc_message` SET `title`='',`cat_id`='10',`content`='' WHERE `id` = 111 [ RunTime:0.0187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-06-15T01:23:55+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001774s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 112  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001503s ]
+
+[ 2016-06-15T01:25:40+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 112  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012114s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001428s ]
+
+[ 2016-06-15T01:26:06+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001866s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0071s ]
+SQL: UPDATE `sc_message` SET `title`='浏览器缓存详解：expires,cache-control,last-modified,etag详细说明 ？',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">首先，为了方便理解，先看如下的图：</span><br />
+<img src=\"/Public/Admin/js/editor/attached/image/20160615/20160615011625_16940.png\" alt=\"\" /><br />
+<span style=\"line-height:1.5;\">每个状态的详细说明如下：</span><br />
+<span style=\"line-height:1.5;\">1、Last-Modified</span><br />
+<span style=\"line-height:1.5;\">在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是你请求的资源，同时有一个Last-Modified的属性标记(HttpReponse Header)此文件在服务期端最后被修改的时间，格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头(HttpRequest Header)，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since:Tue, 24 Feb 2009 08:01:04 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回HTTP304（NotChanged.）状态码，内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。</span><br />
+<span style=\"line-height:1.5;\">注：如果If-Modified-Since的时间比服务器当前时间(当前的请求时间request_time)还晚，会认为是个非法请求</span><br />
+<span style=\"line-height:1.5;\">2、Etag工作原理</span><br />
+<span style=\"line-height:1.5;\">HTTP协议规格说明定义ETag为“被请求变量的实体标记”。简单点即服务器响应时给请求URL标记，并在HTTP响应头中将其传送到客户端，类似服务器端返回的格式：</span><br />
+<span style=\"line-height:1.5;\">Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">客户端的查询更新格式是这样的：</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">如果ETag没改变，则返回状态304。</span><br />
+<span style=\"line-height:1.5;\">即:在客户端发出请求后，HttpReponse Header中包含Etag:“5d8c72a5edda8d6a:3239″</span><br />
+<span style=\"line-height:1.5;\">标识，等于告诉Client端，你拿到的这个的资源有表示ID：5d8c72a5edda8d6a:3239。当下次需要发Request索要同一个URI的时候，浏览器同时发出一个If-None-Match报头(Http RequestHeader)此时包头中信息包含上次访问得到的Etag:“5d8c72a5edda8d6a:3239″标识。</span><br />
+<span style=\"line-height:1.5;\">If-None-Match:“5d8c72a5edda8d6a:3239“</span><br />
+<span style=\"line-height:1.5;\">,这样，Client端等于Cache了两份，服务器端就会比对2者的etag。如果If-None-Match为False，不返回200，返回304(Not Modified) Response。</span><br />
+<span style=\"line-height:1.5;\">3、Expires</span><br />
+<span style=\"line-height:1.5;\">给出的日期/时间后，被响应认为是过时。如Expires:Thu, 02 Apr 2009 05:14:08 GMT</span><br />
+<span style=\"line-height:1.5;\">需和Last-Modified结合使用。用于控制请求文件的有效时间，当请求数据在有效期内时客户端浏览器从缓存请求数据而不是服务器端.当缓存中数据失效或过期，才决定从服务器更新数据。</span><br />
+<span style=\"line-height:1.5;\">4、Last-Modified和Expires</span><br />
+<span style=\"line-height:1.5;\">Last-Modified标识能够节省一点带宽，但是还是逃不掉发一个HTTP请求出去，而且要和Expires一起用。而Expires标识却使得浏览器干脆连HTTP请求都不用发，比如当用户F5或者点击Refresh按钮的时候就算对于有Expires的URI，一样也会发一个HTTP请求出去，所以，Last-Modified还是要用的，而且要和Expires一起用。</span><br />
+<span style=\"line-height:1.5;\">5、Etag和Expires</span><br />
+<span style=\"line-height:1.5;\">如果服务器端同时设置了Etag和Expires时，Etag原理同样，即与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；在完全匹配If-Modified-Since和If-None-Match即检查完修改时间和Etag之后，服务器才能返回304.</span><br />
+<span style=\"line-height:1.5;\">6、Last-Modified和Etag</span><br />
+<span style=\"line-height:1.5;\">分布式系统里多台机器间文件的last-modified必须保持一致，以免负载均衡到不同机器导致比对失败</span><br />
+<span style=\"line-height:1.5;\">分布式系统尽量关闭掉Etag(每台机器生成的etag都会不一样)</span><br />
+<span style=\"line-height:1.5;\">Last-Modified和ETags请求的http报头一起使用，服务器首先产生Last-Modified/Etag标记，服务器可在稍后使用它来判断页面是否已经被修改，来决定文件是否继续缓存</span><br />
+<span style=\"line-height:1.5;\">过程如下:</span><br />
+<span style=\"line-height:1.5;\">1.客户端请求一个页面（A）。</span><br />
+<span style=\"line-height:1.5;\">2.服务器返回页面A，并在给A加上一个Last-Modified/ETag。</span><br />
+<span style=\"line-height:1.5;\">3.客户端展现该页面，并将页面连同Last-Modified/ETag一起缓存。</span><br />
+<span style=\"line-height:1.5;\">4.客户再次请求页面A，并将上次请求时服务器返回的Last-Modified/ETag一起传递给服务器。</span><br />
+<span style=\"line-height:1.5;\">5.服务器检查该Last-Modified或ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304和一个空的响应体。</span><br />
+<span style=\"line-height:1.5;\">注：</span><br />
+<span style=\"line-height:1.5;\">1)Last-Modified和Etag头都是由WebServer发出的HttpReponse Header，WebServer应该同时支持这两种头。</span><br />
+<span style=\"line-height:1.5;\">2)WebServer发送完Last-Modified/Etag头给客户端后，客户端会缓存这些头；</span><br />
+<span style=\"line-height:1.5;\">3)客户端再次发起相同页面的请求时，将分别发送与Last-Modified/Etag对应的HttpRequestHeader:If-Modified-Since和If-None-Match。我们可以看到这两个Header的值和WebServer发出的Last-Modified,Etag值完全一样；</span><br />
+<span style=\"line-height:1.5;\">4)通过上述值到服务器端检查，判断文件是否继续缓存；</span><br />
+<span style=\"line-height:1.5;\">7、关于 Cache-Control: max-age=秒 和 Expires</span><br />
+<span style=\"line-height:1.5;\">Expires = 时间，HTTP 1.0 版本，缓存的载止时间，允许客户端在这个时间之前不去检查（发请求）</span><br />
+<span style=\"line-height:1.5;\">max-age = 秒，HTTP 1.1版本，资源在本地缓存多少秒。</span><br />
+<span style=\"line-height:1.5;\">如果max-age和Expires同时存在，则被Cache-Control的max-age覆盖。</span><br />
+<span style=\"line-height:1.5;\">Expires 的一个缺点就是，返回的到期时间是服务器端的时间，这样存在一个问题，如果客户端的时间与服务器的时间相差很大，那么误差就很大，所以在HTTP 1.1版开始，使用Cache-Control: max-age=秒替代。</span><br />
+<span style=\"line-height:1.5;\">Expires =max-age + &nbsp; “每次下载时的当前的request时间”</span><br />
+<span style=\"line-height:1.5;\">所以一旦重新下载的页面后，expires就重新计算一次，但last-modified不会变化&nbsp;</span><br />
+<div>
+	<br />
+</div>' WHERE `id` = 112 [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001098s ]
+
+[ 2016-06-15T01:26:16+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001700s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001561s ]
+
+[ 2016-06-15T01:31:51+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求(第一次和后续的请求都包含)并未出现If-Modified-Since参数，而第一次请求返回状态码是200，后续的请求只给出 No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），浏览器拦截了后续的所有请求，也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到服务器端修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.2726s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001198s ]
+
+[ 2016-06-15T01:37:03+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001614s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001754s ]
+
+[ 2016-06-15T01:37:26+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001806s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0071s ]
+SQL: UPDATE `sc_message` SET `title`='如何配置apache和php？',`cat_id`='4',`content`='<p>
+	<span style=\"line-height:1.5;\">php：缩写：Personal Home Page ==&gt;&gt;PHP：HypeText Preprocessor</span>
+</p>
+<p>
+	命令行脚本：<br />
+运行php文件：php.exe &nbsp;-f &nbsp;\"php文件路径\"<br />
+运行php代码：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+直接运行php代码：形式：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+web软件的运行模式中，总是先在客户端（浏览器端），发起一个“请求”，然后，服务器端才产生反馈动作（就是“运行”程序），并因此而返回给该浏览器一定的信息——就是应答（响应）；<br />
+<span style=\"color:#E53333;\">配置apache 以运行php程序：</span><br />
+分2步：<br />
+第一步：装载php“模块”——其实就是指php语言包中的一个文件而已！<br />
+A：首先，我们将php语言模块，拷贝到计划的目录中来：<br />
+B：打开apache的配置文件：apache安装位置/ conf / httpd.conf<br />
+//需要给出php5apache2_2.dll的完整路径<br />
+131 ： LoadModule php5_module \"....amp/php/php5apache2_2.dll\"<br />
+第二步：告知apache，凡是“.php”后缀文件找php语言模块，这里称（application/x-httpd-php）<br />
+136行：AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp;.phtml<br />
+然后重启apache<br />
+检测apache的配置语法的命令：<br />
+命令所在位置：apache安装位置/bin/httpd.exe<br />
+命令使用方式：httpd.exe &nbsp;-t<br />
+如果配置文件httpd.conf没有语法错误，就返回： syntax &nbsp;OK<br />
+用法1：强行拖入法<br />
+用法2：配置环境变量法：<br />
+在path路径中加入刚才httpd.exe文件所在的完整目录路径，注意使用英文分号（;）跟以前的内容分开<br />
+<span style=\"color:#E53333;\">php的配置：</span><br />
+时区配置：<br />
+php的配置文件位置：php语言包/php.ini<br />
+第一步：<br />
+查找关键字：timezone:<br />
+修改为 date.timezone = PRC<br />
+第二步：<br />
+在apache的配置文件（httpd.conf)中，设置php.ini文件的路径（位置）：<br />
+143行-------&gt; &nbsp;PHPIniDir &nbsp;\"....../amp/php\" &nbsp;//此时不要写php.ini文件名，只要目录<br />
+然后重启apache；<br />
+php的模块配置：<br />
+第一步：<br />
+在php.ini文件中，设定php模块所在的路径（查找关键字extension_dir)：<br />
+extension_dir = \"......./amp/php/ext\"<br />
+第二步：<br />
+“打开”mysql这个模块就可以了（查找关键字php_mysql.dll）：<br />
+将extension=php_mysql.dll 打开，然后，重启apache<br />
+<span style=\"color:#E53333;\">分布式权限配置：</span>就是针对某个网站的任何一个下级目录，都可以单独去设置其访问权限，并且可以不重启apache就生效。<br />
+第1步：<br />
+在该站点对应目录权限的Directorty配置中添加一条：<br />
+AllowOverride &nbsp;all &nbsp; &nbsp;//表示当前目录，允许“分布式”权限配置<br />
+第2步：<br />
+在该目录下的任何子目录中，创建一个特殊的文件（ .htaccess ），在该文件中写所需要的“权限内容”：<br />
+Deny &nbsp;from &nbsp;all<br />
+Allow from 192.168.3.4<br />
+然后访问站点路径，将会报错：Forbidden
+</p>
+<div>
+	<br />
+</div>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 1 [ RunTime:0.0539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017213s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001492s ]
+
+[ 2016-06-15T10:26:00+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 110  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-06-15T10:27:51+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0063s ]
+SQL: UPDATE `sc_message` SET `title`='有关浏览器缓存以及ajax的缓存的一些疑问？',`cat_id`='10',`content`='<span style=\"color:#E53333;line-height:1.5;\"><strong>问题1：浏览器为什么要缓存网页的内容？</strong></span><br />
+<span style=\"line-height:1.5;\">通常当我们访问一个静态的html文件或者以get方式发起请求时，网页的内容会被浏览器缓存到本地，一般对于一些内容不经常变化的，像资源类的文件，比如视频、FLASH、图片或者css和js代码，这些文件在第一次请求的时候会被浏览器缓存下来，存放在本地，这样下次再请求这些文件的时候就可以不用再去请求，直接使用本地的就可以了，这样可以减少带宽占用、降低服务器压力，可以明显地加快用户的访问速度。而post请求的内容浏览器一般不缓存。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题2：当我们在地址栏回车重新请求时，浏览器是如何处理的？</strong></span><br />
+<span style=\"line-height:1.5;\">当我们在地址栏回车重新请求时，分为两种情况：第一种如果请求的文件在浏览器缓存中未过期，此时firebug插件在浏览器里显示HTTP返回状态是200 OK，但是此次请求并没有真正提交到HTTP服务器。而是被浏览器发现缓存中还有未过期的文件，直接把请求拦截了，firebug里面显示所谓的“请求头消息”、“响应头消息”都是浏览器“伪造”的。这种刷新，使用的网络流量是最小的，可以说完全没有，时间消耗也是最少的。</span><br />
+<span style=\"line-height:1.5;\">第二种是请求的文件在浏览器缓存中已过期（这种比较常见），此时firebug显示的HTTP请求里多了一行If-Modified-Since，说明浏览器对这种情况的处理方法是：再 问一下服务器，请求的文件在某个时间之后有没有被修改过，而这个时间是由上次HTTP响应的Last-Modified决定的。服务器鉴定之后，没有修 改的话，返回304 Not Modified，浏览器收到后，从缓存里读出内容；有修改的话，返回200 OK，并返回新的内容。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题3：HTTP请求头中的Last-Modified属性是什么意思？</strong></span><br />
+<span style=\"line-height:1.5;\">Last-Modified属性：在浏览器第一次请求某一个URL时，服务器端的返回状态会是200，内容是客户端请求的资源，同时有一个Last-Modified的属性标记此文件在服务期端最后被修改的时间。</span><br />
+<span style=\"line-height:1.5;\">Last-Modified格式类似这样：</span><br />
+<span style=\"line-height:1.5;\">Last-Modified : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">客户端第二次请求此URL时，根据HTTP协议的规定，浏览器会向服务器传送If-Modified-Since报头，询问该时间之后文件是否有被修改过：</span><br />
+<span style=\"line-height:1.5;\">If-Modified-Since : Fri , 12 May 2006 18:53:33 GMT</span><br />
+<span style=\"line-height:1.5;\">如果服务器端的资源没有变化，则自动返回 HTTP 304 状态码，返回内容为空，这样就节省了传输数据量。当服务器端代码发生改变或者重启服务器时，则重新发出资源，返回结果和第一次请求时类似。从而保证不向客户端重复发出资源，也保证当服务器有变化时，客户端能够得到最新的资源。（来自百度百科）</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题4：If-Modified-Since参数在什么时候存在？</strong></span><br />
+<span style=\"line-height:1.5;\">当浏览器第一次发送请求，此时的请求头中是没有If-Modified-Since这个参数的。第二次请求时，当请求的URL在浏览器缓存中已过期，此时在HTTP请求里就会有If-Modified-Since这个参数。</span><br />
+<span style=\"color:#E53333;\"><strong><span style=\"line-height:1.5;\">问题5：IE浏览器的缓存是浏览器本身的问题，还是它要和服务器文件的最后修改时间做对比才进行的缓存(这里讨论的是静态资源文件</span><span style=\"line-height:1.5;\">)？</span></strong></span><br />
+<span style=\"line-height:1.5;\">这要分情况，如果缓存的文件没有过期，浏览器直接访问本地缓存好的文件，再次请求时拦截此次请求，如果缓存的文件已经过期，则再次请求时在请求头上将会有If-Modified-Since这个参数，通过该参数和服务器文件的最后修改时间做对比。要注意：IE浏览器本身具有拦截机制，会拦截HTTP请求。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题6：ajax请求后浏览器缓存好的文件是什么样的文件？这个文件中是否包含html文件？</strong></span><br />
+<span style=\"line-height:1.5;\">缓存的文件以请求的地址加请求的参数作为文件名，该文件中的内容是php执行后的结果（或者说是PHP+MySQL混编文件的执行结果）。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\"><strong>问题7：在通过httpwatch插件观察IE浏览器的ajax请求，当前的请求(第一次和后续的请求都包含)并未出现If-Modified-Since参数，而第一次请求返回状态码是200，后续的请求只给出 No response stream for cached items（缓存</strong></span><span style=\"color:#E53333;line-height:1.5;\"><strong>），怎么理解？</strong></span><br />
+<span style=\"line-height:1.5;\">我们使用Ajax中的get请求去服务器获取数据，在Firefox（W3C内核的浏览器）中其是可以正常运行的。</span><br />
+<span style=\"line-height:1.5;\">但是在IE浏览器中，其第一次请求时可以正常执行，服务器端返回响应状态码为200，但是当我们再次向同一个url地址发送请求时，系统会自动读取缓存文件（这个缓存文件是服务器PHP+MySQL生成的资源文件）。</span><br />
+<span style=\"line-height:1.5;\">所以对于php动态文件，由于第一次请求时没有Last-Modified参数，Firefox每次ajax的get请求都会重新发请求，去请求服务器端对应的php文件（这里不讨论资源文件），再次请求时也就没有If-Modified-Since参数。</span><br />
+<span style=\"line-height:1.5;\">而IE浏览器将会对ajax的get请求缓存Ajax请求的结果，换句话说，IE浏览器针对相同地址发起的多个Ajax请求，只有第一次会真正发送到服务端，后续ajax请求都直接从缓存中读取，第一次请求时没有Last-Modified参数，当再次请求时，请求头中只给出了 No response stream for cached items（缓存），也就是说既然没有Last-Modified参数，那么再次请求也不会有If-Modified-Since参数，浏览器并没有向服务器询问最后的修改时间，每次请求都只是从本地读取缓存文件，所以当我们修改了服务器端的内容后，此时将得不到服务器端修改后的最新内容，会一直显示已经缓存好的内容，但如果我们在ajax请求之前加上xhr.setRequestHeader(\"If-Modified-Since\",\"0\");之后，每次ajax请求浏览器都会带If-Modified-Since和服务器的最后修改时间做对比，所以每次返回的状态码都是 200</span><br />' WHERE `id` = 110 [ RunTime:0.0819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000831s ]
+
+[ 2016-06-15T10:38:45+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 111  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001476s ]
+
+[ 2016-06-15T10:38:49+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 109  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012322s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000857s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001538s ]
+
+[ 2016-06-15T10:38:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0040s ]
+SQL: UPDATE `sc_message` SET `title`='浏览器禁用COOKIE，session是否可用？',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">COOKIE被禁用，session-Id不能存储和传输。因此不可用！</span><br />
+<span style=\"line-height:1.5;\">理论上的解决方案：</span><br />
+<span style=\"line-height:1.5;\">通过 URL， 或者 POST数据数据向服务器端，每次传输session-ID！</span><br />
+<span style=\"line-height:1.5;\">例如下面的配置：php.ini</span><br />
+<span style=\"line-height:1.5;\">Session是否仅仅是用COOKIE完成传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_only_cookie = 1 &nbsp;开启（在session_start之前）</span><br />
+<span style=\"line-height:1.5;\">是否通过其他方式自动传输session-ID：</span><br />
+<span style=\"line-height:1.5;\">session.use_trans_sid = 0 &nbsp;开启</span><br />
+<span style=\"line-height:1.5;\">然后通过表单的隐藏域向服务器端，每次传输session-ID！即可</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 109 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-15T10:38:59+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001327s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 111  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-06-15T10:44:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001655s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: UPDATE `sc_message` SET `title`='如何创建ajax对象，兼容不同内核的浏览器？',`cat_id`='10',`content`='<span style=\"line-height:1.5;\">为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：</span><br />
+<span style=\"line-height:1.5;\">var xhr;</span><br />
+<span style=\"line-height:1.5;\">if (window.XMLHttpRequest)</span><br />
+<span style=\"line-height:1.5;\">{</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">// code for IE7+, Firefox, Chrome, Opera, Safari</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">xhr = new XMLHttpRequest();</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\">else</span><br />
+<span style=\"line-height:1.5;\">{</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">// code for IE6, IE5</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">xhr = new ActiveXObject(\"Microsoft.XMLHTTP\");</span><br />
+<span style=\"line-height:1.5;\">}</span><br />
+<span style=\"line-height:1.5;\"></span><br />' WHERE `id` = 111 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-06-15T11:33:15+08:00 ] 192.168.128.117 /index.php/admin/index/edit/id/111
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 111  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-06-15T11:33:58+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2016-06-15T11:42:56+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001452s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0069s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('关于echo 输出整型的问题?','4','<span style=\"line-height:1.5;\">echo通常用来输出一个字符串</span><br />
+<span style=\"line-height:1.5;\">echo \"你好$a\"; 可以正常输出，</span><br />
+<span style=\"line-height:1.5;\">echo \"你好\".$a; 输出也是正常的，</span><br />
+<span style=\"line-height:1.5;\">echo 123;不加引号的话，系统默认按字符串输出，echo \"123\"也是作为字符串处理，</span><br />
+<span style=\"line-height:1.5;\">当被浏览器解析之后，echo 输出的内容在浏览器上看到的结果是一样的。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-06-15T11:42:58+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2016-06-15T11:43:15+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 113  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-06-15T11:44:12+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: UPDATE `sc_message` SET `title`='关于echo 输出整型的问题？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">echo通常用来输出一个字符串</span><br />
+<span style=\"line-height:1.5;\">echo \"你好$a\"; 可以正常输出，</span><br />
+<span style=\"line-height:1.5;\">echo \"你好\".$a; 输出也是正常的，</span><br />
+<span style=\"line-height:1.5;\">echo 123;不加引号的话，系统默认按字符串输出，echo \"123\"也是作为字符串处理，</span><br />
+<span style=\"line-height:1.5;\">当被浏览器解析之后，echo 输出的内容在浏览器上看到的结果是一样的。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 113 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+
+[ 2016-06-15T11:45:10+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 113  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001417s ]
+
+[ 2016-06-15T11:45:32+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: UPDATE `sc_message` SET `title`='关于echo 输出整型的问题？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">echo通常用来输出一个字符串</span><br />
+<span style=\"line-height:1.5;\">echo \"你好$a\"; 可以正常输出，</span><br />
+<span style=\"line-height:1.5;\">echo \"你好\".$a; 输出也是正常的，</span><br />
+<span style=\"line-height:1.5;\">echo 123;不加引号的话，系统默认按字符串输出，echo \"123\"也是作为字符串处理，</span><br />
+<span style=\"line-height:1.5;\">当被浏览器解析之后，echo 输出的内容在浏览器上看到的结果是一样的。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 113 [ RunTime:0.0464s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001381s ]
+
+[ 2016-06-15T14:35:45+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('Still unable to dial tcp://http://www.doesnotexist.com:80 after 3 attempts（无法连接：仍然无法拨TCP）的解决办法？','4','<span style=\"color:#333333;font-family:Georgia, \'Bitstream Charter\', serif;font-size:16px;line-height:24px;background-color:#FFFFFF;\">请关闭lantern，点击Fiddler顶部的黄色提示条，用于重新加载系统代理配置，刷新浏览器。</span>') [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001356s ]
+
+[ 2016-06-15T14:35:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2016-06-15T14:36:03+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 3  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2016-06-15T14:36:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: UPDATE `sc_message` SET `title`='apache虚拟主机如何配置？',`cat_id`='4',`content`='<p style=\"font-family:Simsun;font-size:medium;\">
+	<span style=\"line-height:1.5;\">ServerName &nbsp;www.www.com</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DirectoryIndex &nbsp; &nbsp;index.php</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; #允许使用“分布式权限配置文件”</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; AllowOverride &nbsp;All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">第130行：</span><br />
+<span style=\"line-height:1.5;\">#装载php“模块”--其实就是指php语言包中的一个文件而已！需要给出php5apache2_2.dll的完整路径</span><br />
+<span style=\"line-height:1.5;\">LoadModule php5_module \"F:/soft/phpsoft/php/php-5.3.13</span><span style=\"line-height:1.5;\">/php5apache2_2.dll\"</span><br />
+<span style=\"line-height:1.5;\">#告知apache，凡是\".php\"后缀文件，找php语言模块（这里称为application/x-httpd-php）</span><br />
+<span style=\"line-height:1.5;\">setHandler application/x-httpd-php</span><br />
+<span style=\"line-height:1.5;\">#第二步的另一个语法形式，作用相同，但更灵活一些</span><br />
+<span style=\"line-height:1.5;\">AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp; .phtml</span><br />
+<span style=\"line-height:1.5;\">#让apache知道，php.ini的所在位置（此时不要写出php.ini的文件名，只要目录）：</span><br />
+<span style=\"line-height:1.5;\">phpIniDir \"F:\\soft\\PHPsoft\\php\\php-5.3.13</span><span style=\"line-height:1.5;\">\"</span>
+</p>
+<div>
+	<br />
+</div>
+<br />' WHERE `id` = 3 [ RunTime:0.0502s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-06-15T14:37:30+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 3  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001980s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002170s ]
+
+[ 2016-06-15T14:37:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0043s ]
+SQL: UPDATE `sc_message` SET `title`='apache虚拟主机如何配置？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">NameVirtualHost *:80</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; DirectoryIndex &nbsp; &nbsp;index.php</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; #允许使用“分布式权限配置文件”</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; AllowOverride &nbsp;All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">第130行：</span><br />
+<span style=\"line-height:1.5;\">#装载php“模块”--其实就是指php语言包中的一个文件而已！需要给出php5apache2_2.dll的完整路径</span><br />
+<span style=\"line-height:1.5;\">LoadModule php5_module \"F:/soft/phpsoft/php/php-5.3.13/php5apache2_2.dll\"</span><br />
+<span style=\"line-height:1.5;\">#告知apache，凡是\".php\"后缀文件，找php语言模块（这里称为application/x-httpd-php）</span><br />
+<span style=\"line-height:1.5;\">setHandler application/x-httpd-php</span><br />
+<span style=\"line-height:1.5;\">#第二步的另一个语法形式，作用相同，但更灵活一些</span><br />
+<span style=\"line-height:1.5;\">AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp; .phtml</span><br />
+<span style=\"line-height:1.5;\">#让apache知道，php.ini的所在位置（此时不要写出php.ini的文件名，只要目录）：</span><br />
+<span style=\"line-height:1.5;\">phpIniDir \"F:\\soft\\PHPsoft\\php\\php-5.3.13\"</span><br />
+<br />
+<br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 3 [ RunTime:0.0503s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009441s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000707s ]
+
+[ 2016-06-15T14:37:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 3  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-06-15T14:38:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: UPDATE `sc_message` SET `title`='apache虚拟主机如何配置？',`cat_id`='4',`content`='NameVirtualHost *:80<br />
+&lt;VirtualHost *:80&gt;<br />
+&nbsp; &nbsp; ServerName &nbsp;www.abc.com<br />
+&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"<br />
+&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Allow From All<br />
+&nbsp; &nbsp; &lt;/Directory&gt;<br />
+&lt;/VirtualHost&gt;<br />
+&lt;VirtualHost *:80&gt;<br />
+&nbsp; &nbsp; ServerName &nbsp;www.abc.com<br />
+&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"<br />
+&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Allow From All<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;DirectoryIndex &nbsp; &nbsp;index.php<br />
+&nbsp; &nbsp; &nbsp; &nbsp; #允许使用“分布式权限配置文件”<br />
+&nbsp; &nbsp; &nbsp; &nbsp; AllowOverride &nbsp;All<br />
+&nbsp; &nbsp; &lt;/Directory&gt;<br />
+&lt;/VirtualHost&gt;<br />
+第130行：<br />
+#装载php“模块”--其实就是指php语言包中的一个文件而已！需要给出php5apache2_2.dll的完整路径<br />
+LoadModule php5_module \"F:/soft/phpsoft/php/php-5.3.13/php5apache2_2.dll\"<br />
+#告知apache，凡是\".php\"后缀文件，找php语言模块（这里称为application/x-httpd-php）<br />
+setHandler application/x-httpd-php<br />
+#第二步的另一个语法形式，作用相同，但更灵活一些<br />
+AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp; .phtml<br />
+#让apache知道，php.ini的所在位置（此时不要写出php.ini的文件名，只要目录）：<br />
+phpIniDir \"F:\\soft\\PHPsoft\\php\\php-5.3.13\"<br />
+<br />
+<br />' WHERE `id` = 3 [ RunTime:0.0508s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+
+[ 2016-06-15T14:38:32+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 3  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015152s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001386s ]
+
+[ 2016-06-15T14:38:54+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0047s ]
+SQL: UPDATE `sc_message` SET `title`='apache虚拟主机如何配置？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">NameVirtualHost *:80</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;VirtualHost *:80&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; ServerName &nbsp;www.abc.com</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; DocumentRoot \"F:\\soft\\class\\php\"</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;Directory \"F:\\soft\\class\\php\"&gt;</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Options Indexes</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Order Deny,Allow</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; Allow From All</span><br />
+<span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5;\">DirectoryIndex &nbsp; &nbsp;index.php</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; #允许使用“分布式权限配置文件”</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &nbsp; &nbsp; AllowOverride &nbsp;All</span><br />
+<span style=\"line-height:1.5;\">&nbsp; &nbsp; &lt;/Directory&gt;</span><br />
+<span style=\"line-height:1.5;\">&lt;/VirtualHost&gt;</span><br />
+<span style=\"line-height:1.5;\">第130行：</span><br />
+<span style=\"line-height:1.5;\">#装载php“模块”--其实就是指php语言包中的一个文件而已！需要给出php5apache2_2.dll的完整路径</span><br />
+<span style=\"line-height:1.5;\">LoadModule php5_module \"F:/soft/phpsoft/php/php-5.3.13/php5apache2_2.dll\"</span><br />
+<span style=\"line-height:1.5;\">#告知apache，凡是\".php\"后缀文件，找php语言模块（这里称为application/x-httpd-php）</span><br />
+<span style=\"line-height:1.5;\">setHandler application/x-httpd-php</span><br />
+<span style=\"line-height:1.5;\">#第二步的另一个语法形式，作用相同，但更灵活一些</span><br />
+<span style=\"line-height:1.5;\">AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp; .phtml</span><br />
+<span style=\"line-height:1.5;\">#让apache知道，php.ini的所在位置（此时不要写出php.ini的文件名，只要目录）：</span><br />
+<span style=\"line-height:1.5;\">phpIniDir \"F:\\soft\\PHPsoft\\php\\php-5.3.13\"</span><br />
+<br />
+<br />' WHERE `id` = 3 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000707s ]
+
+[ 2016-06-15T14:39:29+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 113  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2016-06-15T14:39:41+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/113
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002302s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: UPDATE `sc_message` SET `title`='关于echo 输出整型的问题？',`cat_id`='4',`content`='<span style=\"line-height:1.5;\">echo通常用来输出一个字符串，</span><br />
+<span style=\"line-height:1.5;\">echo \"你好$a\"; 可以正常输出，</span><br />
+<span style=\"line-height:1.5;\">echo \"你好\".$a; 输出也是正常的，</span><br />
+<span style=\"line-height:1.5;\">echo 123;不加引号的话，系统默认按字符串输出，echo \"123\"也是作为字符串处理，</span><br />
+<span style=\"line-height:1.5;\">当被浏览器解析之后，echo 输出的内容在浏览器上看到的结果是一样的。</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 113 [ RunTime:0.0563s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-06-15T16:15:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('JSON.parse()和eval()的区别？','10','<span style=\"line-height:1.5;\">JSON(JavaScript Object Notation)是一种轻量级的数据格式，采用完全独立于语言的文本格式，是理想的数据交换格式。同时，JSON是Javascript原生格式，这意味着在javascript中处理JSON数据不需要任何特殊的API或工具包，而且效率非常高。</span><br />
+<span style=\"line-height:1.5;\">基本格式：var jsonData=\'{\"data1\":\"Hello,\",\"data2\":\"world!\"}\'</span><br />
+<span style=\"line-height:1.5;\">调用方法jsonData.data1,jsonData.data2</span><br />
+<span style=\"line-height:1.5;\">很多json数据存入数组</span><br />
+<span style=\"line-height:1.5;\">var jsonData=[{\"name\":\"LiLei\",\"age\":19,\"sex\":\"male\"},{\"name\":\"HanMei\",\"age\":18,\"sex\":\"famale\"}]</span><br />
+<span style=\"line-height:1.5;\">调用方法jsonData[0].name,jsonData[1].sex</span><br />
+<span style=\"line-height:1.5;\">总体而言，json是相对比较容易的理解和使用的，但同时存在很多的陷阱，如果不注意的话很容易掉进去。</span><br />
+<span style=\"line-height:1.5;\">json的的解析方法&nbsp;</span><br />
+<span style=\"line-height:1.5;\">json的解析方法共有两种：eval_r() 和 JSON.parse()，使用方法如下：</span><br />
+<span style=\"line-height:1.5;\">var jsonData = \'{\"data1\":\"Hello,\", \"data2\":\"world!}\';</span><br />
+<span style=\"line-height:1.5;\">var evalJson=eval(\'(\'+jsonData+\')\');</span><br />
+<span style=\"line-height:1.5;\">var jsonParseJson=JSON.parse(jsonData);</span><br />
+<span style=\"line-height:1.5;\">这样就把jsonData这个json格式的字符串转换成了JSON对象。</span><br />
+<span style=\"line-height:1.5;color:#E53333;\"><strong>二者的区别如下：</strong></span><br />
+<span style=\"line-height:1.5;\">JSON.parse()可以解析json格式的数据，并且会对要解析的字符串进行格式检查，如果格式不正确则不进行解析，而eval()则可以解析任何字符串，eval是不安全的。</span><br />
+<span style=\"line-height:1.5;\">比如下面的字符串：</span><br />
+<span style=\"line-height:1.5;\">var str = \'alert(1000.toString())\';</span><br />
+<span style=\"line-height:1.5;\">eval(str);</span><br />
+<span style=\"line-height:1.5;\">JSON.parse(str);</span><br />
+<span style=\"line-height:1.5;\">用eval可以解析，并且会弹出对话框，而用JSON.parse()则解析不了。 其实alert并没有什么坏处，可怕的是如果用恶意用户在json字符串中注入了向页面插入木马链接的脚本，用eval也是可以操作的，而用JSON.parse()则不必担心这个问题。</span><br />
+<span style=\"line-height:1.5;\">注意：某些低级的浏览器尚不支持JSON.parse()</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-06-15T16:15:53+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2016-06-15T16:19:05+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 42  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2016-06-15T16:24:17+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0046s ]
+SQL: UPDATE `sc_message` SET `title`='什么是Ajax？Ajax的核心技术是什么？Ajax如何使用？Ajax如何解析json数据？Ajax的优缺点是什么？',`cat_id`='10',`content`='<p>
+	<span><span style=\"color:#E53333;line-height:1.5;\">Ajax</span><span style=\"line-height:1.5;\">是JS、xml、css、dom 多种技术的结合，它是一种可以与服务器进行(同步、异步)交互的技术，特点：页面不刷新，减少用户等待时间，用户体验好</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Ajax的核心技术</span><span style=\"line-height:1.5;\">是XMLHttpRequest，它是js中的一个对象</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Ajax使用：</span><span style=\"line-height:1.5;\">1、创建一个ajax对象 2、创建一个HTTP协议</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; 3、向服务器发出请求 4、ajax接收服务器返回的信息</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">使用场合：</span><span style=\"line-height:1.5;\">无刷新分页、用户名校验、百度搜索引擎</span><br />
+<span style=\"line-height:1.5;\"> $.ajax({</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; url:请求地址</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; type:get/post请求方式</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; data:给服务器传递数据</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; dataType:	html/text/xml/json服务器返回的数据类型</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; success:	成功请求后的回调函数</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; async:true/false &nbsp;同步、异步请求</span><br />
+<span style=\"line-height:1.5;\"> &nbsp; &nbsp; cache:true/false	是否进行缓存</span><br />
+<span style=\"line-height:1.5;\"> })</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Ajax的Json数据如何解析：通过JSON.parse()方法或者eval()方法，将json格式的字符串转换成了JSON对象<br />
+var jsonParseJson=JSON.parse(data);<br />
+var evalJson=eval(\'(\'+data+\')\'); &nbsp; //data为ajax请求成功后返回的json数据<br />
+二者的区别如下：<br />
+JSON.parse()可以解析json格式的数据，并且会对要解析的字符串进行格式检查，如果格式不正确则不进行解析，而eval()则可以解析任何字符串，eval是不安全的。<br />
+<span></span></span><span style=\"line-height:1.5;\"></span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Ajax 的优点是：<span></span></span><br />
+<span style=\"line-height:1.5;\"> 1.减轻了服务器端负担，将一部分以前由服务器负担的工作转移到客户端执行，利用客户端闲置的资源进行处理；</span><br />
+<span style=\"line-height:1.5;\"> 2.在只局部刷新的情况下更新页面，增加了页面反应速度，使用户体验更友好。</span><br />
+<span style=\"color:#E53333;line-height:1.5;\">Ajax 的缺点是：</span><span style=\"line-height:1.5;\">不利于SEO 推广优化，因为搜索引擎无法直接访问到Ajax 请求的内容。</span><br />
+</span> 
+</p>
+<p>
+	<span><span></span><br />
+<span></span><br />
+<span></span><br />
+<span></span><br />
+</span> 
+</p>' WHERE `id` = 42 [ RunTime:0.0543s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-06-15T16:24:39+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 42  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001345s ]
+
+[ 2016-06-15T16:25:27+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0045s ]
+SQL: UPDATE `sc_message` SET `title`='什么是Ajax？Ajax的核心技术是什么？Ajax如何使用？Ajax如何解析json数据？Ajax的优缺点是什么？',`cat_id`='10',`content`='<p>
+	<span><span style=\"line-height:1.5;\"><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">是JS、xml、css、dom 多种技术的结合，它是一种可以与服务器进行(同步、异步)交互的技术，特点：页面不刷新，减少用户等待时间，用户体验好</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax的核心技术</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">是XMLHttpRequest，它是js中的一个对象</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax使用：</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">1、创建一个ajax对象 2、创建一个HTTP协议</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; 3、向服务器发出请求 4、ajax接收服务器返回的信息</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">使用场合：</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">无刷新分页、用户名校验、百度搜索引擎</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">$.ajax({</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; url:请求地址</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; type:get/post请求方式</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; data:给服务器传递数据</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; dataType:	html/text/xml/json服务器返回的数据类型</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; success:	成功请求后的回调函数</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; async:true/false &nbsp;同步、异步请求</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">&nbsp; &nbsp; cache:true/false	是否进行缓存</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">})</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax的Json数据如何解析：通过JSON.parse()方法或者eval()方法，将json格式的字符串转换成了JSON对象<br />
+var jsonParseJson=JSON.parse(data);<br />
+var evalJson=eval(\'(\'+data+\')\'); &nbsp; //data为ajax请求成功后返回的json格式数据<br />
+二者的区别如下：<br />
+JSON.parse()可以解析json格式的数据，并且会对要解析的字符串进行格式检查，如果格式不正确则不进行解析，而eval()则可以解析任何字符串，eval是不安全的。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax 的优点是：</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">1.减轻了服务器端负担，将一部分以前由服务器负担的工作转移到客户端执行，利用客户端闲置的资源进行处理；</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">2.在只局部刷新的情况下更新页面，增加了页面反应速度，使用户体验更友好。</span><br />
+<span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">Ajax 的缺点是：</span><span style=\"font-family:Simsun;font-size:medium;line-height:1.5;\">不利于SEO 推广优化，因为搜索引擎无法直接访问到Ajax 请求的内容。</span></span></span>
+</p>
+<p>
+	<span><span></span><br />
+<span></span><br />
+<span></span><br />
+</span> 
+</p>' WHERE `id` = 42 [ RunTime:0.0547s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+
+[ 2016-06-15T17:05:50+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0062s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('如何修改SESSION的生存时间？','17','<span style=\"line-height:1.5;\">第一种：将php.ini中的session.gc_maxlifetime设置为9999重启apache</span><br />
+<span style=\"line-height:1.5;\">第二种：我们来手动设置 Session 的生存期：</span><br />
+<span style=\"line-height:1.5;\">session_start();&nbsp;</span><br />
+<span style=\"line-height:1.5;\">// 保存一天&nbsp;</span><br />
+<span style=\"line-height:1.5;\">$lifeTime = 24 * 3600;&nbsp;</span><br />
+<span style=\"line-height:1.5;\">setcookie(session_name(), session_id(), time() + $lifeTime, \"/\");&nbsp;</span><br />
+<span style=\"line-height:1.5;\">第三种：其实 Session 还提供了一个函数 session_set_cookie_params(); 来设置 Session 的生存期的，该函数必须在 session_start() 函数调用之前调用：</span><br />
+<span style=\"line-height:1.5;\">// 保存一天&nbsp;</span><br />
+<span style=\"line-height:1.5;\">$lifeTime = 24 * 3600;&nbsp;</span><br />
+<span style=\"line-height:1.5;\">session_set_cookie_params($lifeTime);&nbsp;</span><br />
+<span style=\"line-height:1.5;\">session_start();</span><br />
+<span style=\"line-height:1.5;\">$_SESSION[\"admin\"] = true;&nbsp;</span><br />
+<span style=\"line-height:1.5;\">如果客户端使用 IE 6.0 ， session_set_cookie_params(); 函数设置 Cookie 会有些问题，所以我们还是手动调用 setcookie 函数来创建 cookie。</span><br />
+<span style=\"line-height:1.5;\"></span>') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-06-15T17:05:52+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2016-06-15T17:27:03+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001485s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0048s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('简述单引号和双引号的区别？','4','<p>
+	<span style=\"line-height:1.5;\">在某些特定情况下，单引号的效率比双引号高。</span><br />
+<span style=\"line-height:1.5;\">双引号串中的内容（如变量）可以被解析而且替换，而单引号串中的内容总被认为是普通字符输出。</span>
+</p>') [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-06-15T17:27:04+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001311s ]
+

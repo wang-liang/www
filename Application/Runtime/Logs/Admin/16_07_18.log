@@ -1,0 +1,860 @@
+[ 2016-07-18T10:49:11+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.069004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.1250s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.126007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.025002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-07-18T10:56:21+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.058003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.124007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.027002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009000s ]
+
+[ 2016-07-18T10:58:25+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0840s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('MongoDB数据表基本操作','13','<h1 style=\"font-size:14px;font-family:Verdana, Arial, Helvetica, sans-serif;background-color:#FFFFFF;\">
+	<a href=\"http://www.cnblogs.com/libingql/archive/2011/06/09/2076440.html\">MongoDB数据表基本操作</a>
+</h1>
+<div style=\"margin:0px;padding:0px;color:#333333;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13.3333px;background-color:#FFFFFF;\">
+</div>
+<div style=\"margin:0px;padding:0px;color:#333333;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13.3333px;background-color:#FFFFFF;\">
+	<div style=\"margin:0px 0px 20px;padding:0px;\">
+		<p>
+			查看全部数据表
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;use&nbsp;ChatRoom<br />
+switched&nbsp;to&nbsp;db&nbsp;ChatRoom<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;show&nbsp;collections<br />
+Account<br />
+Chat<br />
+system.indexes<br />
+system.users</span>
+			</div>
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			创建数据表
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.createCollection(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Account</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">)<br />
+{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">ok</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">}</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.createCollection(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Test</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,{capped:true, size:</span><span style=\"line-height:1.5 !important;\">10000</span><span style=\"line-height:1.5 !important;\">}) {&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">ok</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">&nbsp;}</span>
+			</div>
+			<p>
+				<br />
+			</p>
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">ok</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">}</span>
+			</div>
+		</div>
+		<p>
+			-- 说明
+		</p>
+		<p>
+			capped:true，表示该集合的结构不能被修改；
+		</p>
+		<p>
+			size:在建表之初就指定一定的空间大小，接下来的插入操作会不断地按顺序APPEND数据在这个预分配好空间的文件中，如果已经超出空间大小，则回到文件头覆盖原来的数据继续插入。这种结构保证了插入和查询的高效性，它不允许删除单个记录，更新的也有限制：不能超过原有记录的大小。这种表效率很高，它适用于一些暂时保存数据的场合，比如网站中登录用户的session信息，又比如一些程序的监控日志，都是属于过了一定的时间就可以被覆盖的数据。
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			修改数据表名
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.renameCollection(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Account1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">)<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">ok</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">&nbsp;}</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			数据表帮助主题help
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.help()<br />
+DBCollection&nbsp;help<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find().help()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;show&nbsp;DBCursor&nbsp;help<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.count()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.dataSize()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.distinct(&nbsp;key&nbsp;)&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;eg.&nbsp;db.Account.distinct(&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span><span style=\"color:#800000;line-height:1.5 !important;\">x</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span><span style=\"line-height:1.5 !important;\">&nbsp;)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.drop()&nbsp;drop&nbsp;the&nbsp;collection<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.dropIndex(name)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.dropIndexes()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.ensureIndex(keypattern[,options])&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;options&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">is</span><span style=\"line-height:1.5 !important;\">&nbsp;an&nbsp;object&nbsp;with&nbsp;these&nbsp;possible&nbsp;fields:&nbsp;name,&nbsp;unique,&nbsp;dropDups<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.reIndex()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find([query],[fields])&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;query&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">is</span><span style=\"line-height:1.5 !important;\">&nbsp;an&nbsp;optional&nbsp;query&nbsp;filter.&nbsp;fields&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">is</span><span style=\"line-height:1.5 !important;\">&nbsp;optional&nbsp;set&nbsp;of&nbsp;fields&nbsp;to&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">return</span><span style=\"line-height:1.5 !important;\">.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;db.Account.find(&nbsp;{x:</span><span style=\"line-height:1.5 !important;\">77</span><span style=\"line-height:1.5 !important;\">}&nbsp;,&nbsp;{name:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,&nbsp;x:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">}&nbsp;)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find(...).count()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find(...).limit(n)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find(...).skip(n)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.find(...).sort(...)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.findOne([query])<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.findAndModify(&nbsp;{&nbsp;update&nbsp;:&nbsp;...&nbsp;,&nbsp;remove&nbsp;:&nbsp;bool&nbsp;[,&nbsp;query:&nbsp;{},&nbsp;sort:&nbsp;{},&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span><span style=\"color:#800000;line-height:1.5 !important;\">new</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span><span style=\"line-height:1.5 !important;\">:&nbsp;false]&nbsp;}&nbsp;)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.getDB()&nbsp;get&nbsp;DB&nbsp;object&nbsp;associated&nbsp;with&nbsp;collection<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.getIndexes()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.group(&nbsp;{&nbsp;key&nbsp;:&nbsp;...,&nbsp;initial:&nbsp;...,&nbsp;reduce&nbsp;:&nbsp;...[,&nbsp;cond:&nbsp;...]&nbsp;}&nbsp;)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.mapReduce(&nbsp;mapFunction&nbsp;,&nbsp;reduceFunction&nbsp;,&nbsp;</span><span style=\"line-height:1.5 !important;\">&lt;</span><span style=\"line-height:1.5 !important;\">optional&nbsp;params</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.remove(query)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.renameCollection(&nbsp;newName&nbsp;,&nbsp;</span><span style=\"line-height:1.5 !important;\">&lt;</span><span style=\"line-height:1.5 !important;\">dropTarget</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;)&nbsp;renames&nbsp;the&nbsp;collection.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.runCommand(&nbsp;name&nbsp;,&nbsp;</span><span style=\"line-height:1.5 !important;\">&lt;</span><span style=\"line-height:1.5 !important;\">options</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;)&nbsp;runs&nbsp;a&nbsp;db&nbsp;command&nbsp;with&nbsp;the&nbsp;given&nbsp;name&nbsp;where&nbsp;the&nbsp;first&nbsp;param&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">is</span><span style=\"line-height:1.5 !important;\">&nbsp;the&nbsp;collection&nbsp;name<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.save(obj)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.stats()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.storageSize()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;includes&nbsp;free&nbsp;space&nbsp;allocated&nbsp;to&nbsp;this&nbsp;collection<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.totalIndexSize()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;size&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">in</span><span style=\"line-height:1.5 !important;\">&nbsp;bytes&nbsp;of&nbsp;all&nbsp;the&nbsp;indexes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.totalSize()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;storage&nbsp;allocated&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">for</span><span style=\"line-height:1.5 !important;\">&nbsp;all&nbsp;data&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">and</span><span style=\"line-height:1.5 !important;\">&nbsp;indexes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.update(query,&nbsp;object[,&nbsp;upsert_bool,&nbsp;multi_bool])<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.validate()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;SLOW<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;db.Account.getShardVersion()&nbsp;</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">&nbsp;only&nbsp;</span><span style=\"color:#0000FF;line-height:1.5 !important;\">for</span><span style=\"line-height:1.5 !important;\">&nbsp;use&nbsp;with&nbsp;sharding</span>
+			</div>
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查看全部表记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find()<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df08553188e444d001a763a</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Password</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">26</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing@126.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">RegisterDate</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-09&nbsp;16:31:25</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df08586188e444d001a763b</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">2</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">lb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Password</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">25</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing@163.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">RegisterDate</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-09&nbsp;16:36:95</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;}</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:0px;padding:0px;\">
+			--SELECT * FROM Account
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			说明：
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:0px;padding:0px;\">
+			默认每页显示20条记录，当显示不下的情况下，可以用it迭代命令查询下一页数据。<br />
+可以通过DBQuery.shellBatchSize设置每页显示数据的大小。如：DBQuery.shellBatchSize = 5，这样每页就显示5条记录了。
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Test.find()<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55407444568af61cfea</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55907444568af61cfeb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">2</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55b07444568af61cfec</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">3</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55e07444568af61cfed</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">4</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56207444568af61cfee</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56507444568af61cfef</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">6</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56807444568af61cff0</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">7</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56b07444568af61cff1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">8</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56e07444568af61cff2</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">9</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d57a07444568af61cff3</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">10</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d57d07444568af61cff4</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">11</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58007444568af61cff5</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">12</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58307444568af61cff6</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">13</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58e07444568af61cff7</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">14</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59207444568af61cff8</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">15</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59607444568af61cff9</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">16</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59c07444568af61cffa</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">17</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d5a307444568af61cffb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">18</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d5a607444568af61cffc</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">19</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;DBQuery.shellBatchSize<br />
+</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;DBQuery.shellBatchSize&nbsp;</span><span style=\"line-height:1.5 !important;\">=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Test.find()<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55407444568af61cfea</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55907444568af61cfeb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">2</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55b07444568af61cfec</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">3</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d55e07444568af61cfed</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">4</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56207444568af61cfee</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+has&nbsp;more<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;it<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56507444568af61cfef</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">6</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56807444568af61cff0</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">7</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56b07444568af61cff1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">8</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d56e07444568af61cff2</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">9</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d57a07444568af61cff3</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">10</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+has&nbsp;more<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;it<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d57d07444568af61cff4</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">11</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58007444568af61cff5</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">12</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58307444568af61cff6</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">13</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d58e07444568af61cff7</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">14</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59207444568af61cff8</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">15</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+has&nbsp;more<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;it<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59607444568af61cff9</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">16</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d59c07444568af61cffa</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">17</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d5a307444568af61cffb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">18</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df6d5a607444568af61cffc</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">TestID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">19</span><span style=\"line-height:1.5 !important;\">&nbsp;}<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;it<br />
+no&nbsp;cursor</span>
+			</div>
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询一条记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.findOne()<br />
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4ded95c3b7780a774a099b7c</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">),<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Password</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing@126.cn</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">RegisterDate</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-07&nbsp;11:06:25</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\"><br />
+}</span>
+			</div>
+			<div style=\"margin:5px 0px 0px;padding:0px;background-color:#F5F5F5;\">
+				<br />
+			</div>
+		</div>
+		<p>
+			--SELECT TOP 1 * FROM Account
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			&nbsp;查询聚集中字段的不同记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.distinct(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">)</span>
+			</div>
+		</div>
+		<p>
+			--SELECT DISTINCT(\"UserName\")&nbsp; FROM Account
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			&nbsp;查询聚集中UserName包含“keyword”关键字的记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">keyword</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">})</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;--SELECT * FROM Account WHERE UserName LIKE \'%keyword%\'
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中UserName以\"keyword\" 开头的记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">/^</span><span style=\"line-height:1.5 !important;\">keyword</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">})</span>
+			</div>
+		</div>
+		<p>
+			--SELECT * FROM Account WHERE UserName LIKE \'keyword%\'
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中UserName以“keyword”结尾的记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">keyword$</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">})</span>
+			</div>
+		</div>
+		<p>
+			--SELECT * FROM Account WHERE UserName LIKE \'%keyword\'&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中指定列
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})&nbsp;&nbsp;&nbsp; --1:true<br />
+</span>
+			</div>
+		</div>
+		<p>
+			--SELECT UserName,Email FROM Account
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			&nbsp;查询聚集中排除指定列
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:0})&nbsp;&nbsp;&nbsp; --0:false<br />
+</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中指定列，且Age &gt; 20
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$gt</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})</span>
+			</div>
+		</div>
+		<p>
+			--SELECT UserName,Email FROM Account WHERE Age &gt; 20&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			聚集中字段排序&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().sort({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">&nbsp;升序<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().sort({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">-</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">降序</span>
+			</div>
+		</div>
+		<p>
+			--SELECT * FROM Account ORDER BY UserName ASC
+		</p>
+		<p>
+			--SELECT * FROM Account ORDER BY UserName DESC&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			统计聚集中记录条数
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().count()</span>
+			</div>
+		</div>
+		<p>
+			--SELECT COUNT(*) FROM Account&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			统计聚集中符合条件的记录条数
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$gt</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}}).count()</span>
+			</div>
+		</div>
+		<p>
+			-- SELECT COUNT(*) FROM Account WHERE Age &gt; 20
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			统计聚集中字段符合条件的记录条数
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$exists</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:true}}).count()</span>
+			</div>
+		</div>
+		<p>
+			--SELECT COUNT(UserName) FROM Account&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中前5条记录&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().limit(</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\">)</span>
+			</div>
+		</div>
+		<p>
+			--SELECT TOP 5 * FROM Account&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中第10条以后的记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().skip(</span><span style=\"line-height:1.5 !important;\">10</span><span style=\"line-height:1.5 !important;\">)</span>
+			</div>
+		</div>
+		<p>
+			--SELECT * FROM Account WHERE AccountID NOT IN (SELECT TOP 10 AccountID FROM Account)&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			查询聚集中第10条记录以后的5条记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find().skip(</span><span style=\"line-height:1.5 !important;\">10</span><span style=\"line-height:1.5 !important;\">).limit(</span><span style=\"line-height:1.5 !important;\">5</span><span style=\"line-height:1.5 !important;\">)</span>
+			</div>
+		</div>
+		<p>
+			--SELECT TOP 5 * FROM Account WHERE AccountID NOT IN (SELECT TOP 10 AccountID FROM Account)
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			or查询
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$or</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:[{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">keyword</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">keyword</span><span style=\"line-height:1.5 !important;\">/</span><span style=\"line-height:1.5 !important;\">}]},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:true,</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:true})</span>
+			</div>
+		</div>
+		<p>
+			--SELECT UserName,Email FROM Account WHERE UserName LIKE \'%keyword%\' OR Email LIKE \'%keyword%\'&nbsp;
+		</p>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			添加新记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.insert({AccountID:</span><span style=\"line-height:1.5 !important;\">2</span><span style=\"line-height:1.5 !important;\">,UserName:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">lb</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,Password:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,Age:</span><span style=\"line-height:1.5 !important;\">25</span><span style=\"line-height:1.5 !important;\">,Email:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing@163.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,RegisterDate:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-09&nbsp;16:36:95</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">})</span>
+			</div>
+		</div>
+<br />
+		<p>
+			修改记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.update({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$set</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">27</span><span style=\"line-height:1.5 !important;\">,</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libingql@163.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">}})<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">27</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libingql@163.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Password</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">RegisterDate</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-09&nbsp;16:31:25</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df08553188e444d001a763a</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">)&nbsp;}</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.update({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">},{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">$inc</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">}})<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.find({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})<br />
+{&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"line-height:1.5 !important;\">28</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Email</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libingql@163.com</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Password</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">1</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">RegisterDate</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">2011-06-09&nbsp;16:31:25</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">,&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">_id</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">&nbsp;:&nbsp;ObjectId(</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">4df08553188e444d001a763a</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">)&nbsp;}</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p>
+			删除记录
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">AccountID</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"line-height:1.5 !important;\">1</span><span style=\"line-height:1.5 !important;\">})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;AccountID&nbsp;</span><span style=\"line-height:1.5 !important;\">=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">1</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">UserName</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;UserName&nbsp;</span><span style=\"line-height:1.5 !important;\">=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span><span style=\"color:#800000;line-height:1.5 !important;\">libing</span><span style=\"color:#800000;line-height:1.5 !important;\">\'</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{$lt:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;Age&nbsp;</span><span style=\"line-height:1.5 !important;\">&lt;</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{$lte:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;Age&nbsp;</span><span style=\"line-height:1.5 !important;\">&lt;=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{$gt:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;Age&nbsp;</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{$gte:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;Age&nbsp;</span><span style=\"line-height:1.5 !important;\">&gt;=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\"><br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"color:#800000;line-height:1.5 !important;\">Age</span><span style=\"color:#800000;line-height:1.5 !important;\">\"</span><span style=\"line-height:1.5 !important;\">:{$ne:</span><span style=\"line-height:1.5 !important;\">20</span><span style=\"line-height:1.5 !important;\">}})&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">DELETE&nbsp;FROM&nbsp;Account&nbsp;WHERE&nbsp;Age&nbsp;</span><span style=\"line-height:1.5 !important;\">!=</span><span style=\"line-height:1.5 !important;\">&nbsp;</span><span style=\"line-height:1.5 !important;\">20</span>
+			</div>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div style=\"margin:5px 0px;padding:5px;border:1px solid #CCCCCC;color:#000000;font-family:\'Courier New\' !important;font-size:12px !important;\">
+			<div style=\"margin:0px;padding:0px;background-color:#F5F5F5;\">
+				<span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove()&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">全部删除<br />
+</span><span style=\"line-height:1.5 !important;\">&gt;</span><span style=\"line-height:1.5 !important;\">&nbsp;db.Account.remove({})&nbsp;&nbsp;</span><span style=\"line-height:1.5 !important;\">--</span><span style=\"line-height:1.5 !important;\">全部删除</span>
+			</div>
+		</div>
+	</div>
+	<div style=\"margin:0px;padding:0px;\">
+	</div>
+	<div style=\"margin:20px 0px 0px;padding:0px;\">
+		<div style=\"margin:0px 0px 10px;padding:0px;\">
+			分类:&nbsp;<a href=\"http://www.cnblogs.com/libingql/category/304031.html\">MongoDB</a>
+		</div>
+	</div>
+</div>') [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-18T10:58:26+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-18T11:01:37+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 165  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.102006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-18T11:01:47+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: UPDATE `sc_message` SET `title`='把一篇英文文档中所有单词的首字母转为大写，文档存在 doc.txt 中。写出你的思路，尽量优化你的程序。',`cat_id`='17',`content`='<span style=\"line-height:1.5;\">$str = file_get_contents(\'doc.txt\');</span><br />
+<span style=\"line-height:1.5;\">$str = ucwords($str);</span><br />
+<span style=\"line-height:1.5;\">file_put_contents(\'doc.txt\', $str);</span><br />
+<span style=\"line-height:1.5;\"></span>' WHERE `id` = 165 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-07-18T11:03:44+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0040s ]
+SQL: INSERT INTO `sc_message` (`title`,`cat_id`,`content`) VALUES ('如何查看端口被占用？','4','<span style=\"color:#454545;font-family:arial, 宋体, sans-serif, tahoma, \'Microsoft YaHei\';font-size:14px;line-height:24px;background-color:#FFFFFF;\">输入命令：<strong><span style=\"color:#E53333;\">netstat -ano</span></strong>，列出所有端口的情况。在列表中观察被占用的端口</span>') [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-18T11:03:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-07-18T11:04:40+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/11
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 11  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-07-18T11:05:19+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_message` WHERE `id` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-07-18T11:05:33+08:00 ] 127.0.0.1 /index.php/admin/index/edit/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sc_message` [ RunTime:0.0050s ]
+SQL: UPDATE `sc_message` SET `title`='如何配置apache和php？',`cat_id`='4',`content`='<p>
+	<span style=\"line-height:1.5;\">php：缩写：Personal Home Page ==&gt;&gt;PHP：HypeText Preprocessor</span> 
+</p>
+<p>
+	命令行脚本：<br />
+运行php文件：php.exe &nbsp;-f &nbsp;\"php文件路径\"<br />
+运行php代码：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+直接运行php代码：形式：php.exe &nbsp;-r &nbsp;\"php脚本代码\"<br />
+web软件的运行模式中，总是先在客户端（浏览器端），发起一个“请求”，然后，服务器端才产生反馈动作（就是“运行”程序），并因此而返回给该浏览器一定的信息——就是应答（响应）；<br />
+<span style=\"color:#E53333;\">配置apache 以运行php程序：</span><br />
+分2步：<br />
+第一步：装载php“模块”——其实就是指php语言包中的一个文件而已！<br />
+A：首先，我们将php语言模块，拷贝到计划的目录中来：<br />
+B：打开apache的配置文件：apache安装位置/ conf / httpd.conf<br />
+//需要给出php5apache2_2.dll的完整路径<br />
+131 ： LoadModule php5_module \"....amp/php/php5apache2_2.dll\"<br />
+第二步：告知apache，凡是“.php”后缀文件找php语言模块，这里称（application/x-httpd-php）<br />
+136行：AddType &nbsp;application/x-httpd-php &nbsp;.php &nbsp;.pap &nbsp;.phtml<br />
+然后重启apache<br />
+检测apache的配置语法的命令：<br />
+命令所在位置：apache安装位置/bin/httpd.exe<br />
+命令使用方式：httpd.exe &nbsp;-t<br />
+如果配置文件httpd.conf没有语法错误，就返回： syntax &nbsp;OK<br />
+用法1：强行拖入法<br />
+用法2：配置环境变量法：<br />
+在path路径中加入刚才httpd.exe文件所在的完整目录路径，注意使用英文分号（;）跟以前的内容分开<br />
+<span style=\"color:#E53333;\">php的配置：</span><br />
+时区配置：<br />
+php的配置文件位置：php语言包/php.ini<br />
+第一步：<br />
+查找关键字：timezone:<br />
+修改为 date.timezone = PRC<br />
+第二步：<br />
+在apache的配置文件（httpd.conf)中，设置php.ini文件的路径（位置）：<br />
+143行-------&gt; &nbsp;PHPIniDir &nbsp;\"....../amp/php\" &nbsp;//此时不要写php.ini文件名，只要目录<br />
+然后重启apache；<br />
+php的模块配置：<br />
+第一步：<br />
+在php.ini文件中，设定php模块所在的路径（查找关键字extension_dir)：<br />
+extension_dir = \"......./amp/php/ext\"<br />
+第二步：<br />
+“打开”mysql这个模块就可以了（查找关键字php_mysql.dll）：<br />
+将extension=php_mysql.dll 打开，然后，重启apache<br />
+<span style=\"color:#E53333;\">分布式权限配置：</span>就是针对某个网站的任何一个下级目录，都可以单独去设置其访问权限，并且可以不重启apache就生效。<br />
+第1步：<br />
+在该站点对应目录权限的Directorty配置中添加一条：<br />
+AllowOverride &nbsp;all &nbsp; &nbsp;//表示当前目录，允许“分布式”权限配置<br />
+第2步：<br />
+在该目录下的任何子目录中，创建一个特殊的文件（ .htaccess ），在该文件中写所需要的“权限内容”：<br />
+Deny &nbsp;from &nbsp;all<br />
+Allow from 192.168.3.4<br />
+然后访问站点路径，将会报错：Forbidden
+</p>
+<p>
+	<span style=\"font-family:Simsun;font-size:medium;line-height:24px;color:#E53333;\">查看端口指令：</span><span style=\"font-family:Simsun;font-size:medium;line-height:24px;\">netstat -ano</span>
+</p>
+<p>
+	<br />
+</p>' WHERE `id` = 1 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-07-18T11:25:47+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `sc_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sc_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
